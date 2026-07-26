@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://3a6q6voh5ogr"]
 
-[ext_resource type="Texture2D" uid="uid://qya0wfq1g5qo" path="res://icon.svg" id="1_f7cmv"]
+[ext_resource type="Texture2D" uid="uid://qya0wfq1g5qo" path="res://Assets/icon.svg" id="1_f7cmv"]
 
 [node name="Sprite2D" type="Sprite2D" unique_id=1787457727]
 position = Vector2(591, 298)
