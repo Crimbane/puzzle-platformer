@@ -5,8 +5,12 @@
 [ext_resource type="Script" uid="uid://dhdf6qakv7chr" path="res://Scripts/player.gd" id="2_jjvhh"]
 [ext_resource type="Texture2D" uid="uid://c60jbp71pcrmk" path="res://Assets/Art/Player idle 0.png" id="4_21xkr"]
 [ext_resource type="Texture2D" uid="uid://qya0wfq1g5qo" path="res://Assets/icon.svg" id="4_kry3j"]
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://dvd2tpm5too1b" path="res://Assets/Art/Player idle 1.png" id="5_6bp64"]
 [ext_resource type="Texture2D" uid="uid://d2l01fxrg0c3y" path="res://Assets/Art/Player idle 2.png" id="6_344ge"]
+=======
+[ext_resource type="Script" uid="uid://c7g5uenlqcmbh" path="res://Scripts/button.gd" id="6_21xkr"]
+>>>>>>> Stashed changes
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fjc7g"]
 size = Vector2(39, 125)
@@ -33,6 +37,9 @@ size = Vector2(1147, 31)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jjvhh"]
 radius = 37.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6pas7"]
+size = Vector2(127.5, 50)
 
 [node name="Main" type="Node" unique_id=1928245085]
 
@@ -86,3 +93,20 @@ texture = ExtResource("4_kry3j")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Box" unique_id=487766903]
 position = Vector2(-27, 27)
 shape = SubResource("CircleShape2D_jjvhh")
+
+[node name="Button" type="Area2D" parent="." unique_id=790391499]
+position = Vector2(1061, 505)
+scale = Vector2(0.4, 0.4)
+script = ExtResource("6_21xkr")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Button" unique_id=13198042]
+texture = ExtResource("4_kry3j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button" unique_id=152654223]
+position = Vector2(-1.25, 37.5)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_6pas7")
+
+[connection signal="body_entered" from="Button" to="Button" method="_on_body_entered"]
+[connection signal="body_exited" from="Button" to="Button" method="_on_body_exited"]
