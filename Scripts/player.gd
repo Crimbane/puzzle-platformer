@@ -31,3 +31,5 @@ func _physics_process(delta: float) -> void:
 			if col.get_collider() is RigidBody2D:
 				var box: RigidBody2D = col.get_collider()
 				box.apply_central_force(col.get_normal() * -pushForce)
+
+# Changed the script
