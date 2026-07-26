@@ -22,6 +22,8 @@ position = Vector2(570, 367)
 
 [node name="Platform" type="StaticBody2D" parent="." unique_id=949877795]
 position = Vector2(550, 495)
+collision_layer = 2
+collision_mask = 7
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Platform" unique_id=983740960]
@@ -39,6 +41,8 @@ position = Vector2(667, 123)
 [node name="Button" type="Area2D" parent="." unique_id=148193529]
 position = Vector2(1075, 502.99997)
 scale = Vector2(0.4, 0.4)
+collision_layer = 4
+collision_mask = 7
 script = ExtResource("4_jjvhh")
 metadata/_edit_group_ = true
 

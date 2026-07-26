@@ -51,6 +51,7 @@ animations = [{
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1687183133]
+collision_mask = 7
 script = ExtResource("1_fkybt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1537390055]
@@ -63,6 +64,6 @@ shape = SubResource("RectangleShape2D_8erm5")
 sprite_frames = SubResource("SpriteFrames_f1ek2")
 animation = &"walk"
 autoplay = "idle"
-frame_progress = 0.27876675
+frame_progress = 0.46045068
 
 [connection signal="hit" from="." to="." method="_on_hit"]
