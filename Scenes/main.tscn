@@ -3,10 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://dc202a0io7caw" path="res://Scenes/label_hello.tscn" id="1_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://3a6q6voh5ogr" path="res://Scenes/sprite_2d.tscn" id="2_8gbba"]
 [ext_resource type="Script" uid="uid://dhdf6qakv7chr" path="res://Scripts/player.gd" id="2_jjvhh"]
+[ext_resource type="Texture2D" uid="uid://bw4mpruxhwq2p" path="res://Assets/Art/Player.png" id="4_21xkr"]
 [ext_resource type="Texture2D" uid="uid://qya0wfq1g5qo" path="res://Assets/icon.svg" id="4_kry3j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fjc7g"]
-size = Vector2(124, 125)
+size = Vector2(40, 127)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nrqo6"]
 size = Vector2(1147, 31)
@@ -19,14 +20,16 @@ size = Vector2(74, 74)
 [node name="Label" parent="." unique_id=33634530 instance=ExtResource("1_bo1nx")]
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1460575478]
-position = Vector2(562, 289)
+position = Vector2(934, 113)
 script = ExtResource("2_jjvhh")
 metadata/_edit_group_ = true
 
 [node name="Player Sprite" parent="Player" unique_id=1787457727 instance=ExtResource("2_8gbba")]
 position = Vector2(0, 0)
+texture = ExtResource("4_21xkr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1546551650]
+position = Vector2(0, 2.5)
 shape = SubResource("RectangleShape2D_fjc7g")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=385762799]
@@ -45,7 +48,7 @@ position = Vector2(28.5, 49.5)
 shape = SubResource("RectangleShape2D_nrqo6")
 
 [node name="Box" type="RigidBody2D" parent="." unique_id=846842323]
-position = Vector2(965, 398)
+position = Vector2(965, 360)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Box" unique_id=1028154922]
