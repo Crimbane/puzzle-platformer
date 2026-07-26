@@ -3,11 +3,30 @@
 [ext_resource type="PackedScene" uid="uid://dc202a0io7caw" path="res://Scenes/label_hello.tscn" id="1_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://3a6q6voh5ogr" path="res://Scenes/sprite_2d.tscn" id="2_8gbba"]
 [ext_resource type="Script" uid="uid://dhdf6qakv7chr" path="res://Scripts/player.gd" id="2_jjvhh"]
-[ext_resource type="Texture2D" uid="uid://bw4mpruxhwq2p" path="res://Assets/Art/Player.png" id="4_21xkr"]
+[ext_resource type="Texture2D" uid="uid://c60jbp71pcrmk" path="res://Assets/Art/Player idle 0.png" id="4_21xkr"]
 [ext_resource type="Texture2D" uid="uid://qya0wfq1g5qo" path="res://Assets/icon.svg" id="4_kry3j"]
+[ext_resource type="Texture2D" uid="uid://dvd2tpm5too1b" path="res://Assets/Art/Player idle 1.png" id="5_6bp64"]
+[ext_resource type="Texture2D" uid="uid://d2l01fxrg0c3y" path="res://Assets/Art/Player idle 2.png" id="6_344ge"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fjc7g"]
 size = Vector2(39, 125)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t1yug"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_21xkr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6bp64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_344ge")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 3.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nrqo6"]
 size = Vector2(1147, 31)
@@ -25,6 +44,7 @@ script = ExtResource("2_jjvhh")
 metadata/_edit_group_ = true
 
 [node name="Player Sprite" parent="Player" unique_id=1787457727 instance=ExtResource("2_8gbba")]
+visible = false
 position = Vector2(0, 0)
 texture = ExtResource("4_21xkr")
 
@@ -33,6 +53,12 @@ position = Vector2(0.5, 1.5)
 shape = SubResource("RectangleShape2D_fjc7g")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=385762799]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=1168497846]
+sprite_frames = SubResource("SpriteFrames_t1yug")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.77099234
 
 [node name="Platform" type="StaticBody2D" parent="." unique_id=949877795]
 position = Vector2(550, 495)
