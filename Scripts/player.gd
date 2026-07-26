@@ -3,7 +3,8 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
-
+var pushForce = 2000
+@onready var body: CharacterBody2D = get_node(".")
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -23,3 +24,10 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+	
+	if body.move_and_slide():
+		for i in body.get_slide_collision_count():
+			var col = body.get_slide_collision(i)
+			if col.get_collider() is RigidBody2D:
+				var box: RigidBody2D = col.get_collider()
+				box.apply_central_force(col.get_normal() * -pushForce)
