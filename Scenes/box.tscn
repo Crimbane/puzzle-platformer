@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c1oavcobkgy8b"]
 
-[ext_resource type="Texture2D" uid="uid://qya0wfq1g5qo" path="res://Assets/icon.svg" id="1_xkb4e"]
+[ext_resource type="Texture2D" uid="uid://bb2w7f6wp3bin" path="res://Assets/Art/Box.png" id="1_xkb4e"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jjvhh"]
 radius = 37.0

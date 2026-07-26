@@ -1,8 +1,6 @@
 [gd_scene format=3 uid="uid://bdw1uarwohnlv"]
 
 [ext_resource type="Script" uid="uid://dhdf6qakv7chr" path="res://Scripts/player.gd" id="1_fkybt"]
-[ext_resource type="PackedScene" uid="uid://3a6q6voh5ogr" path="res://Scenes/sprite_2d.tscn" id="1_vgqql"]
-[ext_resource type="Texture2D" path="res://Assets/Art/Player idle 0.png" id="2_fkybt"]
 [ext_resource type="Texture2D" uid="uid://c60jbp71pcrmk" path="res://Assets/Art/Player/Player idle 0.png" id="4_x3wgy"]
 [ext_resource type="Texture2D" uid="uid://dvd2tpm5too1b" path="res://Assets/Art/Player/Player idle 1.png" id="5_3smsa"]
 [ext_resource type="Texture2D" uid="uid://d2l01fxrg0c3y" path="res://Assets/Art/Player/Player idle 2.png" id="6_8erm5"]
@@ -55,11 +53,6 @@ animations = [{
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1687183133]
 script = ExtResource("1_fkybt")
 
-[node name="Player Sprite" parent="." unique_id=1787457727 instance=ExtResource("1_vgqql")]
-visible = false
-position = Vector2(0, 0)
-texture = ExtResource("2_fkybt")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1537390055]
 position = Vector2(0.5, 1.5)
 shape = SubResource("RectangleShape2D_8erm5")
@@ -68,5 +61,8 @@ shape = SubResource("RectangleShape2D_8erm5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1837813518]
 sprite_frames = SubResource("SpriteFrames_f1ek2")
-animation = &"idle"
+animation = &"walk"
 autoplay = "idle"
+frame_progress = 0.27876675
+
+[connection signal="hit" from="." to="." method="_on_hit"]

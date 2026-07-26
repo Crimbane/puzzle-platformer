@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c1oavcobkgy8b" path="res://Scenes/box.tscn" id="4_21xkr"]
 [ext_resource type="Script" uid="uid://c7g5uenlqcmbh" path="res://Scripts/button.gd" id="4_jjvhh"]
 [ext_resource type="Texture2D" uid="uid://qya0wfq1g5qo" path="res://Assets/icon.svg" id="4_kry3j"]
+[ext_resource type="PackedScene" uid="uid://qym1xj7gedbt" path="res://Scenes/spikes.tscn" id="6_21xkr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nrqo6"]
 size = Vector2(1147, 31)
@@ -52,5 +53,9 @@ shape = SubResource("RectangleShape2D_6pas7")
 [node name="Box2" parent="." unique_id=1019390414 instance=ExtResource("4_21xkr")]
 position = Vector2(1144, 411)
 
+[node name="Spikes" parent="." unique_id=681417153 instance=ExtResource("6_21xkr")]
+position = Vector2(122, 493)
+
 [connection signal="body_entered" from="Button" to="Button" method="_on_body_entered"]
 [connection signal="body_exited" from="Button" to="Button" method="_on_body_exited"]
+[connection signal="body_entered" from="Spikes" to="Player" method="_on_spikes_body_entered"]

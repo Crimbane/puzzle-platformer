@@ -1,10 +1,29 @@
 extends CharacterBody2D
 
+#char sprite is 1080 / 8 = 135 pixels tall
+
+signal hit
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 var pushForce = 2000
+var initialPosition
 @onready var body: CharacterBody2D = get_node(".")
+
+func _ready() -> void:
+	initialPosition = global_position
+
+func _process(delta):
+	if velocity.x == 0:
+		$AnimatedSprite2D.animation = "idle"
+	if velocity.x > 0:
+		$AnimatedSprite2D.animation = "walk"
+		$AnimatedSprite2D.flip_h = false
+	if velocity.x < 0:
+		$AnimatedSprite2D.animation = "walk"
+		$AnimatedSprite2D.flip_h = true
+	
+
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -33,3 +52,10 @@ func _physics_process(delta: float) -> void:
 				box.apply_central_force(col.get_normal() * -pushForce)
 
 # Changed the script
+
+func _on_spikes_body_entered(body: Node2D) -> void:
+	hit.emit()
+
+
+func _on_hit() -> void:
+	global_position = initialPosition
