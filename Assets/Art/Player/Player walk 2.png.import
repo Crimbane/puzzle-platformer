@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c60jbp71pcrmk"
-path="res://.godot/imported/Player idle 0.png-8a1830fba05009a1ff426955b6056ea0.ctex"
+uid="uid://bm2bj36p3dycc"
+path="res://.godot/imported/Player walk 2.png-8fd6f43cc0266ccf7d34867bb6e659f5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Player idle 0.png"
-dest_files=["res://.godot/imported/Player idle 0.png-8a1830fba05009a1ff426955b6056ea0.ctex"]
+source_file="res://Assets/Art/Player/Player walk 2.png"
+dest_files=["res://.godot/imported/Player walk 2.png-8fd6f43cc0266ccf7d34867bb6e659f5.ctex"]
 
 [params]
 
