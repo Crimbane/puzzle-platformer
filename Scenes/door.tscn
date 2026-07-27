@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://f1ffs78yx6gk"]
+
+[ext_resource type="Script" uid="uid://c3is8n1n1m4si" path="res://Scripts/door.gd" id="1_p0e35"]
+[ext_resource type="Texture2D" uid="uid://qya0wfq1g5qo" path="res://Assets/icon.svg" id="1_w6aom"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_p0e35"]
+friction = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fjc7g"]
+size = Vector2(32, 244)
+
+[node name="Door" type="AnimatableBody2D" unique_id=2020108157]
+physics_material_override = SubResource("PhysicsMaterial_p0e35")
+script = ExtResource("1_p0e35")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=75086924]
+scale = Vector2(0.2578125, 1.9140625)
+texture = ExtResource("1_w6aom")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1708619589]
+shape = SubResource("RectangleShape2D_fjc7g")

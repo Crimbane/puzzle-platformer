@@ -1,5 +1,8 @@
 extends Area2D
 
+signal button_pressed
+signal button_unpressed
+
 var count = 0
 var entered = false
 
@@ -9,7 +12,7 @@ func _on_body_entered(body: Node2D) -> void:
 		count += 1
 		if not entered && count >= 1:
 			entered = true
-			print("entered")
+			button_pressed.emit()
 
 
 func _on_body_exited(body: Node2D) -> void:
@@ -17,4 +20,4 @@ func _on_body_exited(body: Node2D) -> void:
 		count -= 1
 		if entered && count < 1:
 			entered = false
-			print("exited")
+			button_unpressed.emit()
