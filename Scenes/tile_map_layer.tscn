@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cq0hjewwabrwo"]
+
+[ext_resource type="Texture2D" uid="uid://dvmy0u35e6kmj" path="res://Assets/Art/Tiles/32x32 Grass middle tile.png" id="1_8cujs"]
+[ext_resource type="Texture2D" uid="uid://o3feb1jrhkky" path="res://Assets/Art/Tiles/32x32 Ground middle tile.png" id="2_tto40"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1m32c"]
+texture = ExtResource("1_8cujs")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -11.470707, 16, -11.470707, 16, 16, -16, 16)
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vwmae"]
+texture = ExtResource("2_tto40")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_t1yug"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 2
+physics_layer_0/collision_mask = 7
+sources/0 = SubResource("TileSetAtlasSource_1m32c")
+sources/1 = SubResource("TileSetAtlasSource_vwmae")
+
+[node name="TileMapLayer" type="TileMapLayer" unique_id=1070660664]
+tile_set = SubResource("TileSet_t1yug")

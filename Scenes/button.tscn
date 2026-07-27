@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://d28rn1rq0wsvh"]
 
 [ext_resource type="Script" uid="uid://c7g5uenlqcmbh" path="res://Scripts/button.gd" id="1_0kpiu"]
-[ext_resource type="Texture2D" uid="uid://qya0wfq1g5qo" path="res://Assets/icon.svg" id="2_smycg"]
+[ext_resource type="Texture2D" uid="uid://bb2w7f6wp3bin" path="res://Assets/Art/Box.png" id="2_0kpiu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6pas7"]
-size = Vector2(125.00012, 75.00006)
+size = Vector2(50.00001, 12.500007)
 
 [node name="Button" type="Area2D" unique_id=1552117994]
 scale = Vector2(0.4, 0.4)
@@ -14,11 +14,13 @@ script = ExtResource("1_0kpiu")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=420994012]
-texture = ExtResource("2_smycg")
+position = Vector2(0, 2.500002)
+scale = Vector2(1, 0.11111111)
+texture = ExtResource("2_0kpiu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1838604131]
-position = Vector2(-0.00024414063, 25.000122)
-scale = Vector2(0.9999998, 0.9999998)
+position = Vector2(1.1920922e-06, 1.2500005)
+scale = Vector2(0.99999946, 0.99999946)
 shape = SubResource("RectangleShape2D_6pas7")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
