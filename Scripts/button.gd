@@ -13,6 +13,7 @@ func _on_body_entered(body: Node2D) -> void:
 		if not entered && count >= 1:
 			entered = true
 			button_pressed.emit()
+			$AnimatedSprite2D.frame = 1
 
 
 func _on_body_exited(body: Node2D) -> void:
@@ -21,3 +22,4 @@ func _on_body_exited(body: Node2D) -> void:
 		if entered && count < 1:
 			entered = false
 			button_unpressed.emit()
+			$AnimatedSprite2D.frame = 0
