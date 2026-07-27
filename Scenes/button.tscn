@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://d28rn1rq0wsvh"]
+
+[ext_resource type="Script" uid="uid://c7g5uenlqcmbh" path="res://Scripts/button.gd" id="1_0kpiu"]
+[ext_resource type="Texture2D" uid="uid://qya0wfq1g5qo" path="res://Assets/icon.svg" id="2_smycg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6pas7"]
+size = Vector2(125.00012, 75.00006)
+
+[node name="Button" type="Area2D" unique_id=1552117994]
+scale = Vector2(0.4, 0.4)
+collision_layer = 4
+collision_mask = 7
+script = ExtResource("1_0kpiu")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=420994012]
+texture = ExtResource("2_smycg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1838604131]
+position = Vector2(-0.00024414063, 25.000122)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_6pas7")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
