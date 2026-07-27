@@ -53,8 +53,8 @@ func _physics_process(delta: float) -> void:
 
 # Changed the script
 
-func _on_spikes_body_entered(body: Node2D) -> void:
-	hit.emit()
+#func _on_spikes_body_entered(body: Node2D) -> void:
+#	hit.emit()
 
 
 func _on_hit() -> void:
