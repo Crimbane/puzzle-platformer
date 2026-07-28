@@ -5,8 +5,8 @@ extends CharacterBody2D
 signal hit
 
 const SPEED = 200.0
-const JUMP_VELOCITY = -400.0
-var pushForce = 2000
+const JUMP_VELOCITY = -438.0 #increased from 400
+var pushForce = 3000
 var initialPosition
 @onready var body: CharacterBody2D = get_node(".")
 
@@ -14,15 +14,16 @@ func _ready() -> void:
 	initialPosition = global_position
 
 func _process(delta):
-	if velocity.x == 0:
-		$AnimatedSprite2D.animation = "idle"
-	if velocity.x > 0:
+	
+		
+	if velocity.x > 0 or Input.is_action_pressed("Move Right"):
 		$AnimatedSprite2D.animation = "walk"
 		$AnimatedSprite2D.flip_h = false
-	if velocity.x < 0:
+	elif velocity.x < 0 or Input.is_action_pressed("Move Left"):
 		$AnimatedSprite2D.animation = "walk"
 		$AnimatedSprite2D.flip_h = true
-	
+	else:
+		$AnimatedSprite2D.animation = "idle"
 
 
 func _physics_process(delta: float) -> void:

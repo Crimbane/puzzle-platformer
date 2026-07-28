@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://ch1xxxya1vf5k" path="res://Assets/Art/Pressure plate pressed.png" id="3_smycg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6pas7"]
-size = Vector2(125.00008, 27.50002)
+size = Vector2(125.00008, 27.500023)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t1yug"]
 animations = [{
@@ -29,8 +29,8 @@ script = ExtResource("1_0kpiu")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1838604131]
-position = Vector2(-5.5879345e-06, 1.2499992)
-scale = Vector2(0.99999917, 0.99999917)
+position = Vector2(-5.5879345e-06, 1.2499979)
+scale = Vector2(0.99999887, 0.99999887)
 shape = SubResource("RectangleShape2D_6pas7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=72411231]

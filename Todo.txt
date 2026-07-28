@@ -1,0 +1,2 @@
+Crouch sprite and animation
+Fading block

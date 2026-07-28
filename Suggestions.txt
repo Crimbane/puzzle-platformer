@@ -1,0 +1,8 @@
+Puzzles:
+	Teleporting puzzle
+	
+
+
+Elevator secret
+
+Small parkour with fading blocks
