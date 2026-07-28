@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://qym1xj7gedbt" path="res://Scenes/spikes.tscn" id="6_21xkr"]
 [ext_resource type="PackedScene" uid="uid://cq0hjewwabrwo" path="res://Scenes/tile_map_layer.tscn" id="7_6bp64"]
 [ext_resource type="PackedScene" uid="uid://f1ffs78yx6gk" path="res://Scenes/door.tscn" id="7_344ge"]
+[ext_resource type="Texture2D" uid="uid://bshailmy3f5x3" path="res://Assets/Art/Elevator with chains.png" id="8_ynf5e"]
+[ext_resource type="Texture2D" uid="uid://dj6tp0ooj3vrd" path="res://Assets/Art/Elevator chains.png" id="9_hptm8"]
 
 [node name="Main" type="Node" unique_id=1928245085]
 
@@ -43,6 +45,14 @@ position = Vector2(1779, 306)
 
 [node name="Box3" parent="." unique_id=388009680 groups=["Boxes"] instance=ExtResource("4_21xkr")]
 position = Vector2(2440, 466)
+
+[node name="ElevatorWithChains" type="Sprite2D" parent="." unique_id=1096492990]
+position = Vector2(201, 390)
+texture = ExtResource("8_ynf5e")
+
+[node name="ElevatorChains" type="Sprite2D" parent="." unique_id=181187572]
+position = Vector2(201, -619)
+texture = ExtResource("9_hptm8")
 
 [connection signal="button_pressed" from="Button" to="Door" method="_on_button_pressed"]
 [connection signal="button_unpressed" from="Button" to="Door" method="_on_button_unpressed"]
