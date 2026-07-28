@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://bb2w7f6wp3bin" path="res://Assets/Art/Box.png" id="1_xkb4e"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_jjvhh"]
-radius = 37.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_xkb4e"]
+radius = 32.0
 
 [node name="Box" type="RigidBody2D" unique_id=210537248]
 collision_layer = 4
@@ -12,8 +12,8 @@ lock_rotation = true
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1097404858]
-scale = Vector2(0.578125, 0.578125)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_xkb4e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1924813709]
-shape = SubResource("CircleShape2D_jjvhh")
+shape = SubResource("CircleShape2D_xkb4e")
