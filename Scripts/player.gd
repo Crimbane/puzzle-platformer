@@ -3,19 +3,24 @@ extends CharacterBody2D
 #char sprite is 1080 / 8 = 135 pixels tall
 
 signal hit
+signal keyPickup
+signal keyUsed
 
 const SPEED = 200.0
 const JUMP_VELOCITY = -438.0 #increased from 400
 var pushForce = 3000
-var initialPosition
 @onready var body: CharacterBody2D = get_node(".")
+
+var initialPosition: Vector2
+var keysInInventory: int = 0
 
 func _ready() -> void:
 	initialPosition = global_position
+	#hit.connect(_on_hit)
+	keyPickup.connect(_on_keyPickup)
+	keyUsed.connect(_on_keyUsed)
 
 func _process(delta):
-	
-		
 	if velocity.x > 0 or Input.is_action_pressed("Move Right"):
 		$AnimatedSprite2D.animation = "walk"
 		$AnimatedSprite2D.flip_h = false
@@ -60,3 +65,13 @@ func _physics_process(delta: float) -> void:
 
 func _on_hit() -> void:
 	global_position = initialPosition
+
+func _on_keyPickup() -> void:
+	keysInInventory += 1
+	if keysInInventory > 0:
+		$Sprite2D.visible = true
+
+func _on_keyUsed():
+	keysInInventory -= 1
+	if keysInInventory < 1:
+		$Sprite2D.visible = false

@@ -6,3 +6,5 @@ Puzzles:
 Elevator secret
 
 Small parkour with fading blocks
+
+When lock is opened, split in 2 and fall down to ground or off the map

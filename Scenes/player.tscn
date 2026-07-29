@@ -8,10 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://bm2bj36p3dycc" path="res://Assets/Art/Player/Player walk 2.png" id="8_pu2lt"]
 [ext_resource type="Texture2D" uid="uid://fdgbqc6p02yx" path="res://Assets/Art/Player/Player walk 3.png" id="9_ukyrk"]
 [ext_resource type="Texture2D" uid="uid://bfd22efxk7frg" path="res://Assets/Art/Player/Player walk 4.png" id="10_7dp3o"]
+[ext_resource type="Texture2D" uid="uid://ec8mqaqp1wq" path="res://Assets/Art/Key.png" id="10_tx1dd"]
 [ext_resource type="Texture2D" uid="uid://cu2x5n2btxf33" path="res://Assets/Art/Player/Player walk 5.png" id="11_h4iuc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8erm5"]
-size = Vector2(32, 125)
+size = Vector2(36, 125)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_f1ek2"]
 animations = [{
@@ -55,15 +56,20 @@ collision_mask = 7
 script = ExtResource("1_fkybt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1537390055]
-position = Vector2(0.5, 1.5)
+position = Vector2(0, 1.5)
 shape = SubResource("RectangleShape2D_8erm5")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1433334245]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1837813518]
 sprite_frames = SubResource("SpriteFrames_f1ek2")
-animation = &"walk"
+animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.46045068
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1504640179]
+visible = false
+position = Vector2(0, -81)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("10_tx1dd")
 
 [connection signal="hit" from="." to="." method="_on_hit"]

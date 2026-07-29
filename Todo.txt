@@ -1,2 +1,3 @@
 Crouch sprite and animation
 Fading block
+Shading to key sprite
