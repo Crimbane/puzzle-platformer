@@ -1,9 +1,11 @@
 extends Area2D
 
-signal button_pressed(door)
-signal button_unpressed(door)
+signal button_pressed(door, closedPosition, openedPosition)
+signal button_unpressed(door, closedPosition, openedPosition)
 
 @export var door: AnimatableBody2D
+@onready var closedPosition = door.position.y
+@onready var openedPosition = door.position.y-128
 
 var count = 0
 var entered = false
@@ -14,7 +16,7 @@ func _on_body_entered(body: Node2D) -> void:
 		count += 1
 		if not entered && count >= 1:
 			entered = true
-			button_pressed.emit(door)
+			button_pressed.emit(door, closedPosition, openedPosition)
 			$AnimatedSprite2D.frame = 1
 
 
@@ -23,5 +25,5 @@ func _on_body_exited(body: Node2D) -> void:
 		count -= 1
 		if entered && count < 1:
 			entered = false
-			button_unpressed.emit(door)
+			button_unpressed.emit(door, closedPosition, openedPosition)
 			$AnimatedSprite2D.frame = 0
