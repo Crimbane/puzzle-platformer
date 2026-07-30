@@ -14,6 +14,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8erm5"]
 size = Vector2(36, 125)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fjc7g"]
+size = Vector2(36, 62)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_f1ek2"]
 animations = [{
 "frames": [{
@@ -53,15 +56,20 @@ animations = [{
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1687183133 groups=["Player"]]
 collision_mask = 7
+platform_on_leave = 2
 script = ExtResource("1_fkybt")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1537390055]
-position = Vector2(0, 1.5)
+[node name="StandingCollision" type="CollisionShape2D" parent="." unique_id=1537390055]
 shape = SubResource("RectangleShape2D_8erm5")
+
+[node name="CrouchingCollision" type="CollisionShape2D" parent="." unique_id=57146281]
+position = Vector2(0, 31.5)
+shape = SubResource("RectangleShape2D_fjc7g")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1433334245]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1837813518]
+position = Vector2(0, -1.5)
 sprite_frames = SubResource("SpriteFrames_f1ek2")
 animation = &"idle"
 autoplay = "idle"

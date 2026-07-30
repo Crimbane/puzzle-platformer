@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c2nfgdiyvhbbq"]
+
+[ext_resource type="Texture2D" uid="uid://bshailmy3f5x3" path="res://Assets/Art/Elevator with chains.png" id="1_7i85y"]
+[ext_resource type="Texture2D" uid="uid://dj6tp0ooj3vrd" path="res://Assets/Art/Elevator chains.png" id="2_jd6vs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fjc7g"]
+size = Vector2(256, 16)
+
+[node name="Elevator" type="AnimatableBody2D" unique_id=1932293866]
+
+[node name="ElevatorWithChains" type="Sprite2D" parent="." unique_id=1775288568]
+texture = ExtResource("1_7i85y")
+
+[node name="ElevatorChains" type="Sprite2D" parent="ElevatorWithChains" unique_id=878908519]
+position = Vector2(0, -1009)
+texture = ExtResource("2_jd6vs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1187734054]
+position = Vector2(0, 136)
+shape = SubResource("RectangleShape2D_fjc7g")
+one_way_collision = true
+one_way_collision_margin = 20.0

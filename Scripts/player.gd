@@ -39,6 +39,12 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("Jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		
+	
+	if Input.is_action_just_pressed("Crouch"):
+		$StandingCollision.disabled = true
+	if Input.is_action_just_released("Crouch"):
+		$StandingCollision.disabled = false
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
