@@ -5,36 +5,62 @@ extends CharacterBody2D
 signal hit
 signal keyPickup
 signal keyUsed
+signal teleport(position)
 
-const SPEED = 200.0
-const JUMP_VELOCITY = -438.0 #increased from 400
-var pushForce = 3000
+const WALK_SPEED: = 200.0
+const CROUCH_SPEED: = 100.0
+var currentSpeed: = WALK_SPEED
+const JUMP_VELOCITY: = -438.0 #increased from 400
+var pushForce: = 3000
 @onready var body: CharacterBody2D = get_node(".")
 
 var initialPosition: Vector2
-var keysInInventory: int = 0
+var keysInInventory: = 0
+
+var crouch: = false
+var in_Air = false
 
 func _ready() -> void:
 	initialPosition = global_position
 	#hit.connect(_on_hit)
-	keyPickup.connect(_on_keyPickup)
-	keyUsed.connect(_on_keyUsed)
+	keyPickup.connect(onKeyPickup)
+	keyUsed.connect(onKeyUsed)
+	teleport.connect(onTeleport)
 
 func _process(delta):
-	if velocity.x > 0 or Input.is_action_pressed("Move Right"):
-		$AnimatedSprite2D.animation = "walk"
-		$AnimatedSprite2D.flip_h = false
-	elif velocity.x < 0 or Input.is_action_pressed("Move Left"):
-		$AnimatedSprite2D.animation = "walk"
-		$AnimatedSprite2D.flip_h = true
-	else:
-		$AnimatedSprite2D.animation = "idle"
+	if crouch == false and in_Air == false:
+		$AnimatedSprite2D.offset.y = 0
+		$Sprite2D.offset.y = 0
+		if velocity.x > 0 or Input.is_action_pressed("Move Right"):
+			$AnimatedSprite2D.animation = "walk"
+			$AnimatedSprite2D.flip_h = false
+		elif velocity.x < 0 or Input.is_action_pressed("Move Left"):
+			$AnimatedSprite2D.animation = "walk"
+			$AnimatedSprite2D.flip_h = true
+		else:
+			$AnimatedSprite2D.animation = "idle"
+	elif crouch == true:
+		$AnimatedSprite2D.offset.y = 31.5
+		$Sprite2D.offset.y = 155 * 2
+		
+		if velocity.x > 0 or Input.is_action_pressed("Move Right"):
+			$AnimatedSprite2D.animation = "crouch walk"
+			$AnimatedSprite2D.flip_h = false
+		elif velocity.x < 0 or Input.is_action_pressed("Move Left"):
+			$AnimatedSprite2D.animation = "crouch walk"
+			$AnimatedSprite2D.flip_h = true
+		else:
+			$AnimatedSprite2D.animation = "crouch idle"
 
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+		in_Air = true
+		$AnimatedSprite2D.animation = "jump"
+	elif is_on_floor():
+		in_Air = false
 
 	# Handle jump.
 	if Input.is_action_just_pressed("Jump") and is_on_floor():
@@ -43,16 +69,23 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("Crouch"):
 		$StandingCollision.disabled = true
+		crouch = true
+		$Sprite2D.scale *= 0.5
+		currentSpeed = CROUCH_SPEED 
+	
 	if Input.is_action_just_released("Crouch"):
 		$StandingCollision.disabled = false
+		crouch = false
+		$Sprite2D.scale *= 2.0
+		currentSpeed = WALK_SPEED
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("Move Left", "Move Right")
 	if direction:
-		velocity.x = direction * SPEED
+		velocity.x = direction * WALK_SPEED
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, WALK_SPEED)
 
 	move_and_slide()
 	
@@ -72,12 +105,15 @@ func _physics_process(delta: float) -> void:
 func _on_hit() -> void:
 	global_position = initialPosition
 
-func _on_keyPickup() -> void:
+func onKeyPickup() -> void:
 	keysInInventory += 1
 	if keysInInventory > 0:
 		$Sprite2D.visible = true
 
-func _on_keyUsed():
+func onKeyUsed():
 	keysInInventory -= 1
 	if keysInInventory < 1:
 		$Sprite2D.visible = false
+
+func onTeleport(portalPosition):
+	global_position = portalPosition

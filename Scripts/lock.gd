@@ -11,7 +11,8 @@ func _on_body_entered(body: Node2D) -> void:
 			body.keyUsed.emit() 
 			
 			#--change to second animation frame
-			
+			$AnimatedSprite2D.animation = "open"
+			await get_tree().create_timer(0.7).timeout
 			
 			var tween = create_tween()
 			tween.parallel().tween_property(self, "rotation_degrees", 45, 0.5)

@@ -1,3 +1,5 @@
-Crouch sprite and animation
+
 Fading block
-Shading to key sprite
+
+Make portal speed up over time
+Maybe animate bigger or smaller when it teleports
