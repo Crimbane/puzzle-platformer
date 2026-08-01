@@ -42,7 +42,7 @@ position = Vector2(3760, 608)
 position = Vector2(3472, 2560)
 
 [node name="Door3" parent="Doors" unique_id=996733788 instance=ExtResource("7_344ge")]
-position = Vector2(2256, 1888)
+position = Vector2(2256, 1376)
 inverted = true
 
 [node name="Door4" parent="Doors" unique_id=105503992 instance=ExtResource("7_344ge")]
@@ -82,9 +82,10 @@ scale = Vector2(0.63, 0.9)
 position = Vector2(2739, 1878)
 
 [node name="Label" parent="." unique_id=33634530 instance=ExtResource("1_bo1nx")]
+text = "Secret text"
 
 [node name="Player" parent="." unique_id=1687183133 instance=ExtResource("2_8gbba")]
-position = Vector2(2553, 2101)
+position = Vector2(3007, 612)
 
 [node name="Level design ref" type="Sprite2D" parent="." unique_id=1381956689]
 visible = false
@@ -109,9 +110,6 @@ tile_map_data = PackedByteArray("AAAAABEAAgAAAAAAAAABABEAAgABAAAAAAACABEAAgABAAA
 
 [node name="Lock" parent="." unique_id=1539881253 instance=ExtResource("12_6iyac")]
 position = Vector2(2743, 537)
-
-[node name="Button" parent="." unique_id=1265803423 instance=ExtResource("5_21xkr")]
-position = Vector2(2298, 2159)
 
 [connection signal="button_pressed" from="Buttons/Button" to="Doors/Door" method="_on_button_pressed"]
 [connection signal="button_unpressed" from="Buttons/Button" to="Doors/Door" method="_on_button_unpressed"]

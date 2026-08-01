@@ -6,6 +6,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fjc7g"]
 size = Vector2(256, 16)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t1yug"]
+size = Vector2(105, 32)
+
 [node name="Elevator" type="AnimatableBody2D" unique_id=1932293866]
 
 [node name="ElevatorWithChains" type="Sprite2D" parent="." unique_id=1775288568]
@@ -20,3 +23,9 @@ position = Vector2(0, 136)
 shape = SubResource("RectangleShape2D_fjc7g")
 one_way_collision = true
 one_way_collision_margin = 20.0
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1915217049]
+
+[node name="ActivateCollision" type="CollisionShape2D" parent="Area2D" unique_id=1267462662]
+position = Vector2(0, 110)
+shape = SubResource("RectangleShape2D_t1yug")
