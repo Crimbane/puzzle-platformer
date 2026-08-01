@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://d28rn1rq0wsvh"]
 
 [ext_resource type="Script" uid="uid://c7g5uenlqcmbh" path="res://Scripts/button.gd" id="1_0kpiu"]
-[ext_resource type="Texture2D" uid="uid://cy5kxhqwwua4f" path="res://Assets/Art/Pressure plate.png" id="2_0kpiu"]
-[ext_resource type="Texture2D" uid="uid://ch1xxxya1vf5k" path="res://Assets/Art/Pressure plate pressed.png" id="3_smycg"]
+[ext_resource type="Texture2D" uid="uid://cy5kxhqwwua4f" path="res://Assets/Art/Pressure plate red.png" id="2_0kpiu"]
+[ext_resource type="Texture2D" uid="uid://kgwyhgag7wen" path="res://Assets/Art/Pressure plate blue.png" id="2_edukx"]
+[ext_resource type="Texture2D" uid="uid://ch1xxxya1vf5k" path="res://Assets/Art/Pressure plate pressed red.png" id="3_smycg"]
+[ext_resource type="Texture2D" uid="uid://bxn4jqc1tym1i" path="res://Assets/Art/Pressure plate pressed blue.png" id="3_svtet"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6pas7"]
 size = Vector2(125.00008, 27.500023)
@@ -11,13 +13,24 @@ size = Vector2(125.00008, 27.500023)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("2_edukx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_svtet")
+}],
+"loop": 1,
+"name": &"blue",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("2_0kpiu")
 }, {
 "duration": 1.0,
 "texture": ExtResource("3_smycg")
 }],
 "loop": 1,
-"name": &"default",
+"name": &"red",
 "speed": 5.0
 }]
 
@@ -26,6 +39,7 @@ scale = Vector2(0.4, 0.4)
 collision_layer = 4
 collision_mask = 7
 script = ExtResource("1_0kpiu")
+buttonColor = "Red"
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1838604131]
@@ -35,6 +49,7 @@ shape = SubResource("RectangleShape2D_6pas7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=72411231]
 sprite_frames = SubResource("SpriteFrames_t1yug")
+animation = &"red"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

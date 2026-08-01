@@ -1,3 +1,4 @@
+@tool
 extends Area2D
 
 signal button_pressed(door, closedPosition, openedPosition)
@@ -6,10 +7,17 @@ signal button_unpressed(door, closedPosition, openedPosition)
 @export var doors: Array[AnimatableBody2D]
 var doorPositions: Array[Vector2]
 
+@export_enum("Red", "Blue") var buttonColor: String:
+	set(value):
+		buttonColor = value
+		updateSprite()
+
 var count = 0
 var entered = false
 
 func _ready() -> void:
+	updateSprite()
+	
 	for door in doors:
 		doorPositions.append(Vector2(door.position.y, door.position.y-128))
 		if door.inverted:
@@ -35,3 +43,11 @@ func _on_body_exited(body: Node2D) -> void:
 			for door in doors:
 				var i = doors.find(door)
 				button_unpressed.emit(door, doorPositions[i].x, doorPositions[i].y)
+
+func updateSprite() -> void:
+	var animatedSprite = get_node_or_null("AnimatedSprite2D")
+	if animatedSprite:
+		if buttonColor == "Red":
+			animatedSprite.animation = "red"
+		elif buttonColor == "Blue":
+			animatedSprite.animation = "blue"
