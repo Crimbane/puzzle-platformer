@@ -18,7 +18,8 @@ var initialPosition: Vector2
 var keysInInventory: = 0
 
 var crouch: = false
-var in_Air = false
+var inAir = false
+var inAirTimerStarted = false
 
 func _ready() -> void:
 	initialPosition = global_position
@@ -28,7 +29,7 @@ func _ready() -> void:
 	teleport.connect(onTeleport)
 
 func _process(delta):
-	if crouch == false and in_Air == false:
+	if crouch == false and inAir == false:
 		$AnimatedSprite2D.offset.y = 0
 		$Sprite2D.offset.y = 0
 		if velocity.x > 0 or Input.is_action_pressed("Move Right"):
@@ -57,13 +58,17 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-		in_Air = true
+		
 		$AnimatedSprite2D.animation = "jump"
+		if inAirTimerStarted == false:
+			inAirTimerStarted = true
+			get_tree().create_timer(0.1).timeout.connect(setInAir) # Coyote time
 	elif is_on_floor():
-		in_Air = false
+		inAir = false
+		inAirTimerStarted = false
 
 	# Handle jump.
-	if Input.is_action_just_pressed("Jump") and is_on_floor():
+	if Input.is_action_just_pressed("Jump") and inAir == false:
 		velocity.y = JUMP_VELOCITY
 		
 	
@@ -101,6 +106,8 @@ func _physics_process(delta: float) -> void:
 #func _on_spikes_body_entered(body: Node2D) -> void:
 #	hit.emit()
 
+func setInAir() -> void:
+	inAir = true
 
 func _on_hit() -> void:
 	global_position = initialPosition

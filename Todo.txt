@@ -1,5 +1,4 @@
 
 Fading block
 
-Make portal speed up over time
-Maybe animate bigger or smaller when it teleports
+Blood on spikes after hit
