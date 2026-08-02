@@ -1,7 +1,5 @@
-Puzzles:
-	Teleporting puzzle
-	
 
+Different color background upstairs and downstairs
 
 Elevator secret
 
