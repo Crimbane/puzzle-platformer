@@ -19,6 +19,8 @@ func _ready() -> void:
 	updateSprite()
 	
 	for door in doors:
+		self.button_pressed.connect(door._on_button_pressed)
+		self.button_unpressed.connect(door._on_button_unpressed)
 		doorPositions.append(Vector2(door.position.y, door.position.y-128))
 		if door.inverted:
 			door.position.y -= 128
