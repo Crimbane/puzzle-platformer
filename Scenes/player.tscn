@@ -118,7 +118,7 @@ shape = SubResource("RectangleShape2D_fjc7g")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1837813518]
 position = Vector2(0, -1.5)
 sprite_frames = SubResource("SpriteFrames_f1ek2")
-animation = &"jump"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1504640179]

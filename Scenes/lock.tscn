@@ -36,5 +36,4 @@ shape = SubResource("RectangleShape2D_fyjvv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=159876507]
 sprite_frames = SubResource("SpriteFrames_t1yug")
-animation = &"open"
 autoplay = "default"

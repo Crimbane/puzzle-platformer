@@ -2,26 +2,74 @@
 
 [ext_resource type="Texture2D" uid="uid://b015if8axqh78" path="res://Assets/Art/Spikes.png" id="1_aj3k7"]
 [ext_resource type="Script" uid="uid://dhwyrb4ie8ol3" path="res://Scripts/spikes.gd" id="1_gwqs2"]
+[ext_resource type="Texture2D" uid="uid://cvncb3jas403" path="res://Assets/Art/Spikes blood big.png" id="2_0s4ke"]
+[ext_resource type="Texture2D" uid="uid://c6c7yq6mlvl5t" path="res://Assets/Art/Spikes blood big 2.png" id="3_lq82v"]
+[ext_resource type="Texture2D" uid="uid://co7kklc2c1yss" path="res://Assets/Art/Spikes blood.png" id="4_hq7gf"]
+[ext_resource type="Texture2D" uid="uid://y2jvyo8tec8p" path="res://Assets/Art/Spikes blood 2.png" id="5_kg6rf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t1yug"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0s4ke")
+}],
+"loop": 1,
+"name": &"big blood",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_lq82v")
+}],
+"loop": 1,
+"name": &"big blood 2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_hq7gf")
+}],
+"loop": 1,
+"name": &"blood",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_kg6rf")
+}],
+"loop": 1,
+"name": &"blood2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_aj3k7")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fyjvv"]
 size = Vector2(89, 62)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fjc7g"]
-size = Vector2(97, 48)
+size = Vector2(105, 21)
 
 [node name="Spikes" type="Area2D" unique_id=681417153]
 collision_layer = 4
 script = ExtResource("1_gwqs2")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1007928867]
+sprite_frames = SubResource("SpriteFrames_t1yug")
+autoplay = "default"
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1984101738]
 position = Vector2(11.5, 1)
 shape = SubResource("RectangleShape2D_fyjvv")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=246399482]
-texture = ExtResource("1_aj3k7")
-
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1026716536]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=15005944]
-position = Vector2(11.5, 10)
+position = Vector2(8.5, 23.5)
 shape = SubResource("RectangleShape2D_fjc7g")
