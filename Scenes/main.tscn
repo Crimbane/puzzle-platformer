@@ -14,8 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://d2bmvbksqq2fv" path="res://Scenes/lock.tscn" id="12_6iyac"]
 [ext_resource type="PackedScene" uid="uid://dxq2pjg1ba575" path="res://Scenes/portal.tscn" id="13_fdnlq"]
 [ext_resource type="Texture2D" uid="uid://c4yb8b7bjr6c4" path="res://Assets/Art/Tiles/Background.png" id="13_jkdf5"]
-[ext_resource type="Texture2D" uid="uid://kh7j283c4v32" path="res://Assets/Art/Wooden platform without edges.png" id="15_k12tt"]
-[ext_resource type="Texture2D" uid="uid://4ikl0k5nvxsh" path="res://Assets/Art/Wooden platform.png" id="16_h1bgf"]
+[ext_resource type="PackedScene" uid="uid://bwghxjlasmyb8" path="res://Scenes/wooden_platform.tscn" id="16_k12tt"]
 [ext_resource type="Texture2D" uid="uid://s2vrhoh0b4cr" path="res://Assets/Art/Lever.png" id="17_h1bgf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wsu2k"]
@@ -109,8 +108,9 @@ doors = [NodePath("../../Doors/Door6"), NodePath("../../Doors/Door7")]
 position = Vector2(1106, 1978)
 doors = [NodePath("../../Doors/Door5")]
 
-[node name="Button7" parent="Buttons" unique_id=1653987895 instance=ExtResource("5_21xkr")]
+[node name="Button7" parent="Buttons" unique_id=1653987895 node_paths=PackedStringArray("platforms") instance=ExtResource("5_21xkr")]
 position = Vector2(1552, 2426)
+platforms = [NodePath("../../Platforms/WoodenPlatform"), NodePath("../../Platforms/WoodenPlatform2")]
 buttonColor = "Blue"
 
 [node name="Spikes" type="Node" parent="." unique_id=2025316337]
@@ -197,11 +197,19 @@ scale = Vector2(0.8, 0.8)
 position = Vector2(995, 2319)
 scale = Vector2(0.8, 0.8)
 
+[node name="Platforms" type="Node" parent="." unique_id=602010607]
+
+[node name="WoodenPlatform" parent="Platforms" unique_id=404044254 groups=["Platforms"] instance=ExtResource("16_k12tt")]
+position = Vector2(1728, 2436)
+
+[node name="WoodenPlatform2" parent="Platforms" unique_id=1204757873 groups=["Platforms"] instance=ExtResource("16_k12tt")]
+position = Vector2(1376, 2436)
+
 [node name="Label" parent="." unique_id=33634530 instance=ExtResource("1_bo1nx")]
 text = "Secret text"
 
 [node name="Player" parent="." unique_id=1687183133 instance=ExtResource("2_8gbba")]
-position = Vector2(3178, 564)
+position = Vector2(1752, 2549)
 
 [node name="Level design ref" type="Sprite2D" parent="." unique_id=1381956689]
 visible = false
@@ -232,14 +240,6 @@ metadata/_edit_lock_ = true
 
 [node name="Lock" parent="." unique_id=1539881253 instance=ExtResource("12_6iyac")]
 position = Vector2(2743, 537)
-
-[node name="WoodenPlatformWithoutEdges" type="Sprite2D" parent="." unique_id=2085124333]
-position = Vector2(1728, 2436)
-texture = ExtResource("15_k12tt")
-
-[node name="WoodenPlatform" type="Sprite2D" parent="." unique_id=1087230453]
-position = Vector2(1376, 2436)
-texture = ExtResource("16_h1bgf")
 
 [node name="Lever" type="Sprite2D" parent="." unique_id=1368093583]
 position = Vector2(1894, 2606)

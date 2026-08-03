@@ -83,6 +83,11 @@ func _physics_process(delta: float) -> void:
 		crouch = false
 		$Sprite2D.scale *= 2.0
 		currentSpeed = WALK_SPEED
+	
+	if Input.is_action_just_pressed("Go Down"):
+		var col = $CheckForPlatform.get_collider()
+		if col != null && col.is_in_group("Platforms"):
+			position.y += 1
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.

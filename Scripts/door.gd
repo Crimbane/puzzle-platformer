@@ -4,8 +4,8 @@ extends AnimatableBody2D
 var opened = false
 
 
-func _on_button_pressed(door, closedPosition, openedPosition) -> void:
-	if not opened && door == self:
+func on_button_pressed(closedPosition, openedPosition) -> void:
+	if not opened:
 		opened = true
 		if not inverted:
 			var tween = create_tween()
@@ -15,8 +15,8 @@ func _on_button_pressed(door, closedPosition, openedPosition) -> void:
 			tween.tween_property(self,"position:y", closedPosition, 0.5)
 
 
-func _on_button_unpressed(door, closedPosition, openedPosition) -> void:
-	if opened && door == self:
+func on_button_unpressed(closedPosition, openedPosition) -> void:
+	if opened:
 		opened = false
 		if not inverted:
 			var tween = create_tween()
