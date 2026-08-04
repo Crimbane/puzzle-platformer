@@ -6,6 +6,7 @@ signal hit
 signal keyPickup
 signal keyUsed
 signal teleport(position)
+signal leverInteract
 
 const WALK_SPEED: = 200.0
 const CROUCH_SPEED: = 100.0
@@ -20,6 +21,7 @@ var keysInInventory: = 0
 var crouch: = false
 var inAir = false
 var inAirTimerStarted = false
+var onLever = false
 
 func _ready() -> void:
 	initialPosition = global_position
@@ -28,7 +30,7 @@ func _ready() -> void:
 	keyUsed.connect(onKeyUsed)
 	teleport.connect(onTeleport)
 
-func _process(delta):
+func _process(_delta):
 	if crouch == false and inAir == false:
 		$AnimatedSprite2D.offset.y = 0
 		$Sprite2D.offset.y = 0
@@ -52,6 +54,9 @@ func _process(delta):
 			$AnimatedSprite2D.flip_h = true
 		else:
 			$AnimatedSprite2D.animation = "crouch idle"
+	
+	if onLever && Input.is_action_just_pressed("Interact"):
+		leverInteract.emit()
 
 
 func _physics_process(delta: float) -> void:
@@ -129,3 +134,11 @@ func onKeyUsed():
 
 func onTeleport(portalPosition):
 	global_position = portalPosition
+
+
+func _on_lever_body_entered(_body: Node2D) -> void:
+	onLever = true
+
+
+func _on_lever_body_exited(_body: Node2D) -> void:
+	onLever = false

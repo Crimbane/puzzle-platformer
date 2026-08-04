@@ -24,7 +24,7 @@ func _ready() -> void:
 			#self.button_pressed.connect(door._on_button_pressed)
 			#self.button_unpressed.connect(door._on_button_unpressed)
 			doorPositions.append(Vector2(door.position.y, door.position.y-128))
-			if door.inverted:
+			if door.inverted && not Engine.is_editor_hint():
 				door.position.y -= 128
 
 func _on_body_entered(body: Node2D) -> void:

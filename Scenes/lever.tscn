@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://u6ix6f1b455b"]
+
+[ext_resource type="Script" uid="uid://6646k1gtdxam" path="res://Scripts/lever.gd" id="1_6kuia"]
+[ext_resource type="Texture2D" uid="uid://s2vrhoh0b4cr" path="res://Assets/Art/Lever.png" id="1_wv1st"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fjc7g"]
+size = Vector2(42, 39)
+
+[node name="Lever" type="Area2D" unique_id=670092759]
+script = ExtResource("1_6kuia")
+
+[node name="Lever" type="Sprite2D" parent="." unique_id=778510162]
+texture = ExtResource("1_wv1st")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1743367092]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_fjc7g")
+
+[node name="Label" type="Label" parent="." unique_id=270450469]
+visible = false
+z_index = 1000
+offset_left = -181.0
+offset_top = -89.0
+offset_right = 180.0
+offset_bottom = -44.0
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 24
+text = "Press 'E' to reset boxes."
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="." unique_id=447386736]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
