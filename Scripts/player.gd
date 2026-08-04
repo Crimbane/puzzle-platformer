@@ -15,6 +15,9 @@ const JUMP_VELOCITY: = -438.0 #increased from 400
 var pushForce: = 3000
 @onready var body: CharacterBody2D = get_node(".")
 
+@onready var soundKey: AudioStreamPlayer2D = $SoundKey
+
+
 var initialPosition: Vector2
 var keysInInventory: = 0
 
@@ -123,6 +126,7 @@ func _on_hit() -> void:
 	global_position = initialPosition
 
 func onKeyPickup() -> void:
+	soundKey.play()
 	keysInInventory += 1
 	if keysInInventory > 0:
 		$Sprite2D.visible = true

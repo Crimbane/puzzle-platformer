@@ -2,6 +2,9 @@ extends Area2D
 
 var randomNumber = RandomNumberGenerator.new()
 var spriteNumberSelector
+@onready var soundBlood: AudioStreamPlayer2D = $"Blood Sound"
+@onready var soundBloodBig: AudioStreamPlayer2D = $"Big Blood Sound"
+
 
 func _ready() -> void:
 	body_entered.connect(_on_body_entered)
@@ -15,11 +18,14 @@ func _on_body_entered(body: Node2D) -> void:
 		bloodSpikes()
 
 func bloodSpikes() -> void:
+	soundBlood.play()
 	if $AnimatedSprite2D.animation == "blood":
-			$AnimatedSprite2D.animation = "big blood"
-			return
+		$AnimatedSprite2D.animation = "big blood"
+		soundBloodBig.play()
+		return
 	elif $AnimatedSprite2D.animation == "blood2":
 		$AnimatedSprite2D.animation = "big blood 2"
+		soundBloodBig.play()
 		return
 		
 	if spriteNumberSelector == 1:

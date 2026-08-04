@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://q55s8v0om26w"
+path="res://.godot/imported/Portal - Air Whoosh Fast C.wav-2cf7e50b2ba5ae371a972e4cfa30584b.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Portal - Air Whoosh Fast C.wav"
+dest_files=["res://.godot/imported/Portal - Air Whoosh Fast C.wav-2cf7e50b2ba5ae371a972e4cfa30584b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

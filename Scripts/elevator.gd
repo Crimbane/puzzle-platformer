@@ -6,6 +6,10 @@ var currentPosition
 var tween: Tween
 @export var invertedStartPosition = true # starts at top instead of bottom
 
+@onready var soundButton: AudioStreamPlayer2D = $ElevatorButton
+@onready var soundElevatorMoving: AudioStreamPlayer2D = $ElevatorMoving
+
+
 func _ready() -> void:
 	$Area2D.body_entered.connect(callElevator)
 	currentPosition = startPositionY
@@ -22,6 +26,7 @@ func moveElevator() -> void:
 	if currentPosition == startPositionY:
 		tween = create_tween().set_trans(Tween.TRANS_SINE).set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
 		tween.tween_callback($Area2D/Sprite2D.hide)
+		playElevatorSound()
 		tween.tween_interval(2)
 		tween.tween_property(self, "position:y", endPositionY, 5)
 		tween.tween_callback($Area2D/Sprite2D.show)
@@ -30,6 +35,7 @@ func moveElevator() -> void:
 	elif currentPosition == endPositionY:
 		tween = create_tween().set_trans(Tween.TRANS_SINE).set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
 		tween.tween_callback($Area2D/Sprite2D.hide)
+		playElevatorSound()
 		tween.tween_interval(2)
 		tween.tween_property(self, "position:y", startPositionY, 5)
 		tween.tween_callback($Area2D/Sprite2D.show)
@@ -38,3 +44,10 @@ func moveElevator() -> void:
 func callElevator(body: Node2D) -> void:
 	if body.name == "Player":
 		moveElevator()
+
+func playElevatorSound() -> void:
+	soundButton.play()
+	await get_tree().create_timer(2).timeout
+	soundElevatorMoving.play()
+	await get_tree().create_timer(5).timeout
+	soundElevatorMoving.stop()

@@ -1,5 +1,6 @@
 extends Area2D
 
+@onready var audioSound: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 
 func _ready() -> void:
@@ -9,8 +10,8 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		if body.keysInInventory > 0:
 			body.keyUsed.emit() 
+			audioSound.play(0.18)
 			
-			#--change to second animation frame
 			#$AnimatedSprite2D.animation = "open"
 			#await get_tree().create_timer(0.7).timeout
 			

@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://c6c7yq6mlvl5t" path="res://Assets/Art/Spikes blood big 2.png" id="3_lq82v"]
 [ext_resource type="Texture2D" uid="uid://co7kklc2c1yss" path="res://Assets/Art/Spikes blood.png" id="4_hq7gf"]
 [ext_resource type="Texture2D" uid="uid://y2jvyo8tec8p" path="res://Assets/Art/Spikes blood 2.png" id="5_kg6rf"]
+[ext_resource type="AudioStream" uid="uid://3nhiw8j2v7no" path="res://Assets/Sounds/Spikes - Blood Squirt.wav" id="7_lq82v"]
+[ext_resource type="AudioStream" uid="uid://bembsyor602cn" path="res://Assets/Sounds/Spikes - Body Burst B.wav" id="8_hq7gf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t1yug"]
 animations = [{
@@ -73,3 +75,9 @@ shape = SubResource("RectangleShape2D_fyjvv")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=15005944]
 position = Vector2(8.5, 23.5)
 shape = SubResource("RectangleShape2D_fjc7g")
+
+[node name="Blood Sound" type="AudioStreamPlayer2D" parent="." unique_id=70016558]
+stream = ExtResource("7_lq82v")
+
+[node name="Big Blood Sound" type="AudioStreamPlayer2D" parent="." unique_id=1566274257]
+stream = ExtResource("8_hq7gf")

@@ -5,6 +5,9 @@ var boxPositions: Array[Vector2]
 
 var onLever = false
 
+@onready var soundLeverPull: AudioStreamPlayer2D = $"Lever Pull"
+
+
 func _ready() -> void:
 	for box in boxes:
 		if box != null:
@@ -16,6 +19,7 @@ func _on_lever_interacted() -> void:
 		$Timer.start()
 		$Lever.flip_h = true
 		$Label.visible = false
+		soundLeverPull.play()
 		for box in boxes:
 			if box != null:
 				var i = boxes.find(box)

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://6646k1gtdxam" path="res://Scripts/lever.gd" id="1_6kuia"]
 [ext_resource type="Texture2D" uid="uid://s2vrhoh0b4cr" path="res://Assets/Art/Lever.png" id="1_wv1st"]
+[ext_resource type="AudioStream" uid="uid://bc7seqt818v0o" path="res://Assets/Sounds/Lever - Drop Stone C.wav" id="3_fhlr4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fjc7g"]
 size = Vector2(42, 39)
@@ -31,5 +32,8 @@ horizontal_alignment = 1
 [node name="Timer" type="Timer" parent="." unique_id=447386736]
 wait_time = 3.0
 one_shot = true
+
+[node name="Lever Pull" type="AudioStreamPlayer2D" parent="." unique_id=160413346]
+stream = ExtResource("3_fhlr4")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

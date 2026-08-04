@@ -1,7 +1,8 @@
 
 Fading block
+Invisible tiles
 
-
+Music
 
 Elevator moves when player steps on it
 	Elevator can be reset with a lever

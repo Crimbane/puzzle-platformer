@@ -16,6 +16,11 @@ var doorPositions: Array[Vector2]
 var count = 0
 var entered = false
 
+@onready var soundButtonDown: AudioStreamPlayer2D = $"Button Down"
+@onready var soundButtonUp: AudioStreamPlayer2D = $"Button Up"
+
+
+
 func _ready() -> void:
 	updateSprite()
 	
@@ -33,6 +38,7 @@ func _on_body_entered(body: Node2D) -> void:
 			count += 1
 			if not entered && count >= 1:
 				entered = true
+				soundButtonDown.play()
 				$AnimatedSprite2D.frame = 1
 				for door in doors:
 					if door != null:
@@ -42,6 +48,7 @@ func _on_body_entered(body: Node2D) -> void:
 		if body.is_in_group("Player"):
 			if not entered:
 				entered = true
+				soundButtonDown.play()
 				$AnimatedSprite2D.frame = 1
 				for platform in platforms:
 					if platform != null:
@@ -55,6 +62,7 @@ func _on_body_exited(body: Node2D) -> void:
 			count -= 1
 			if entered && count < 1:
 				entered = false
+				soundButtonUp.play()
 				$AnimatedSprite2D.frame = 0
 				for door in doors:
 					if door != null:
@@ -64,6 +72,7 @@ func _on_body_exited(body: Node2D) -> void:
 		if body.is_in_group("Player"):
 			if entered:
 				entered = false
+				soundButtonUp.play()
 				$AnimatedSprite2D.frame = 0
 				for platform in platforms:
 					if platform != null:

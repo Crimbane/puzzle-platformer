@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://ec8mqaqp1wq" path="res://Assets/Art/Key.png" id="10_tx1dd"]
 [ext_resource type="Texture2D" uid="uid://cu2x5n2btxf33" path="res://Assets/Art/Player/Player walk 5.png" id="11_h4iuc"]
 [ext_resource type="Texture2D" uid="uid://2r8dmlmf170n" path="res://Assets/Art/Player/Player jump.png" id="12_igrcy"]
+[ext_resource type="AudioStream" uid="uid://dyv15iue4rk4v" path="res://Assets/Sounds/Key Pickup - Pick Up Jewlery A.wav" id="19_fs7ks"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8erm5"]
 size = Vector2(36, 125)
@@ -130,5 +131,8 @@ texture = ExtResource("10_tx1dd")
 [node name="CheckForPlatform" type="RayCast2D" parent="." unique_id=840848592]
 position = Vector2(0, 62.5)
 target_position = Vector2(0, 10)
+
+[node name="SoundKey" type="AudioStreamPlayer2D" parent="." unique_id=1132634672]
+stream = ExtResource("19_fs7ks")
 
 [connection signal="hit" from="." to="." method="_on_hit"]

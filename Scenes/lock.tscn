@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://keue7chb2a3e" path="res://Scripts/lock.gd" id="1_nv4u3"]
 [ext_resource type="Texture2D" uid="uid://cw34n3lwsp03h" path="res://Assets/Art/Lock.png" id="2_dhfgy"]
 [ext_resource type="Texture2D" uid="uid://cgyvrdgicvkfv" path="res://Assets/Art/Lock open.png" id="3_dhfgy"]
+[ext_resource type="AudioStream" uid="uid://dpfu2wgxaomlt" path="res://Assets/Sounds/Unlock.wav" id="4_g4ve3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fyjvv"]
 size = Vector2(60, 54)
@@ -37,3 +38,6 @@ shape = SubResource("RectangleShape2D_fyjvv")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=159876507]
 sprite_frames = SubResource("SpriteFrames_t1yug")
 autoplay = "default"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1187109415]
+stream = ExtResource("4_g4ve3")

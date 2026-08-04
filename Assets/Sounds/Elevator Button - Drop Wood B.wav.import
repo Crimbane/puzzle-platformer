@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dduwsp7xmpq85"
+path="res://.godot/imported/Elevator Button - Drop Wood B.wav-ef4ce63813d1cb5b4ad953cdf8e692bb.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Elevator Button - Drop Wood B.wav"
+dest_files=["res://.godot/imported/Elevator Button - Drop Wood B.wav-ef4ce63813d1cb5b4ad953cdf8e692bb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

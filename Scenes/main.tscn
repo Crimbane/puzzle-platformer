@@ -209,7 +209,7 @@ position = Vector2(1376, 2436)
 text = "Secret text"
 
 [node name="Player" parent="." unique_id=1687183133 instance=ExtResource("2_8gbba")]
-position = Vector2(1966, 2541)
+position = Vector2(1636, 2314)
 
 [node name="Level design ref" type="Sprite2D" parent="." unique_id=1381956689]
 visible = false
@@ -247,6 +247,9 @@ position = Vector2(2743, 537)
 
 [node name="Spikes2" parent="." unique_id=1516483598 instance=ExtResource("6_21xkr")]
 position = Vector2(2975, 667)
+
+[node name="Box" parent="." unique_id=227373808 instance=ExtResource("4_21xkr")]
+position = Vector2(4103, 618)
 
 [connection signal="body_entered" from="Spikes/Spikes1" to="Player" method="_on_spikes_body_entered"]
 [connection signal="leverInteract" from="Player" to="Lever" method="_on_lever_interacted"]
