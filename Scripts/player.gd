@@ -23,7 +23,7 @@ var inAirTimerStarted = false
 
 func _ready() -> void:
 	initialPosition = global_position
-	#hit.connect(_on_hit)
+	#hit.connect(_on_hit) # connected in editor
 	keyPickup.connect(onKeyPickup)
 	keyUsed.connect(onKeyUsed)
 	teleport.connect(onTeleport)

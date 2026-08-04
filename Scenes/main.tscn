@@ -63,7 +63,7 @@ position = Vector2(3760, 608)
 position = Vector2(3472, 2560)
 
 [node name="Door3" parent="Doors" unique_id=996733788 instance=ExtResource("7_344ge")]
-position = Vector2(2256, 2144)
+position = Vector2(2256, 1760)
 inverted = true
 
 [node name="Door4" parent="Doors" unique_id=105503992 instance=ExtResource("7_344ge")]
@@ -73,7 +73,7 @@ position = Vector2(2256, 2560)
 position = Vector2(1808, 2368)
 
 [node name="Door6" parent="Doors" unique_id=2137757128 instance=ExtResource("7_344ge")]
-position = Vector2(1296, 2368)
+position = Vector2(1296, 1984)
 inverted = true
 
 [node name="Door7" parent="Doors" unique_id=380843093 instance=ExtResource("7_344ge")]
@@ -209,7 +209,7 @@ position = Vector2(1376, 2436)
 text = "Secret text"
 
 [node name="Player" parent="." unique_id=1687183133 instance=ExtResource("2_8gbba")]
-position = Vector2(1752, 2549)
+position = Vector2(4165, 584)
 
 [node name="Level design ref" type="Sprite2D" parent="." unique_id=1381956689]
 visible = false

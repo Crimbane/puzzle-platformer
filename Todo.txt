@@ -1,11 +1,7 @@
 
 Fading block
 
-Blood on spikes after hit
+
 
 Elevator moves when player steps on it
 	Elevator can be reset with a lever
-
-Lever sprite
-
-Thin wooden platform
