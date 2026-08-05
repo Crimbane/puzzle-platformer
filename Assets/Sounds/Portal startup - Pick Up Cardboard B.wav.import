@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://duud4f65vs7bn"
+path="res://.godot/imported/Portal startup - Pick Up Cardboard B.wav-8200a6b1096667235c56fe0c38a89d62.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Portal startup - Pick Up Cardboard B.wav"
+dest_files=["res://.godot/imported/Portal startup - Pick Up Cardboard B.wav-8200a6b1096667235c56fe0c38a89d62.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

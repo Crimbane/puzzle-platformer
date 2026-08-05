@@ -5,8 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://bk8fqn2ud425" path="res://Assets/Art/Portal purple 1.png" id="2_cqy4h"]
 [ext_resource type="Texture2D" uid="uid://d27r38yvae8un" path="res://Assets/Art/Portal purple 2.png" id="3_8lpw3"]
 [ext_resource type="Texture2D" uid="uid://5u4jx3fcmq77" path="res://Assets/Art/Portal purple 3.png" id="4_vcl8t"]
-[ext_resource type="AudioStream" uid="uid://q55s8v0om26w" path="res://Assets/Sounds/Portal - Air Whoosh Fast C.wav" id="7_bt0xm"]
-[ext_resource type="AudioStream" uid="uid://cf6bmoyvuklrv" path="res://Assets/Sounds/Portal - Holy Seal Loop 001.wav" id="7_vcl8t"]
+[ext_resource type="AudioStream" uid="uid://djft7m8454e5g" path="res://Assets/Sounds/Portal use - Big Wind Gust D.wav" id="6_vcl8t"]
+[ext_resource type="AudioStream" uid="uid://q55s8v0om26w" path="res://Assets/Sounds/Portal teleport - Air Whoosh Fast C.wav" id="7_bt0xm"]
+[ext_resource type="AudioStream" uid="uid://cm56pvrpchgsc" path="res://Assets/Sounds/Portal startup - Air Whoosh Fast A.wav" id="8_bt0xm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t1yug"]
 animations = [{
@@ -45,8 +46,12 @@ visible = false
 shape = SubResource("CircleShape2D_fyjvv")
 
 [node name="Portal Use" type="AudioStreamPlayer2D" parent="." unique_id=1027674236]
-stream = ExtResource("7_vcl8t")
-volume_db = -10.125
+stream = ExtResource("6_vcl8t")
+volume_db = -5.521
 
 [node name="Portal Teleport" type="AudioStreamPlayer2D" parent="." unique_id=616080570]
 stream = ExtResource("7_bt0xm")
+volume_db = 4.0
+
+[node name="Portal Startup" type="AudioStreamPlayer2D" parent="." unique_id=1278435642]
+stream = ExtResource("8_bt0xm")

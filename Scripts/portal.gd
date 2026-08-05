@@ -6,8 +6,11 @@ var teleportCooldown: = 4
 
 var tween
 
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+
 @onready var soundPortalUse: AudioStreamPlayer2D = $"Portal Use"
 @onready var soundPortalTeleport: AudioStreamPlayer2D = $"Portal Teleport"
+@onready var soundPortalStartup: AudioStreamPlayer2D = $"Portal Startup"
 
 
 func _ready() -> void:
@@ -22,6 +25,7 @@ func _on_body_entered(body: Node2D) -> void:
 		resetTween()
 		tween.tween_method(set_rotation_degrees, 0.0, 360.0, teleportTimer)
 		$AnimatedSprite2D.speed_scale = 4
+		soundPortalStartup.play()
 		soundPortalUse.play()
 		
 		await get_tree().create_timer(teleportTimer).timeout
