@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://bwghxjlasmyb8" path="res://Scenes/wooden_platform.tscn" id="16_k12tt"]
 [ext_resource type="Texture2D" uid="uid://da81fcqu86xsc" path="res://Assets/Art/Door closed.png" id="17_b3802"]
 [ext_resource type="Texture2D" uid="uid://vloykh261yim" path="res://Assets/Art/Door open.png" id="18_fevyy"]
+[ext_resource type="PackedScene" uid="uid://j8f1b3gybst2" path="res://Scenes/load_next_scene.tscn" id="19_fevyy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fjc7g"]
 size = Vector2(32, 160)
@@ -272,6 +273,10 @@ finalDoor = NodePath("../Final Door")
 
 [node name="Spikes2" parent="." unique_id=1516483598 instance=ExtResource("6_21xkr")]
 position = Vector2(2975, 667)
+
+[node name="Load Next Scene" parent="." unique_id=97781926 instance=ExtResource("19_fevyy")]
+position = Vector2(717, 2683)
+nextScenePath = "uid://cewqlvpyoluew"
 
 [connection signal="body_entered" from="Spikes/Spikes1" to="Player" method="_on_spikes_body_entered"]
 [connection signal="leverInteract" from="Player" to="Lever" method="_on_lever_interacted"]

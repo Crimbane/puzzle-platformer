@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://5rieeta81ud7"]
+
+[ext_resource type="Script" uid="uid://dg7ywtymmex71" path="res://coins.gd" id="1_m2shm"]
+[ext_resource type="AudioStream" uid="uid://dyv15iue4rk4v" path="res://Assets/Sounds/Key Pickup - Pick Up Jewlery A.wav" id="2_nolx5"]
+[ext_resource type="Texture2D" uid="uid://dhkeuo1yrjlc8" path="res://Assets/Art/Coin pile.png" id="3_voadd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t1yug"]
+size = Vector2(32, 42)
+
+[node name="Coins" type="Area2D" unique_id=1205373579]
+script = ExtResource("1_m2shm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1705282384]
+position = Vector2(-1, -1)
+shape = SubResource("RectangleShape2D_t1yug")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1334210927]
+stream = ExtResource("2_nolx5")
+volume_db = 2.761
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=925946306]
+scale = Vector2(0.36, 0.36)
+texture = ExtResource("3_voadd")
