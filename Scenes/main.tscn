@@ -16,6 +16,11 @@
 [ext_resource type="PackedScene" uid="uid://u6ix6f1b455b" path="res://Scenes/lever.tscn" id="13_h1bgf"]
 [ext_resource type="Texture2D" uid="uid://c4yb8b7bjr6c4" path="res://Assets/Art/Tiles/Background.png" id="13_jkdf5"]
 [ext_resource type="PackedScene" uid="uid://bwghxjlasmyb8" path="res://Scenes/wooden_platform.tscn" id="16_k12tt"]
+[ext_resource type="Texture2D" uid="uid://da81fcqu86xsc" path="res://Assets/Art/Door closed.png" id="17_b3802"]
+[ext_resource type="Texture2D" uid="uid://vloykh261yim" path="res://Assets/Art/Door open.png" id="18_fevyy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fjc7g"]
+size = Vector2(32, 160)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wsu2k"]
 texture = ExtResource("13_jkdf5")
@@ -208,8 +213,26 @@ position = Vector2(1376, 2436)
 [node name="Label" parent="." unique_id=33634530 instance=ExtResource("1_bo1nx")]
 text = "Secret text"
 
+[node name="Final Door" type="StaticBody2D" parent="." unique_id=1207357974]
+position = Vector2(880, 2544)
+metadata/_edit_group_ = true
+
+[node name="ClosedSprite" type="Sprite2D" parent="Final Door" unique_id=881116894]
+position = Vector2(3.2500038, -3.71933e-05)
+scale = Vector2(0.95185184, 0.9696965)
+texture = ExtResource("17_b3802")
+
+[node name="OpenedSprite" type="Sprite2D" parent="Final Door" unique_id=546805036]
+visible = false
+position = Vector2(-34.500004, -3.71933e-05)
+scale = Vector2(0.67407405, 0.9696965)
+texture = ExtResource("18_fevyy")
+
+[node name="Collision" type="CollisionShape2D" parent="Final Door" unique_id=749527544]
+shape = SubResource("RectangleShape2D_fjc7g")
+
 [node name="Player" parent="." unique_id=1687183133 instance=ExtResource("2_8gbba")]
-position = Vector2(1618, 2125)
+position = Vector2(1165, 2544)
 
 [node name="Level design ref" type="Sprite2D" parent="." unique_id=1381956689]
 visible = false
@@ -223,7 +246,7 @@ metadata/_edit_lock_ = true
 position = Vector2(2658, 178)
 
 [node name="Key2" parent="." unique_id=660937868 instance=ExtResource("11_d1ilt")]
-position = Vector2(2903, 594)
+position = Vector2(1054, 2555)
 
 [node name="Elevator" parent="." unique_id=1932293866 instance=ExtResource("11_6iyac")]
 position = Vector2(4352, 2529)
@@ -242,8 +265,10 @@ tile_map_data = PackedByteArray("AAAOAAcAAAACAAAAAAAOAAgAAAACAAAAAAAOAAkAAAACAAA
 tile_set = SubResource("TileSet_t1yug")
 metadata/_edit_lock_ = true
 
-[node name="Lock" parent="." unique_id=1539881253 instance=ExtResource("12_6iyac")]
-position = Vector2(2743, 537)
+[node name="Lock" parent="." unique_id=1539881253 node_paths=PackedStringArray("finalDoor") instance=ExtResource("12_6iyac")]
+z_index = 1
+position = Vector2(960, 2551)
+finalDoor = NodePath("../Final Door")
 
 [node name="Spikes2" parent="." unique_id=1516483598 instance=ExtResource("6_21xkr")]
 position = Vector2(2975, 667)

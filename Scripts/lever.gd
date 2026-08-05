@@ -38,5 +38,6 @@ func _on_body_exited(_body: Node2D) -> void:
 
 func _on_timer_timeout() -> void:
 	$Lever.flip_h = false
+	soundLeverPull.play()
 	if onLever:
 		$Label.visible = true
