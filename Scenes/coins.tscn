@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://5rieeta81ud7"]
 
-[ext_resource type="Script" uid="uid://dg7ywtymmex71" path="res://coins.gd" id="1_m2shm"]
+[ext_resource type="Script" uid="uid://dg7ywtymmex71" path="res://Scripts/coins.gd" id="1_m2shm"]
 [ext_resource type="AudioStream" uid="uid://dyv15iue4rk4v" path="res://Assets/Sounds/Key Pickup - Pick Up Jewlery A.wav" id="2_nolx5"]
 [ext_resource type="Texture2D" uid="uid://dhkeuo1yrjlc8" path="res://Assets/Art/Coin pile.png" id="3_voadd"]
 

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ddxoi7up1s4uq"]
+
+[ext_resource type="Script" uid="uid://b0qqwfs4c7y8f" path="res://Scripts/quit_button.gd" id="1_43bp5"]
+
+[node name="Quit Button" type="Button" unique_id=1056621152]
+z_index = 10
+offset_right = 42.0
+offset_bottom = 15.0
+text = "Exit game"
+script = ExtResource("1_43bp5")

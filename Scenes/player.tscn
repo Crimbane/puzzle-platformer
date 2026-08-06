@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bdw1uarwohnlv"]
 
 [ext_resource type="Script" uid="uid://dhdf6qakv7chr" path="res://Scripts/player.gd" id="1_fkybt"]
+[ext_resource type="PackedScene" uid="uid://ddxoi7up1s4uq" path="res://Scenes/quit_button.tscn" id="2_l6n3p"]
 [ext_resource type="Texture2D" uid="uid://dhrcl2lybo4v4" path="res://Assets/Art/Player/Player crouch idle 0.png" id="2_qqcod"]
 [ext_resource type="Texture2D" uid="uid://cy2b5g0dq587i" path="res://Assets/Art/Player/Player crouch idle 1.png" id="3_igrcy"]
 [ext_resource type="Texture2D" uid="uid://jenjt0uedqoj" path="res://Assets/Art/Player/Player crouch idle 2.png" id="4_fs7ks"]
@@ -106,6 +107,12 @@ animations = [{
 collision_mask = 7
 platform_on_leave = 2
 script = ExtResource("1_fkybt")
+
+[node name="Quit Button" parent="." unique_id=1056621152 instance=ExtResource("2_l6n3p")]
+offset_left = 864.0
+offset_top = -537.0
+offset_right = 948.0
+offset_bottom = -506.0
 
 [node name="StandingCollision" type="CollisionShape2D" parent="." unique_id=1537390055]
 shape = SubResource("RectangleShape2D_8erm5")
