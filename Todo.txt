@@ -2,6 +2,8 @@
 Fading block
 Invisible tiles
 
+Fade to black between level changes
+
 Music
 
 Elevator moves when player steps on it
