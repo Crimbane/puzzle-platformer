@@ -278,7 +278,7 @@ texture = ExtResource("18_fevyy")
 shape = SubResource("RectangleShape2D_fjc7g")
 
 [node name="Player" parent="." unique_id=1687183133 instance=ExtResource("2_8gbba")]
-position = Vector2(1017, 356)
+position = Vector2(546, 450)
 
 [node name="Level design ref" type="Sprite2D" parent="." unique_id=1381956689]
 visible = false
