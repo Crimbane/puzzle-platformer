@@ -12,6 +12,9 @@ size = Vector2(256, 16)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t1yug"]
 size = Vector2(105, 13)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nrqo6"]
+size = Vector2(256, 8)
+
 [node name="Elevator" type="AnimatableBody2D" unique_id=1932293866]
 
 [node name="ElevatorWithChains" type="Sprite2D" parent="." unique_id=1775288568]
@@ -45,3 +48,10 @@ stream = ExtResource("4_1gjip")
 
 [node name="ElevatorMoving" type="AudioStreamPlayer2D" parent="." unique_id=1459421084]
 stream = ExtResource("5_sdfrh")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=345490937 groups=["Platforms"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1392593156]
+position = Vector2(0, -56.5)
+shape = SubResource("RectangleShape2D_nrqo6")
+one_way_collision = true

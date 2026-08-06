@@ -21,10 +21,10 @@
 [ext_resource type="AudioStream" uid="uid://dyv15iue4rk4v" path="res://Assets/Sounds/Key Pickup - Pick Up Jewlery A.wav" id="19_fs7ks"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8erm5"]
-size = Vector2(36, 125)
+size = Vector2(31.5, 125)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fjc7g"]
-size = Vector2(36, 62)
+size = Vector2(31.5, 62)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_f1ek2"]
 animations = [{
