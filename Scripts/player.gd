@@ -27,6 +27,12 @@ var inAirTimerStarted = false
 var onLever = false
 
 func _ready() -> void:
+	if $"..".name == "Main Menu":
+		get_tree().paused = true
+		process_mode = Node.PROCESS_MODE_WHEN_PAUSED
+		$Camera2D.offset = Vector2(12, 303)
+	else:
+		$AnimatedSprite2D.play("idle")
 	initialPosition = global_position
 	#hit.connect(_on_hit) # connected in editor
 	keyPickup.connect(onKeyPickup)
@@ -34,85 +40,93 @@ func _ready() -> void:
 	teleport.connect(onTeleport)
 
 func _process(_delta):
-	if crouch == false and inAir == false:
-		$AnimatedSprite2D.offset.y = 0
-		$Sprite2D.offset.y = 0
-		if velocity.x > 0 or Input.is_action_pressed("Move Right"):
-			$AnimatedSprite2D.animation = "walk"
-			$AnimatedSprite2D.flip_h = false
-		elif velocity.x < 0 or Input.is_action_pressed("Move Left"):
-			$AnimatedSprite2D.animation = "walk"
-			$AnimatedSprite2D.flip_h = true
-		else:
-			$AnimatedSprite2D.animation = "idle"
-	elif crouch == true:
-		$AnimatedSprite2D.offset.y = 31.5
-		$Sprite2D.offset.y = 155 * 2
+	if get_tree().paused:
+		if Input.is_anything_pressed():
+			get_tree().paused = false
+			process_mode = Node.PROCESS_MODE_PAUSABLE
+			create_tween().tween_property($Camera2D, "offset", Vector2(0, 0), .5)
+			$AnimatedSprite2D.play("jump")
+	if not get_tree().paused:
+		if crouch == false and inAir == false:
+			$AnimatedSprite2D.offset.y = 0
+			$Sprite2D.offset.y = 0
+			if velocity.x > 0 or Input.is_action_pressed("Move Right"):
+				$AnimatedSprite2D.animation = "walk"
+				$AnimatedSprite2D.flip_h = false
+			elif velocity.x < 0 or Input.is_action_pressed("Move Left"):
+				$AnimatedSprite2D.animation = "walk"
+				$AnimatedSprite2D.flip_h = true
+			else:
+				$AnimatedSprite2D.animation = "idle"
+		elif crouch == true:
+			$AnimatedSprite2D.offset.y = 31.5
+			$Sprite2D.offset.y = 155 * 2
+			
+			if velocity.x > 0 or Input.is_action_pressed("Move Right"):
+				$AnimatedSprite2D.animation = "crouch walk"
+				$AnimatedSprite2D.flip_h = false
+			elif velocity.x < 0 or Input.is_action_pressed("Move Left"):
+				$AnimatedSprite2D.animation = "crouch walk"
+				$AnimatedSprite2D.flip_h = true
+			else:
+				$AnimatedSprite2D.animation = "crouch idle"
 		
-		if velocity.x > 0 or Input.is_action_pressed("Move Right"):
-			$AnimatedSprite2D.animation = "crouch walk"
-			$AnimatedSprite2D.flip_h = false
-		elif velocity.x < 0 or Input.is_action_pressed("Move Left"):
-			$AnimatedSprite2D.animation = "crouch walk"
-			$AnimatedSprite2D.flip_h = true
-		else:
-			$AnimatedSprite2D.animation = "crouch idle"
-	
-	if onLever && Input.is_action_just_pressed("Interact"):
-		leverInteract.emit()
+		if onLever && Input.is_action_just_pressed("Interact"):
+			leverInteract.emit()
 
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
+	if not get_tree().paused:
+		# Add the gravity.
+		if not is_on_floor():
+			velocity += get_gravity() * delta
+			
+			$AnimatedSprite2D.animation = "jump"
+			if inAirTimerStarted == false:
+				inAirTimerStarted = true
+				get_tree().create_timer(0.1).timeout.connect(setInAir) # Coyote time
+		elif is_on_floor():
+			inAir = false
+			inAirTimerStarted = false
+
+		# Handle jump.
+		if Input.is_action_just_pressed("Jump") and inAir == false:
+			velocity.y = JUMP_VELOCITY
+			
 		
-		$AnimatedSprite2D.animation = "jump"
-		if inAirTimerStarted == false:
-			inAirTimerStarted = true
-			get_tree().create_timer(0.1).timeout.connect(setInAir) # Coyote time
-	elif is_on_floor():
-		inAir = false
-		inAirTimerStarted = false
-
-	# Handle jump.
-	if Input.is_action_just_pressed("Jump") and inAir == false:
-		velocity.y = JUMP_VELOCITY
+		if Input.is_action_just_pressed("Crouch"):
+			$StandingCollision.disabled = true
+			crouch = true
+			$Sprite2D.scale *= 0.5
+			currentSpeed = CROUCH_SPEED 
 		
-	
-	if Input.is_action_just_pressed("Crouch"):
-		$StandingCollision.disabled = true
-		crouch = true
-		$Sprite2D.scale *= 0.5
-		currentSpeed = CROUCH_SPEED 
-	
-	if Input.is_action_just_released("Crouch"):
-		$StandingCollision.disabled = false
-		crouch = false
-		$Sprite2D.scale *= 2.0
-		currentSpeed = WALK_SPEED
-	
-	if Input.is_action_just_pressed("Go Down"):
-		var col = $CheckForPlatform.get_collider()
-		if col != null && col.is_in_group("Platforms"):
-			position.y += 1
+		if Input.is_action_just_released("Crouch"):
+			$StandingCollision.disabled = false
+			crouch = false
+			$Sprite2D.scale *= 2.0
+			currentSpeed = WALK_SPEED
+		
+		if Input.is_action_just_pressed("Go Down"):
+			var col = $CheckForPlatform.get_collider()
+			if col != null && col.is_in_group("Platforms"):
+				position.y += 1
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("Move Left", "Move Right")
-	if direction:
-		velocity.x = direction * WALK_SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, WALK_SPEED)
+		# Get the input direction and handle the movement/deceleration.
+		# As good practice, you should replace UI actions with custom gameplay actions.
+		var direction := Input.get_axis("Move Left", "Move Right")
+		if direction:
+			velocity.x = direction * WALK_SPEED
+		else:
+			velocity.x = move_toward(velocity.x, 0, WALK_SPEED)
 
-	move_and_slide()
-	
-	if body.move_and_slide():
-		for i in body.get_slide_collision_count():
-			var col = body.get_slide_collision(i)
-			if col.get_collider() is RigidBody2D:
-				var box: RigidBody2D = col.get_collider()
-				box.apply_central_force(col.get_normal() * -pushForce)
+		move_and_slide()
+		
+		if body.move_and_slide():
+			for i in body.get_slide_collision_count():
+				var col = body.get_slide_collision(i)
+				if col.get_collider() is RigidBody2D:
+					var box: RigidBody2D = col.get_collider()
+					box.apply_central_force(col.get_normal() * -pushForce)
 
 # Changed the script
 

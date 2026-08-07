@@ -105,6 +105,7 @@ animations = [{
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1687183133 groups=["Player"]]
+disable_mode = 1
 collision_mask = 7
 platform_on_leave = 2
 script = ExtResource("1_fkybt")
@@ -134,7 +135,6 @@ shape = SubResource("RectangleShape2D_fjc7g")
 position = Vector2(0, -1.5)
 sprite_frames = SubResource("SpriteFrames_f1ek2")
 animation = &"idle"
-autoplay = "idle"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1504640179]
 visible = false
