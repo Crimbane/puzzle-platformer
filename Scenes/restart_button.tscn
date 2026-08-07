@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dybstukr2moae"]
+
+[ext_resource type="Script" uid="uid://bhk5ux458m81o" path="res://Scripts/restart_button.gd" id="1_jdibl"]
+
+[node name="Restart Button" type="Button" unique_id=1056621152]
+z_index = 10
+offset_right = 42.0
+offset_bottom = 15.0
+text = "Restart game"
+script = ExtResource("1_jdibl")
