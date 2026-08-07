@@ -14,6 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://j8f1b3gybst2" path="res://Scenes/load_next_scene.tscn" id="12_6m47u"]
 [ext_resource type="Texture2D" uid="uid://b75ruxg1qa1is" path="res://Assets/Art/Puzzle_Platformer_title.png" id="14_8dnnj"]
 [ext_resource type="Texture2D" uid="uid://vloykh261yim" path="res://Assets/Art/Door open.png" id="14_vtepg"]
+[ext_resource type="AudioStream" uid="uid://d3loipnpldkc0" path="res://Assets/Music/Keys Camp Main.wav" id="15_8dnnj"]
+[ext_resource type="PackedScene" uid="uid://d28rn1rq0wsvh" path="res://Scenes/button.tscn" id="16_m3bi6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_okp8f"]
 texture = ExtResource("4_m3bi6")
@@ -117,3 +119,12 @@ nextScenePath = "uid://d126xwa5j1d5"
 position = Vector2(960, 540)
 texture = ExtResource("14_8dnnj")
 metadata/_edit_lock_ = true
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=2007205781]
+stream = ExtResource("15_8dnnj")
+volume_db = -14.0
+autoplay = true
+
+[node name="Button" parent="." unique_id=1552117994 instance=ExtResource("16_m3bi6")]
+position = Vector2(524, 858)
+buttonColor = "Blue"

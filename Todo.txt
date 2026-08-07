@@ -1,6 +1,4 @@
-
 Fading block
-
 
 Escape menu (quit game)
 	Maybe restart game starting with the main menu

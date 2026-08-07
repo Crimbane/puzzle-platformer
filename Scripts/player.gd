@@ -6,6 +6,7 @@ signal hit
 signal keyPickup
 signal keyUsed
 signal teleport(position)
+signal checkpoint(position)
 signal leverInteract
 
 const WALK_SPEED: = 200.0
@@ -18,7 +19,7 @@ var pushForce: = 3000
 @onready var soundKey: AudioStreamPlayer2D = $SoundKey
 
 
-var initialPosition: Vector2
+var respawnPosition: Vector2
 var keysInInventory: = 0
 
 var crouch: = false
@@ -33,11 +34,12 @@ func _ready() -> void:
 		$Camera2D.offset = Vector2(12, 303)
 	else:
 		$AnimatedSprite2D.play("idle")
-	initialPosition = global_position
+	respawnPosition = global_position
 	#hit.connect(_on_hit) # connected in editor
 	keyPickup.connect(onKeyPickup)
 	keyUsed.connect(onKeyUsed)
 	teleport.connect(onTeleport)
+	checkpoint.connect(onCheckpoint)
 
 func _process(_delta):
 	if get_tree().paused:
@@ -136,8 +138,10 @@ func _physics_process(delta: float) -> void:
 func setInAir() -> void:
 	inAir = true
 
+
 func _on_hit() -> void:
-	global_position = initialPosition
+	global_position = respawnPosition
+
 
 func onKeyPickup() -> void:
 	soundKey.play()
@@ -145,13 +149,20 @@ func onKeyPickup() -> void:
 	if keysInInventory > 0:
 		$Sprite2D.visible = true
 
+
 func onKeyUsed():
 	keysInInventory -= 1
 	if keysInInventory < 1:
 		$Sprite2D.visible = false
 
+
 func onTeleport(portalPosition):
 	global_position = portalPosition
+
+
+func onCheckpoint(checkpointPosition):
+	respawnPosition = checkpointPosition
+	print("set respawn")
 
 
 func _on_lever_body_entered(_body: Node2D) -> void:

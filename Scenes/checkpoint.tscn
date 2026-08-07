@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c8josd21gflyv"]
+
+[ext_resource type="Script" uid="uid://bro0dfa80r2iw" path="res://checkpoint.gd" id="1_lbcco"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_t1yug"]
+font_size = 15
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t1yug"]
+
+[node name="Checkpoint" type="Area2D" unique_id=973812139]
+script = ExtResource("1_lbcco")
+
+[node name="Label" type="Label" parent="." unique_id=1244881281]
+offset_left = -41.0
+offset_top = -11.0
+offset_right = 41.0
+offset_bottom = 12.0
+text = "Checkpoint"
+label_settings = SubResource("LabelSettings_t1yug")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1395883124]
+scale = Vector2(5, 5)
+shape = SubResource("RectangleShape2D_t1yug")
+metadata/_edit_lock_ = true

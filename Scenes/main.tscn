@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://j8f1b3gybst2" path="res://Scenes/load_next_scene.tscn" id="19_fevyy"]
 [ext_resource type="Texture2D" uid="uid://sw7273i5v3l3" path="res://Assets/Art/Chest.png" id="21_ee4r6"]
 [ext_resource type="PackedScene" uid="uid://5rieeta81ud7" path="res://Scenes/coins.tscn" id="22_gt3je"]
+[ext_resource type="PackedScene" uid="uid://c8josd21gflyv" path="res://Scenes/checkpoint.tscn" id="23_gt3je"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fjc7g"]
 size = Vector2(32, 160)
@@ -303,7 +304,8 @@ texture = ExtResource("18_fevyy")
 shape = SubResource("RectangleShape2D_fjc7g")
 
 [node name="Player" parent="." unique_id=1687183133 instance=ExtResource("2_8gbba")]
-position = Vector2(1679, 1965)
+position = Vector2(3904, 2562)
+disable_mode = 0
 
 [node name="Level design ref" type="Sprite2D" parent="." unique_id=1381956689]
 visible = false
@@ -351,6 +353,9 @@ nextScenePath = "uid://cewqlvpyoluew"
 [node name="Chest" type="Sprite2D" parent="." unique_id=1060283973]
 position = Vector2(6032, 2575)
 texture = ExtResource("21_ee4r6")
+
+[node name="Checkpoint" parent="." unique_id=973812139 instance=ExtResource("23_gt3je")]
+position = Vector2(4148, 2580)
 
 [connection signal="body_entered" from="Groups/Spikes/Spikes1" to="Player" method="_on_spikes_body_entered"]
 [connection signal="leverInteract" from="Player" to="Lever" method="_on_lever_interacted"]
