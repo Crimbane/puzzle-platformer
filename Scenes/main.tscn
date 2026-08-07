@@ -107,7 +107,7 @@ position = Vector2(2418, 2164)
 position = Vector2(1460, 2388)
 
 [node name="Box7" parent="Groups/Boxes" unique_id=1698771876 groups=["Boxes"] instance=ExtResource("4_21xkr")]
-position = Vector2(1378, 1940)
+position = Vector2(1388, 1940)
 
 [node name="Doors" type="Node" parent="Groups" unique_id=1381828441]
 
@@ -303,7 +303,7 @@ texture = ExtResource("18_fevyy")
 shape = SubResource("RectangleShape2D_fjc7g")
 
 [node name="Player" parent="." unique_id=1687183133 instance=ExtResource("2_8gbba")]
-position = Vector2(373, 2546)
+position = Vector2(1679, 1965)
 
 [node name="Level design ref" type="Sprite2D" parent="." unique_id=1381956689]
 visible = false

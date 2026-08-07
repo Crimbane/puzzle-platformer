@@ -1,7 +1,6 @@
 
 Fading block
 
-Fade to black between level changes
 
 Escape menu (quit game)
 	Maybe restart game starting with the main menu
