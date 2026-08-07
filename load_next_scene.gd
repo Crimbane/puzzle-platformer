@@ -14,6 +14,13 @@ func _on_body_entered(body: Node2D) -> void:
 
 func loadNextScene() -> void:
 	if nextScenePath != "": 
+		var animation = LoadingScreen.get_node("AnimationPlayer")
+		
+		animation.play("transition")
+		await animation.animation_finished
+		
 		get_tree().change_scene_to_file(nextScenePath)
+		
+		animation.play_backwards("transition")
 	else:
 		print("Warning: No next scene path assigned in the Inspector")
