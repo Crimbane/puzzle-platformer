@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://xqu2ehc661yw"
+path="res://.godot/imported/80s Waterbed Retiree Intensity 1.wav-f6c6bf2de2bd03bd26c8d78c9ef0b0c3.sample"
+
+[deps]
+
+source_file="res://Assets/Music/80s Waterbed Retiree Intensity 1.wav"
+dest_files=["res://.godot/imported/80s Waterbed Retiree Intensity 1.wav-f6c6bf2de2bd03bd26c8d78c9ef0b0c3.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

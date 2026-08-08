@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://jntk6dj5lxdj"
+path="res://.godot/imported/80s Waterbed Retiree Main.wav-2b3e4c636c5cfaa763b1b398ce2ae883.sample"
+
+[deps]
+
+source_file="res://Assets/Music/80s Waterbed Retiree Main.wav"
+dest_files=["res://.godot/imported/80s Waterbed Retiree Main.wav-2b3e4c636c5cfaa763b1b398ce2ae883.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
