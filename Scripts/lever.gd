@@ -21,7 +21,7 @@ func _ready() -> void:
 		
 
 func _on_lever_interacted() -> void:
-	if $Timer.is_stopped():
+	if onLever && $Timer.is_stopped():
 		$Timer.start()
 		$Lever.flip_h = true
 		$Label.visible = false
@@ -35,15 +35,17 @@ func _on_lever_interacted() -> void:
 		else:
 			elevator.moveElevator(true)
 
-func _on_body_entered(_body: Node2D) -> void:
-	onLever = true
-	if $Timer.is_stopped():
-		$Label.visible = true
+func _on_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Player"):
+		onLever = true
+		if $Timer.is_stopped():
+			$Label.visible = true
 
 
-func _on_body_exited(_body: Node2D) -> void:
-	onLever = false
-	$Label.visible = false
+func _on_body_exited(body: Node2D) -> void:
+	if body.is_in_group("Player"):
+		onLever = false
+		$Label.visible = false
 
 
 func _on_timer_timeout() -> void:

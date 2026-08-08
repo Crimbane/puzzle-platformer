@@ -20,9 +20,9 @@ shape = SubResource("RectangleShape2D_fjc7g")
 [node name="Label" type="Label" parent="." unique_id=270450469]
 visible = false
 z_index = 1000
-offset_left = -181.0
+offset_left = -250.0
 offset_top = -89.0
-offset_right = 180.0
+offset_right = 250.0
 offset_bottom = -44.0
 theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 24
