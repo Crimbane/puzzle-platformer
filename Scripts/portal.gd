@@ -14,6 +14,10 @@ var tween
 
 
 func _ready() -> void:
+	if VolumeSettings != null:
+		soundPortalUse.volume_db = VolumeSettings.soundVolume
+		soundPortalTeleport.volume_db = VolumeSettings.soundVolume
+		soundPortalStartup.volume_db = VolumeSettings.soundVolume
 	body_entered.connect(_on_body_entered)
 	portalPosition = global_position
 

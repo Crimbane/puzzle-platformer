@@ -11,6 +11,9 @@ var tween: Tween
 
 
 func _ready() -> void:
+	if VolumeSettings != null:
+		soundButton.volume_db = VolumeSettings.soundVolume
+		soundElevatorMoving.volume_db = VolumeSettings.soundVolume
 	$Area2D.body_entered.connect(callElevator)
 	currentPosition = startPositionY
 	if invertedStartPosition == true:
@@ -19,11 +22,11 @@ func _ready() -> void:
 		
 		currentPosition = endPositionY
 
-func moveElevator() -> void:
+func moveElevator(lever = false) -> void:
 	if tween and tween.is_running():
 		return
 	
-	if currentPosition == startPositionY:
+	if currentPosition == startPositionY && not lever:
 		tween = create_tween().set_trans(Tween.TRANS_SINE).set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
 		tween.tween_callback($Area2D/Sprite2D.hide)
 		playElevatorSound()

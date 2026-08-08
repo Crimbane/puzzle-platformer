@@ -22,6 +22,9 @@ var entered = false
 
 
 func _ready() -> void:
+	if VolumeSettings != null:
+		soundButtonDown.volume_db = VolumeSettings.soundVolume
+		soundButtonUp.volume_db = VolumeSettings.soundVolume
 	updateSprite()
 	
 	for door in doors:

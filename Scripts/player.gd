@@ -17,6 +17,7 @@ var pushForce: = 3000
 @onready var body: CharacterBody2D = get_node(".")
 
 @onready var soundKey: AudioStreamPlayer2D = $SoundKey
+@onready var music: AudioStreamPlayer = $Music
 
 
 var respawnPosition: Vector2
@@ -28,6 +29,9 @@ var inAirTimerStarted = false
 var onLever = false
 
 func _ready() -> void:
+	if VolumeSettings != null:
+		music.volume_db = VolumeSettings.musicVolume
+		soundKey.volume_db = VolumeSettings.soundVolume
 	if $"..".name == "Main Menu":
 		get_tree().paused = true
 		process_mode = Node.PROCESS_MODE_WHEN_PAUSED

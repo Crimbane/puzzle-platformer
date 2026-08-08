@@ -7,3 +7,13 @@ Music
 
 Elevator moves when player steps on it
 	Elevator can be reset with a lever
+
+
+Volume sliders
+	Furthest left position:
+		soundbox: (511.7, 832)
+		musicbox: (1183.7, 832)
+
+	Furthest right position:
+		soundbox: (736.3, 832)
+		musicbox: (1408.3, 832)

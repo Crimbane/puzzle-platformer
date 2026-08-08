@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://cu2x5n2btxf33" path="res://Assets/Art/Player/Player walk 5.png" id="11_h4iuc"]
 [ext_resource type="Texture2D" uid="uid://2r8dmlmf170n" path="res://Assets/Art/Player/Player jump.png" id="12_igrcy"]
 [ext_resource type="AudioStream" uid="uid://dyv15iue4rk4v" path="res://Assets/Sounds/Key Pickup - Pick Up Jewlery A.wav" id="19_fs7ks"]
+[ext_resource type="AudioStream" uid="uid://d3loipnpldkc0" path="res://Assets/Music/Keys Camp Main.wav" id="22_wpjfl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8erm5"]
 size = Vector2(31.5, 125)
@@ -148,5 +149,10 @@ target_position = Vector2(0, 10)
 
 [node name="SoundKey" type="AudioStreamPlayer2D" parent="." unique_id=1132634672]
 stream = ExtResource("19_fs7ks")
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1455615299]
+stream = ExtResource("22_wpjfl")
+volume_db = -14.0
+autoplay = true
 
 [connection signal="hit" from="." to="." method="_on_hit"]

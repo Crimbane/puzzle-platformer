@@ -18,6 +18,7 @@ config/icon="res://Assets/icon.svg"
 [autoload]
 
 LoadingScreen="*uid://cepngs6rjbw1c"
+VolumeSettings="*uid://dghux4end8c7r"
 
 [display]
 
