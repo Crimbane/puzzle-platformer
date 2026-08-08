@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://j8f1b3gybst2"]
 
-[ext_resource type="Script" uid="uid://c7jp3ati00tlj" path="res://load_next_scene.gd" id="1_0gh3a"]
+[ext_resource type="Script" uid="uid://c7jp3ati00tlj" path="res://Scripts/load_next_scene.gd" id="1_0gh3a"]
 [ext_resource type="Texture2D" uid="uid://s2vrhoh0b4cr" path="res://Assets/Art/Lever.png" id="2_j0pbl"]
 [ext_resource type="AudioStream" uid="uid://bc7seqt818v0o" path="res://Assets/Sounds/Lever - Drop Stone C.wav" id="3_jkojd"]
 

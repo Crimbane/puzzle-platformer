@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://jc0v0uc56cpl"]
+
+[ext_resource type="Script" uid="uid://b1mj4l6y6inan" path="res://Scripts/music_manager.gd" id="1_760hw"]
+[ext_resource type="AudioStream" uid="uid://d3loipnpldkc0" path="res://Assets/Music/Keys Camp Main.wav" id="2_hsxb6"]
+[ext_resource type="AudioStream" uid="uid://yamb12pd3kh8" path="res://Assets/Music/80s Waterbed Retiree Intensity 2.wav" id="3_b40f5"]
+[ext_resource type="AudioStream" uid="uid://xqu2ehc661yw" path="res://Assets/Music/80s Waterbed Retiree Intensity 1.wav" id="4_a0g8o"]
+[ext_resource type="AudioStream" uid="uid://jntk6dj5lxdj" path="res://Assets/Music/80s Waterbed Retiree Main.wav" id="5_a0g8o"]
+
+[node name="Music Manager" type="Node" unique_id=1038468038]
+script = ExtResource("1_760hw")
+menuMusic = ExtResource("2_hsxb6")
+gameMusic = ExtResource("3_b40f5")
+gameMusic2 = ExtResource("4_a0g8o")
+creditsMusic = ExtResource("5_a0g8o")
+
+[node name="Music Player" type="AudioStreamPlayer" parent="." unique_id=628120696]
+volume_db = -14.0

@@ -17,7 +17,7 @@ var pushForce: = 3000
 @onready var body: CharacterBody2D = get_node(".")
 
 @onready var soundKey: AudioStreamPlayer2D = $SoundKey
-@onready var music: AudioStreamPlayer = $Music
+@onready var music: AudioStreamPlayer = MusicManager.get_node("Music Player")
 
 
 var respawnPosition: Vector2
@@ -79,6 +79,9 @@ func _process(_delta):
 		
 		if onLever && Input.is_action_just_pressed("Interact"):
 			leverInteract.emit()
+		
+		if Input.is_action_just_pressed("Escape"):
+			get_tree().quit()
 
 
 func _physics_process(delta: float) -> void:

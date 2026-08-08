@@ -28,6 +28,7 @@ func loadNextScene() -> void:
 		animation.play("transition")
 		await animation.animation_finished
 		
+		startMusic()
 		get_tree().change_scene_to_file(nextScenePath)
 		
 		animation.play_backwards("transition")
@@ -53,3 +54,14 @@ func _on_timer_timeout() -> void:
 	soundLeverPull.play()
 	if onLever:
 		$Label.visible = true
+
+
+func startMusic() -> void:
+	print("Next scene: ", nextScenePath)
+	if nextScenePath == "uid://cewqlvpyoluew":
+		print("Playing menu music")
+		MusicManager.playMenuMusic()
+	elif nextScenePath == "uid://d126xwa5j1d5":
+		MusicManager.playGameMusic()
+	elif nextScenePath == "uid://rehh6xxkwaew":
+		MusicManager.playCreditsMusic()

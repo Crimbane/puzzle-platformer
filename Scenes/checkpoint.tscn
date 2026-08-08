@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c8josd21gflyv"]
 
-[ext_resource type="Script" uid="uid://bro0dfa80r2iw" path="res://checkpoint.gd" id="1_lbcco"]
+[ext_resource type="Script" uid="uid://bro0dfa80r2iw" path="res://Scripts/checkpoint.gd" id="1_lbcco"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_t1yug"]
 font_size = 15

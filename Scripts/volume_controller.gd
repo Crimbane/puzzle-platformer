@@ -1,6 +1,6 @@
 extends Node
 
-@onready var music: AudioStreamPlayer = $Player/Music
+@onready var music: AudioStreamPlayer = MusicManager.get_node("Music Player")
 @onready var buttonSound1: AudioStreamPlayer2D = $"Button/Button Down"
 @onready var buttonSound2: AudioStreamPlayer2D = $"Button/Button Up"
 @export var soundVolumeBox: RigidBody2D

@@ -1,0 +1,49 @@
+[gd_scene format=4 uid="uid://rehh6xxkwaew"]
+
+[ext_resource type="Script" uid="uid://vgx5xpu2e7cj" path="res://Scripts/credits.gd" id="1_ccovl"]
+[ext_resource type="PackedScene" uid="uid://cq0hjewwabrwo" path="res://Scenes/tile_map_layer.tscn" id="1_gryuy"]
+[ext_resource type="Texture2D" uid="uid://cndiu7nqdp3rx" path="res://Assets/Art/Credits background.png" id="1_r18jl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_t1yug"]
+font_size = 40
+font_color = Color(0.9278493, 0.33290055, 0.6458, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fyjvv"]
+font_size = 50
+
+[node name="Credits" type="Control" unique_id=1583289519]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ccovl")
+
+[node name="TileMapLayer" parent="." unique_id=1070660664 instance=ExtResource("1_gryuy")]
+tile_map_data = PackedByteArray("AAAhAAAAAgAHAAIAAAAgAAAAAgAHAAIAAAAfAAAAAgAHAAIAAAAeAAAAAgAHAAIAAAAdAAAAAgAHAAIAAAAcAAAAAgAHAAIAAAAbAAAAAgAHAAIAAAAaAAAAAgAHAAIAAAA=")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1133861583]
+z_index = -1
+position = Vector2(961, 540)
+texture = ExtResource("1_r18jl")
+metadata/_edit_lock_ = true
+
+[node name="Made By" type="Label" parent="." unique_id=1468063357]
+layout_mode = 0
+offset_left = 747.0
+offset_top = 344.0
+offset_right = 912.0
+offset_bottom = 399.0
+text = "Made by"
+label_settings = SubResource("LabelSettings_t1yug")
+
+[node name="Names" type="Label" parent="Made By" unique_id=1379430373]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -459.5
+offset_top = 81.0
+offset_right = 458.5
+offset_bottom = 150.0
+grow_horizontal = 2
+text = "olem50 and x - change x to your name"
+label_settings = SubResource("LabelSettings_fyjvv")
