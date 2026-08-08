@@ -29,7 +29,7 @@ var inAirTimerStarted = false
 var onLever = false
 
 func _ready() -> void:
-	if VolumeSettings != null:
+	if "soundVolume" in VolumeSettings and "musicVolume" in VolumeSettings:
 		music.volume_db = VolumeSettings.musicVolume
 		soundKey.volume_db = VolumeSettings.soundVolume
 	if $"..".name == "Main Menu":

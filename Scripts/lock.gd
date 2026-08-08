@@ -5,7 +5,7 @@ extends Area2D
 
 
 func _ready() -> void:
-	if VolumeSettings != null:
+	if "soundVolume" in VolumeSettings:
 		audioSound.volume_db = VolumeSettings.soundVolume
 	body_entered.connect(_on_body_entered)
 

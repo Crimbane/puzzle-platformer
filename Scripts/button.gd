@@ -22,7 +22,7 @@ var entered = false
 
 
 func _ready() -> void:
-	if VolumeSettings != null:
+	if "soundVolume" in VolumeSettings:
 		soundButtonDown.volume_db = VolumeSettings.soundVolume
 		soundButtonUp.volume_db = VolumeSettings.soundVolume
 	updateSprite()

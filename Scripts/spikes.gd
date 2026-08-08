@@ -12,7 +12,7 @@ var spriteNumberSelector
 		updateSprite()
 
 func _ready() -> void:
-	if VolumeSettings != null:
+	if "soundVolume" in VolumeSettings:
 		soundBlood.volume_db = VolumeSettings.soundVolume
 		soundBloodBig.volume_db = VolumeSettings.soundVolume
 	body_entered.connect(_on_body_entered)

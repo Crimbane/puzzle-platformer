@@ -7,7 +7,7 @@ var doorOpenTimer = 0.5
 @onready var soundDoor: AudioStreamPlayer2D = $SoundDoor
 
 func _ready() -> void:
-	if VolumeSettings != null:
+	if "soundVolume" in VolumeSettings:
 		soundDoor.volume_db = VolumeSettings.soundVolume
 
 

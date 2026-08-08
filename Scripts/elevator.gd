@@ -11,7 +11,7 @@ var tween: Tween
 
 
 func _ready() -> void:
-	if VolumeSettings != null:
+	if "soundVolume" in VolumeSettings:
 		soundButton.volume_db = VolumeSettings.soundVolume
 		soundElevatorMoving.volume_db = VolumeSettings.soundVolume
 	$Area2D.body_entered.connect(callElevator)

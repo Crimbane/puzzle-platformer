@@ -12,7 +12,7 @@ var onLever = false
 
 
 func _ready() -> void:
-	if VolumeSettings != null:
+	if "soundVolume" in VolumeSettings:
 		soundLeverPull.volume_db = VolumeSettings.soundVolume
 	$Label.text = message
 	for box in boxes:
