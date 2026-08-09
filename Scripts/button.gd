@@ -4,6 +4,7 @@ extends Area2D
 #signal button_pressed(closedPosition, openedPosition)
 #signal button_unpressed(closedPosition, openedPosition)
 
+@export_multiline var message: String
 @export var platforms: Array[StaticBody2D]
 @export var doors: Array[AnimatableBody2D]
 var doorPositions: Array[Vector2]
@@ -26,7 +27,7 @@ func _ready() -> void:
 		soundButtonDown.volume_db = VolumeSettings.soundVolume
 		soundButtonUp.volume_db = VolumeSettings.soundVolume
 	updateSprite()
-	
+	$Label.text = message
 	for door in doors:
 		if door != null:
 			#self.button_pressed.connect(door._on_button_pressed)
@@ -43,6 +44,7 @@ func _on_body_entered(body: Node2D) -> void:
 				entered = true
 				soundButtonDown.play()
 				$AnimatedSprite2D.frame = 1
+				if message != "": $Label.visible = true
 				for door in doors:
 					if door != null:
 						var i = doors.find(door)
@@ -53,6 +55,7 @@ func _on_body_entered(body: Node2D) -> void:
 				entered = true
 				soundButtonDown.play()
 				$AnimatedSprite2D.frame = 1
+				if message != "": $Label.visible = true
 				for platform in platforms:
 					if platform != null:
 						platform.visible = false
@@ -67,6 +70,7 @@ func _on_body_exited(body: Node2D) -> void:
 				entered = false
 				soundButtonUp.play()
 				$AnimatedSprite2D.frame = 0
+				if message != "": $Label.visible = false
 				for door in doors:
 					if door != null:
 						var i = doors.find(door)
@@ -77,6 +81,7 @@ func _on_body_exited(body: Node2D) -> void:
 				entered = false
 				soundButtonUp.play()
 				$AnimatedSprite2D.frame = 0
+				if message != "": $Label.visible = false
 				for platform in platforms:
 					if platform != null:
 						platform.visible = true

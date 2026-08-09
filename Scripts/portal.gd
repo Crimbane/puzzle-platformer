@@ -1,7 +1,7 @@
 extends Area2D
 
 var portalPosition: Vector2
-var teleportTimer: = 5
+@export var teleportTimer: = 5
 var teleportCooldown: = 4
 
 var tween

@@ -1,9 +1,14 @@
+@tool
 extends Area2D
 
 # using change to packed scene can corrupt file when you use export packed scene
 
 @export var message: String
 @export_file("*.tscn") var nextScenePath: String
+@export_enum("Lever", "Area") var type: String:
+	set(value):
+		type = value
+		updateSprite()
 var onLever = false
 @onready var soundLeverPull: AudioStreamPlayer2D = $"Lever Pull"
 
@@ -14,12 +19,13 @@ func _ready() -> void:
 	$Label.text = message
 
 func _on_lever_interacted() -> void:
-	if onLever && $Timer.is_stopped():
-		$Timer.start()
-		$Lever.flip_h = true
-		$Label.visible = false
-		soundLeverPull.play()
-		call_deferred("loadNextScene")
+	if type == "Lever":
+		if onLever && $Timer.is_stopped():
+			$Timer.start()
+			$Lever.flip_h = true
+			$Label.visible = false
+			soundLeverPull.play()
+			call_deferred("loadNextScene")
 
 func loadNextScene() -> void:
 	if nextScenePath != "": 
@@ -41,6 +47,8 @@ func _on_body_entered(body: Node2D) -> void:
 		onLever = true
 		if $Timer.is_stopped():
 			$Label.visible = true
+	if type == "Area":
+		call_deferred("loadNextScene")
 
 
 func _on_body_exited(body: Node2D) -> void:
@@ -56,10 +64,16 @@ func _on_timer_timeout() -> void:
 		$Label.visible = true
 
 
+func updateSprite() -> void:
+	if type == "Area":
+		$Lever.visible = false
+	else:
+		$Lever.visible = true
+
+
 func startMusic() -> void:
 	print("Next scene: ", nextScenePath)
 	if nextScenePath == "uid://cewqlvpyoluew":
-		print("Playing menu music")
 		MusicManager.playMenuMusic()
 	elif nextScenePath == "uid://d126xwa5j1d5":
 		MusicManager.playGameMusic()

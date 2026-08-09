@@ -146,6 +146,10 @@ texture = ExtResource("10_tx1dd")
 position = Vector2(0, 62.5)
 target_position = Vector2(0, 10)
 
+[node name="CheckForCeiling" type="RayCast2D" parent="." unique_id=350575042]
+target_position = Vector2(0, -10)
+collision_mask = 2
+
 [node name="SoundKey" type="AudioStreamPlayer2D" parent="." unique_id=1132634672]
 stream = ExtResource("19_fs7ks")
 

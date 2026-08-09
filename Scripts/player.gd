@@ -23,7 +23,8 @@ var pushForce: = 3000
 var respawnPosition: Vector2
 var keysInInventory: = 0
 
-var crouch: = false
+var crouching: = false
+var holdingCrouch = false
 var inAir = false
 var inAirTimerStarted = false
 var onLever = false
@@ -53,7 +54,7 @@ func _process(_delta):
 			create_tween().tween_property($Camera2D, "offset", Vector2(0, 0), .5)
 			$AnimatedSprite2D.play("jump")
 	if not get_tree().paused:
-		if crouch == false and inAir == false:
+		if crouching == false and inAir == false:
 			$AnimatedSprite2D.offset.y = 0
 			$Sprite2D.offset.y = 0
 			if velocity.x > 0 or Input.is_action_pressed("Move Right"):
@@ -64,7 +65,7 @@ func _process(_delta):
 				$AnimatedSprite2D.flip_h = true
 			else:
 				$AnimatedSprite2D.animation = "idle"
-		elif crouch == true:
+		elif crouching == true:
 			$AnimatedSprite2D.offset.y = 31.5
 			$Sprite2D.offset.y = 155 * 2
 			
@@ -104,16 +105,21 @@ func _physics_process(delta: float) -> void:
 			
 		
 		if Input.is_action_just_pressed("Crouch"):
+			holdingCrouch = true
+			
 			$StandingCollision.disabled = true
-			crouch = true
+			crouching = true
 			$Sprite2D.scale *= 0.5
 			currentSpeed = CROUCH_SPEED 
 		
 		if Input.is_action_just_released("Crouch"):
-			$StandingCollision.disabled = false
-			crouch = false
-			$Sprite2D.scale *= 2.0
-			currentSpeed = WALK_SPEED
+			holdingCrouch = false
+			
+			if crouching && not $CheckForCeiling.is_colliding():
+				$StandingCollision.disabled = false
+				crouching = false
+				$Sprite2D.scale *= 2.0
+				currentSpeed = WALK_SPEED
 		
 		if Input.is_action_just_pressed("Go Down"):
 			var col = $CheckForPlatform.get_collider()
@@ -127,10 +133,16 @@ func _physics_process(delta: float) -> void:
 			velocity.x = direction * WALK_SPEED
 		else:
 			velocity.x = move_toward(velocity.x, 0, WALK_SPEED)
-
+		
 		move_and_slide()
 		
 		if body.move_and_slide():
+			if not holdingCrouch && crouching && not $CheckForCeiling.is_colliding():
+				$StandingCollision.disabled = false
+				crouching = false
+				$Sprite2D.scale *= 2.0
+				currentSpeed = WALK_SPEED
+			
 			for i in body.get_slide_collision_count():
 				var col = body.get_slide_collision(i)
 				if col.get_collider() is RigidBody2D:
