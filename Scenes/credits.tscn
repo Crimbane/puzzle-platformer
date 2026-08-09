@@ -23,8 +23,8 @@ grow_vertical = 2
 script = ExtResource("1_ccovl")
 
 [node name="TileMapLayer" parent="." unique_id=1070660664 instance=ExtResource("1_gryuy")]
-visible = false
-tile_map_data = PackedByteArray("AAAhAAAAAgAHAAIAAAAgAAAAAgAHAAIAAAAfAAAAAgAHAAIAAAAeAAAAAgAHAAIAAAAdAAAAAgAHAAIAAAAcAAAAAgAHAAIAAAAbAAAAAgAHAAIAAAAaAAAAAgAHAAIAAAA=")
+position = Vector2(0, 3.98)
+tile_map_data = PackedByteArray("AAD8/+//AgAHAAIAAAD9/+//AgAHAAIAAAD+/+//AgAHAAIAAAD//+//AgAHAAIAAAAAAO//AgAHAAIAAAABAO//AgAHAAIAAAACAO//AgAHAAIAAAADAO//AgAHAAIAAAA=")
 metadata/_edit_lock_ = true
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1133861583]

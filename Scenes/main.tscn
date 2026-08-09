@@ -23,6 +23,9 @@
 [ext_resource type="Texture2D" uid="uid://sw7273i5v3l3" path="res://Assets/Art/Chest.png" id="21_ee4r6"]
 [ext_resource type="PackedScene" uid="uid://5rieeta81ud7" path="res://Scenes/coins.tscn" id="22_gt3je"]
 [ext_resource type="PackedScene" uid="uid://c8josd21gflyv" path="res://Scenes/checkpoint.tscn" id="23_gt3je"]
+[ext_resource type="Texture2D" uid="uid://cmbh7tpkxwt1i" path="res://Assets/Art/Vines.png" id="24_3pmx8"]
+[ext_resource type="Texture2D" uid="uid://dcybqpw7kfycp" path="res://Assets/Art/Vines end.png" id="25_cbgmd"]
+[ext_resource type="Texture2D" uid="uid://eqcxp8ydbqao" path="res://Assets/Art/Mushroom.png" id="26_1w6v2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fjc7g"]
 size = Vector2(32, 160)
@@ -294,6 +297,14 @@ position = Vector2(6179, 636)
 [node name="Coins4" parent="Groups/Coins" unique_id=968495824 instance=ExtResource("22_gt3je")]
 position = Vector2(6134, 627)
 
+[node name="Decorations" type="Node" parent="Groups" unique_id=1358447883]
+
+[node name="Vines" type="Sprite2D" parent="Groups/Decorations" unique_id=948002797]
+z_index = 1
+position = Vector2(3567, 49)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("24_3pmx8")
+
 [node name="Label" parent="." unique_id=33634530 instance=ExtResource("1_bo1nx")]
 visible = false
 offset_left = 6028.0
@@ -386,6 +397,72 @@ finalDoor = NodePath("../Final Door")
 
 [node name="Checkpoint" parent="." unique_id=973812139 instance=ExtResource("23_gt3je")]
 position = Vector2(4148, 2580)
+
+[node name="VinesEnd" type="Sprite2D" parent="." unique_id=873980368]
+position = Vector2(3567, 121)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("25_cbgmd")
+
+[node name="Vines" type="Sprite2D" parent="." unique_id=1358737094]
+position = Vector2(3540, 49)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("24_3pmx8")
+hframes = 3
+
+[node name="VinesEnd2" type="Sprite2D" parent="." unique_id=177018917]
+position = Vector2(3540, 114)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("25_cbgmd")
+hframes = 3
+
+[node name="Vines2" type="Sprite2D" parent="." unique_id=1000015925]
+position = Vector2(3513, 24)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("24_3pmx8")
+vframes = 2
+
+[node name="Vines3" type="Sprite2D" parent="." unique_id=514979218]
+position = Vector2(3300, 241)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("24_3pmx8")
+
+[node name="Vines4" type="Sprite2D" parent="." unique_id=855709879]
+position = Vector2(3262, 240)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("24_3pmx8")
+
+[node name="Vines5" type="Sprite2D" parent="." unique_id=1450427918]
+position = Vector2(3059, 368)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("24_3pmx8")
+vframes = 3
+
+[node name="VinesEnd3" type="Sprite2D" parent="." unique_id=2076720148]
+position = Vector2(3513, 69)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("25_cbgmd")
+
+[node name="VinesEnd4" type="Sprite2D" parent="." unique_id=1043753635]
+position = Vector2(3301, 311)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("25_cbgmd")
+flip_h = true
+
+[node name="VinesEnd5" type="Sprite2D" parent="." unique_id=664321087]
+position = Vector2(3263, 311)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("25_cbgmd")
+
+[node name="VinesEnd6" type="Sprite2D" parent="." unique_id=482043071]
+position = Vector2(3058, 406)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("25_cbgmd")
+flip_h = true
+
+[node name="Mushroom" type="Sprite2D" parent="." unique_id=950260478]
+position = Vector2(3558, 300)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("26_1w6v2")
 
 [connection signal="body_entered" from="Groups/Spikes/Spikes1" to="Player" method="_on_spikes_body_entered"]
 [connection signal="leverInteract" from="Player" to="FinalRoomLever" method="_on_lever_interacted"]
