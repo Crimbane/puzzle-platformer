@@ -28,7 +28,7 @@ func _process(_delta: float) -> void:
 		VolumeSettings.musicVolume = linear_to_db(musicVolumeRemap)
 		soundVolumeLabel.text = "Sound Volume: " + str(int(snapped(db_to_linear(VolumeSettings.soundVolume), .01) * 100 / 5))
 		musicVolumeLabel.text = "Music Volume: " + str(int(snapped(db_to_linear(VolumeSettings.musicVolume), .01) * 100 * 1.25))
-		print(db_to_linear(-8))
+		
 		if music && buttonSound1 && buttonSound2:
 			buttonSound1.volume_db = VolumeSettings.soundVolume
 			buttonSound2.volume_db = VolumeSettings.soundVolume
