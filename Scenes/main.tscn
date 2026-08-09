@@ -9,12 +9,16 @@
 [ext_resource type="PackedScene" uid="uid://f1ffs78yx6gk" path="res://Scenes/door.tscn" id="7_344ge"]
 [ext_resource type="Texture2D" uid="uid://b7d5ojl80umtn" path="res://Assets/Level design/image2.png" id="7_fdnlq"]
 [ext_resource type="PackedScene" uid="uid://c2nfgdiyvhbbq" path="res://Scenes/elevator.tscn" id="11_6iyac"]
+[ext_resource type="Texture2D" uid="uid://bbh6108kd6jl8" path="res://Assets/Art/Vines end 2.png" id="11_7k868"]
 [ext_resource type="PackedScene" uid="uid://du40u4yaavxrc" path="res://Scenes/key.tscn" id="11_d1ilt"]
 [ext_resource type="Script" uid="uid://ctwrgfi0jjep8" path="res://Scripts/elevator.gd" id="11_fdnlq"]
 [ext_resource type="PackedScene" uid="uid://d2bmvbksqq2fv" path="res://Scenes/lock.tscn" id="12_6iyac"]
+[ext_resource type="Texture2D" uid="uid://dbh4g6147prno" path="res://Assets/Art/Vines end 3.png" id="12_hpc6h"]
 [ext_resource type="PackedScene" uid="uid://dxq2pjg1ba575" path="res://Scenes/portal.tscn" id="13_fdnlq"]
 [ext_resource type="PackedScene" uid="uid://u6ix6f1b455b" path="res://Scenes/lever.tscn" id="13_h1bgf"]
 [ext_resource type="Texture2D" uid="uid://c4yb8b7bjr6c4" path="res://Assets/Art/Tiles/Background.png" id="13_jkdf5"]
+[ext_resource type="Texture2D" uid="uid://c58ls6ab01bff" path="res://Assets/Art/Vines ground.png" id="13_kltya"]
+[ext_resource type="Texture2D" uid="uid://c8cqc6tf403r" path="res://Assets/Art/Vines ground 2.png" id="14_e08e2"]
 [ext_resource type="PackedScene" uid="uid://bwghxjlasmyb8" path="res://Scenes/wooden_platform.tscn" id="16_k12tt"]
 [ext_resource type="Texture2D" uid="uid://da81fcqu86xsc" path="res://Assets/Art/Door closed.png" id="17_b3802"]
 [ext_resource type="Texture2D" uid="uid://vloykh261yim" path="res://Assets/Art/Door open.png" id="18_fevyy"]
@@ -299,11 +303,1872 @@ position = Vector2(6134, 627)
 
 [node name="Decorations" type="Node" parent="Groups" unique_id=1358447883]
 
-[node name="Vines" type="Sprite2D" parent="Groups/Decorations" unique_id=948002797]
+[node name="VineBatch5" type="Sprite2D" parent="Groups/Decorations" unique_id=948002797]
 z_index = 1
-position = Vector2(3567, 49)
+position = Vector2(3546, 49)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("24_3pmx8")
+metadata/_edit_group_ = true
+
+[node name="VinesEnd9" type="Sprite2D" parent="Groups/Decorations/VineBatch5" unique_id=484259576]
+position = Vector2(-142.5, -67.499985)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("25_cbgmd")
+flip_h = true
+
+[node name="VinesEnd3" type="Sprite2D" parent="Groups/Decorations/VineBatch5" unique_id=2076720148]
+position = Vector2(-82.5, 50)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("25_cbgmd")
+
+[node name="Vines3" type="Sprite2D" parent="Groups/Decorations/VineBatch5" unique_id=1000015925]
+position = Vector2(-82.5, -62.499992)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("24_3pmx8")
+vframes = 2
+
+[node name="VinesEnd2" type="Sprite2D" parent="Groups/Decorations/VineBatch5" unique_id=177018917]
+position = Vector2(62.5, 55)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("25_cbgmd")
+hframes = 3
+
+[node name="Vines2" type="Sprite2D" parent="Groups/Decorations/VineBatch5" unique_id=1358737094]
+position = Vector2(62.5, -62.499973)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("24_3pmx8")
+hframes = 3
+vframes = 2
+
+[node name="VinesEnd" type="Sprite2D" parent="Groups/Decorations/VineBatch5" unique_id=873980368]
+position = Vector2(0, 177.49998)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("25_cbgmd")
+
+[node name="VineBatch8" type="Sprite2D" parent="Groups/Decorations" unique_id=1509135256]
+position = Vector2(2227, 368)
+scale = Vector2(0.39999998, 0.39999998)
+texture = ExtResource("24_3pmx8")
+vframes = 3
+metadata/_edit_group_ = true
+
+[node name="VinesEnd12" type="Sprite2D" parent="Groups/Decorations/VineBatch8" unique_id=1182562584]
+position = Vector2(85, 15)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("25_cbgmd")
+flip_h = true
+
+[node name="VinesEnd11" type="Sprite2D" parent="Groups/Decorations/VineBatch8" unique_id=752446361]
+position = Vector2(0, 92.49994)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("25_cbgmd")
+
+[node name="VineBatch6" type="Sprite2D" parent="Groups/Decorations" unique_id=514979218]
+position = Vector2(3297, 208)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("24_3pmx8")
+vframes = 3
+metadata/_edit_group_ = true
+
+[node name="VinesEnd10" type="Sprite2D" parent="Groups/Decorations/VineBatch6" unique_id=1885797424]
+position = Vector2(60, 15.000061)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("25_cbgmd")
+
+[node name="VinesEnd8" type="Sprite2D" parent="Groups/Decorations/VineBatch6" unique_id=476089857]
+position = Vector2(-130, 15)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("25_cbgmd")
+
+[node name="VinesEnd5" type="Sprite2D" parent="Groups/Decorations/VineBatch6" unique_id=664321087]
+position = Vector2(-87.5, 137.5)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("25_cbgmd")
+
+[node name="VinesEnd4" type="Sprite2D" parent="Groups/Decorations/VineBatch6" unique_id=1043753635]
+position = Vector2(5, 95)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("25_cbgmd")
+flip_h = true
+
+[node name="Vines5" type="Sprite2D" parent="Groups/Decorations/VineBatch6" unique_id=855709879]
+position = Vector2(-87.5, 20)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("24_3pmx8")
+vframes = 2
+
+[node name="VineBatch31" type="Sprite2D" parent="Groups/Decorations" unique_id=842810228]
+position = Vector2(1909, 111)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("24_3pmx8")
+vframes = 3
+metadata/_edit_group_ = true
+
+[node name="VinesEnd10" type="Sprite2D" parent="Groups/Decorations/VineBatch31" unique_id=1501483564]
+position = Vector2(60, 15.000061)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("25_cbgmd")
+
+[node name="VinesEnd8" type="Sprite2D" parent="Groups/Decorations/VineBatch31" unique_id=1273461768]
+position = Vector2(-130, 15)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("25_cbgmd")
+
+[node name="VinesEnd5" type="Sprite2D" parent="Groups/Decorations/VineBatch31" unique_id=1175092840]
+position = Vector2(-87.5, 137.5)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("25_cbgmd")
+
+[node name="VinesEnd4" type="Sprite2D" parent="Groups/Decorations/VineBatch31" unique_id=1316189116]
+position = Vector2(5, 95)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("25_cbgmd")
+flip_h = true
+
+[node name="Vines5" type="Sprite2D" parent="Groups/Decorations/VineBatch31" unique_id=956317567]
+position = Vector2(-87.5, 20)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("24_3pmx8")
+vframes = 2
+
+[node name="VineBatch7" type="Sprite2D" parent="Groups/Decorations" unique_id=1450427918]
+position = Vector2(3058, 368)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("24_3pmx8")
+vframes = 3
+metadata/_edit_group_ = true
+
+[node name="VinesEnd7" type="Sprite2D" parent="Groups/Decorations/VineBatch7" unique_id=1508143065]
+position = Vector2(47.49951, 17.5)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("25_cbgmd")
+flip_h = true
+
+[node name="VinesEnd6" type="Sprite2D" parent="Groups/Decorations/VineBatch7" unique_id=482043071]
+position = Vector2(0, 94.99994)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("25_cbgmd")
+flip_h = true
+
+[node name="VineBatch32" type="Sprite2D" parent="Groups/Decorations" unique_id=1379947752]
+position = Vector2(908.00024, 204.00002)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("24_3pmx8")
+vframes = 3
+metadata/_edit_group_ = true
+
+[node name="VinesEnd7" type="Sprite2D" parent="Groups/Decorations/VineBatch32" unique_id=521095278]
+position = Vector2(47.49951, 17.5)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("25_cbgmd")
+flip_h = true
+
+[node name="VinesEnd6" type="Sprite2D" parent="Groups/Decorations/VineBatch32" unique_id=2124603939]
+position = Vector2(0, 94.99994)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("25_cbgmd")
+flip_h = true
+
+[node name="MushroomBatch" type="Sprite2D" parent="Groups/Decorations" unique_id=950260478]
+position = Vector2(3548, 300)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("26_1w6v2")
+metadata/_edit_group_ = true
+
+[node name="Mushroom4" type="Sprite2D" parent="Groups/Decorations/MushroomBatch" unique_id=667915806]
+position = Vector2(42.5, 25)
+scale = Vector2(0.49999997, 0.49999997)
+texture = ExtResource("26_1w6v2")
+flip_h = true
+
+[node name="MushroomBatch5" type="Sprite2D" parent="Groups/Decorations" unique_id=145336082]
+position = Vector2(3099, 107.99999)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("26_1w6v2")
+metadata/_edit_group_ = true
+
+[node name="Mushroom4" type="Sprite2D" parent="Groups/Decorations/MushroomBatch5" unique_id=300253765]
+position = Vector2(42.5, 25)
+scale = Vector2(0.49999997, 0.49999997)
+texture = ExtResource("26_1w6v2")
+flip_h = true
+
+[node name="MushroomBatch3" type="Sprite2D" parent="Groups/Decorations" unique_id=1233112154]
+position = Vector2(467, 524)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("26_1w6v2")
+metadata/_edit_group_ = true
+
+[node name="Mushroom4" type="Sprite2D" parent="Groups/Decorations/MushroomBatch3" unique_id=1409798502]
+position = Vector2(42.5, 25)
+scale = Vector2(0.49999997, 0.49999997)
+texture = ExtResource("26_1w6v2")
+flip_h = true
+
+[node name="MushroomBatch2" type="Sprite2D" parent="Groups/Decorations" unique_id=1224929478]
+position = Vector2(2404, 470)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("26_1w6v2")
+flip_h = true
+metadata/_edit_group_ = true
+
+[node name="Mushroom3" type="Sprite2D" parent="Groups/Decorations/MushroomBatch2" unique_id=1338571601]
+position = Vector2(-110, -100)
+scale = Vector2(2.9999998, 2.9999998)
+texture = ExtResource("26_1w6v2")
+flip_h = true
+
+[node name="Mushroom2" type="Sprite2D" parent="Groups/Decorations/MushroomBatch2" unique_id=270613984]
+position = Vector2(-265, -50)
+scale = Vector2(1.9999999, 1.9999999)
+texture = ExtResource("26_1w6v2")
+
+[node name="MushroomBatch4" type="Sprite2D" parent="Groups/Decorations" unique_id=1346851240]
+position = Vector2(3188, 118)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("26_1w6v2")
+flip_h = true
+metadata/_edit_group_ = true
+
+[node name="Mushroom3" type="Sprite2D" parent="Groups/Decorations/MushroomBatch4" unique_id=1189718185]
+position = Vector2(-110, -100)
+scale = Vector2(2.9999998, 2.9999998)
+texture = ExtResource("26_1w6v2")
+
+[node name="Mushroom2" type="Sprite2D" parent="Groups/Decorations/MushroomBatch4" unique_id=29567082]
+position = Vector2(-265, -50)
+scale = Vector2(1.9999999, 1.9999999)
+texture = ExtResource("26_1w6v2")
+flip_h = true
+
+[node name="VineBatch9" type="Sprite2D" parent="Groups/Decorations" unique_id=1178591398]
+z_index = 1
+position = Vector2(3467.0002, 534.00006)
+rotation = -1.134464
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+flip_h = true
+metadata/_edit_group_ = true
+
+[node name="VinesEnd4" type="Sprite2D" parent="Groups/Decorations/VineBatch9" unique_id=1391369899]
+z_index = 1
+position = Vector2(9.893677, -89.20703)
+rotation = -2.364921
+scale = Vector2(0.8333333, 0.8333333)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd6" type="Sprite2D" parent="Groups/Decorations/VineBatch9" unique_id=1694373184]
+z_index = 1
+position = Vector2(-41.345825, -124.15967)
+rotation = -2.0071285
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd5" type="Sprite2D" parent="Groups/Decorations/VineBatch9" unique_id=1429024849]
+z_index = 1
+position = Vector2(30.609253, -1.4013672)
+rotation = -0.4450589
+scale = Vector2(0.83333325, 0.83333325)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+frame = 1
+
+[node name="VinesEnd3" type="Sprite2D" parent="Groups/Decorations/VineBatch9" unique_id=1805845681]
+z_index = 1
+position = Vector2(-44.374878, -95.1626)
+rotation = 1.134464
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("12_hpc6h")
+
+[node name="VinesGround" type="Sprite2D" parent="Groups/Decorations/VineBatch9" unique_id=530906046]
+position = Vector2(11.998487, -57.08643)
+rotation = 2.7052605
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("13_kltya")
+
+[node name="VinesGround2" type="Sprite2D" parent="Groups/Decorations/VineBatch9" unique_id=1630742588]
+z_index = 1
+position = Vector2(-5.0078125, -89.61328)
+rotation = 2.7052605
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("14_e08e2")
+vframes = 2
+
+[node name="VinesGround3" type="Sprite2D" parent="Groups/Decorations/VineBatch9" unique_id=1693482371]
+z_index = 1
+position = Vector2(-8.427734, -100.890625)
+rotation = -0.5235987
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_e08e2")
+vframes = 3
+
+[node name="VinesEnd" type="Sprite2D" parent="Groups/Decorations/VineBatch9" unique_id=1646338935]
+position = Vector2(-91.30261, -69.60205)
+rotation = 1.134464
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("25_cbgmd")
+
+[node name="VineBatch24" type="Sprite2D" parent="Groups/Decorations" unique_id=433893084]
+z_index = 1
+position = Vector2(3114, 150.00006)
+rotation = -1.134464
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+flip_h = true
+metadata/_edit_group_ = true
+
+[node name="VinesEnd4" type="Sprite2D" parent="Groups/Decorations/VineBatch24" unique_id=1801611282]
+z_index = 1
+position = Vector2(9.893677, -89.20703)
+rotation = -2.364921
+scale = Vector2(0.8333333, 0.8333333)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd6" type="Sprite2D" parent="Groups/Decorations/VineBatch24" unique_id=674605351]
+z_index = 1
+position = Vector2(-41.345825, -124.15967)
+rotation = -2.0071285
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd5" type="Sprite2D" parent="Groups/Decorations/VineBatch24" unique_id=75390040]
+z_index = 1
+position = Vector2(30.609253, -1.4013672)
+rotation = -0.4450589
+scale = Vector2(0.83333325, 0.83333325)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+frame = 1
+
+[node name="VinesEnd3" type="Sprite2D" parent="Groups/Decorations/VineBatch24" unique_id=189914158]
+z_index = 1
+position = Vector2(-44.374878, -95.1626)
+rotation = 1.134464
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("12_hpc6h")
+
+[node name="VinesGround" type="Sprite2D" parent="Groups/Decorations/VineBatch24" unique_id=610527012]
+position = Vector2(11.998487, -57.08643)
+rotation = 2.7052605
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("13_kltya")
+
+[node name="VinesGround2" type="Sprite2D" parent="Groups/Decorations/VineBatch24" unique_id=1712340558]
+z_index = 1
+position = Vector2(-5.0078125, -89.61328)
+rotation = 2.7052605
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("14_e08e2")
+vframes = 2
+
+[node name="VinesGround3" type="Sprite2D" parent="Groups/Decorations/VineBatch24" unique_id=1779373663]
+z_index = 1
+position = Vector2(-8.427734, -100.890625)
+rotation = -0.5235987
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_e08e2")
+vframes = 3
+
+[node name="VinesEnd" type="Sprite2D" parent="Groups/Decorations/VineBatch24" unique_id=432751314]
+position = Vector2(-141.14941, -46.357662)
+rotation = 1.134464
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("25_cbgmd")
+
+[node name="VinesEnd2" type="Sprite2D" parent="Groups/Decorations/VineBatch24" unique_id=1108716431]
+position = Vector2(-80.92434, -94.66966)
+rotation = 1.134464
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("25_cbgmd")
+flip_h = true
+flip_v = true
+hframes = 3
+
+[node name="VinesEnd7" type="Sprite2D" parent="Groups/Decorations/VineBatch24" unique_id=407089186]
+position = Vector2(-102.674095, -90.04448)
+rotation = 1.134464
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("25_cbgmd")
+hframes = 3
+
+[node name="VineBatch10" type="Sprite2D" parent="Groups/Decorations" unique_id=1825437605]
+z_index = 1
+position = Vector2(3564, 342.00006)
+rotation = -1.134464
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+flip_h = true
+metadata/_edit_group_ = true
+
+[node name="VinesEnd4" type="Sprite2D" parent="Groups/Decorations/VineBatch10" unique_id=1790226313]
+z_index = 1
+position = Vector2(9.893677, -89.20703)
+rotation = -2.364921
+scale = Vector2(0.8333333, 0.8333333)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd6" type="Sprite2D" parent="Groups/Decorations/VineBatch10" unique_id=2011136450]
+z_index = 1
+position = Vector2(-78.60768, -97.58892)
+rotation = 1.2217305
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd5" type="Sprite2D" parent="Groups/Decorations/VineBatch10" unique_id=1629407350]
+z_index = 1
+position = Vector2(30.609253, -1.4013672)
+rotation = -0.4450589
+scale = Vector2(0.83333325, 0.83333325)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+frame = 1
+
+[node name="VinesEnd3" type="Sprite2D" parent="Groups/Decorations/VineBatch10" unique_id=1008282926]
+z_index = 1
+position = Vector2(-44.374878, -95.1626)
+rotation = 1.134464
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("12_hpc6h")
+
+[node name="VinesGround" type="Sprite2D" parent="Groups/Decorations/VineBatch10" unique_id=1224228749]
+position = Vector2(28.903389, -20.83375)
+rotation = 2.7052605
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("13_kltya")
+vframes = 2
+
+[node name="VinesGround2" type="Sprite2D" parent="Groups/Decorations/VineBatch10" unique_id=371034869]
+z_index = 1
+position = Vector2(-5.0078125, -89.61328)
+rotation = 2.7052605
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("14_e08e2")
+vframes = 2
+
+[node name="VinesGround3" type="Sprite2D" parent="Groups/Decorations/VineBatch10" unique_id=1585597478]
+z_index = 1
+position = Vector2(-8.427734, -100.890625)
+rotation = -0.5235987
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_e08e2")
+vframes = 3
+
+[node name="VinesEnd2" type="Sprite2D" parent="Groups/Decorations/VineBatch10" unique_id=285221003]
+position = Vector2(-62.500946, -86.709915)
+rotation = 1.134464
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+flip_h = true
+
+[node name="VinesEnd7" type="Sprite2D" parent="Groups/Decorations/VineBatch10" unique_id=1004960543]
+position = Vector2(-38.544495, -62.940796)
+rotation = 1.6755161
+texture = ExtResource("11_7k868")
+hframes = 2
+
+[node name="VinesEnd8" type="Sprite2D" parent="Groups/Decorations/VineBatch10" unique_id=1027650364]
+position = Vector2(-24.449093, -60.31878)
+rotation = 0.9948377
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VineBatch12" type="Sprite2D" parent="Groups/Decorations" unique_id=381135525]
+z_index = 1
+position = Vector2(3028.0002, 331.00015)
+rotation = 2.0158553
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+flip_h = true
+metadata/_edit_group_ = true
+
+[node name="VinesEnd4" type="Sprite2D" parent="Groups/Decorations/VineBatch12" unique_id=1387749049]
+z_index = 1
+position = Vector2(9.893677, -89.20703)
+rotation = -2.364921
+scale = Vector2(0.8333333, 0.8333333)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd6" type="Sprite2D" parent="Groups/Decorations/VineBatch12" unique_id=1589949556]
+z_index = 1
+position = Vector2(-78.60768, -97.58892)
+rotation = 1.2217305
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd5" type="Sprite2D" parent="Groups/Decorations/VineBatch12" unique_id=1593408823]
+z_index = 1
+position = Vector2(30.609253, -1.4013672)
+rotation = -0.4450589
+scale = Vector2(0.83333325, 0.83333325)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+frame = 1
+
+[node name="VinesEnd3" type="Sprite2D" parent="Groups/Decorations/VineBatch12" unique_id=1133190034]
+z_index = 1
+position = Vector2(-44.374878, -95.1626)
+rotation = 1.134464
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("12_hpc6h")
+
+[node name="VinesGround" type="Sprite2D" parent="Groups/Decorations/VineBatch12" unique_id=278166216]
+position = Vector2(28.903389, -20.83375)
+rotation = 2.7052605
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("13_kltya")
+vframes = 2
+
+[node name="VinesGround2" type="Sprite2D" parent="Groups/Decorations/VineBatch12" unique_id=1528443481]
+z_index = 1
+position = Vector2(-5.0078125, -89.61328)
+rotation = 2.7052605
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("14_e08e2")
+vframes = 2
+
+[node name="VinesGround3" type="Sprite2D" parent="Groups/Decorations/VineBatch12" unique_id=910447209]
+z_index = 1
+position = Vector2(-8.427734, -100.890625)
+rotation = -0.5235987
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_e08e2")
+vframes = 3
+
+[node name="VinesEnd2" type="Sprite2D" parent="Groups/Decorations/VineBatch12" unique_id=426774637]
+position = Vector2(-62.500946, -86.709915)
+rotation = 1.134464
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+flip_h = true
+
+[node name="VinesEnd7" type="Sprite2D" parent="Groups/Decorations/VineBatch12" unique_id=1696777257]
+position = Vector2(-38.544495, -62.940796)
+rotation = 1.6755161
+texture = ExtResource("11_7k868")
+hframes = 2
+
+[node name="VinesEnd8" type="Sprite2D" parent="Groups/Decorations/VineBatch12" unique_id=972889610]
+position = Vector2(-24.449093, -60.31878)
+rotation = 0.9948377
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VineBatch17" type="Sprite2D" parent="Groups/Decorations" unique_id=612000809]
+z_index = 1
+position = Vector2(2200.0002, 330.00006)
+rotation = 2.0158553
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+flip_h = true
+metadata/_edit_group_ = true
+
+[node name="VinesEnd4" type="Sprite2D" parent="Groups/Decorations/VineBatch17" unique_id=828105563]
+z_index = 1
+position = Vector2(9.893677, -89.20703)
+rotation = -2.364921
+scale = Vector2(0.8333333, 0.8333333)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd6" type="Sprite2D" parent="Groups/Decorations/VineBatch17" unique_id=730033093]
+z_index = 1
+position = Vector2(-34.510056, -68.48025)
+rotation = 1.2217305
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd5" type="Sprite2D" parent="Groups/Decorations/VineBatch17" unique_id=40838233]
+z_index = 1
+position = Vector2(30.609253, -1.4013672)
+rotation = -0.4450589
+scale = Vector2(0.83333325, 0.83333325)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+frame = 1
+
+[node name="VinesEnd3" type="Sprite2D" parent="Groups/Decorations/VineBatch17" unique_id=1810022708]
+z_index = 1
+position = Vector2(-44.374878, -95.1626)
+rotation = 1.134464
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("12_hpc6h")
+
+[node name="VinesGround2" type="Sprite2D" parent="Groups/Decorations/VineBatch17" unique_id=392463786]
+z_index = 1
+position = Vector2(-5.0078125, -89.61328)
+rotation = 2.7052605
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("14_e08e2")
+vframes = 2
+
+[node name="VinesGround3" type="Sprite2D" parent="Groups/Decorations/VineBatch17" unique_id=1126676757]
+z_index = 1
+position = Vector2(-8.427734, -100.890625)
+rotation = -0.5235987
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_e08e2")
+vframes = 3
+
+[node name="VinesEnd2" type="Sprite2D" parent="Groups/Decorations/VineBatch17" unique_id=800703800]
+position = Vector2(-54.18496, -132.95769)
+rotation = 1.8936822
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+
+[node name="VinesEnd7" type="Sprite2D" parent="Groups/Decorations/VineBatch17" unique_id=1471254740]
+position = Vector2(-38.544495, -62.940796)
+rotation = 1.6755161
+texture = ExtResource("11_7k868")
+hframes = 2
+
+[node name="VinesEnd8" type="Sprite2D" parent="Groups/Decorations/VineBatch17" unique_id=821799773]
+position = Vector2(-24.449093, -60.31878)
+rotation = 0.9948377
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VineBatch30" type="Sprite2D" parent="Groups/Decorations" unique_id=668151813]
+z_index = 1
+position = Vector2(2855.0002, 693.99994)
+rotation = 5.148721
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+flip_h = true
+metadata/_edit_group_ = true
+
+[node name="VinesEnd4" type="Sprite2D" parent="Groups/Decorations/VineBatch30" unique_id=30968249]
+z_index = 1
+position = Vector2(9.893677, -89.20703)
+rotation = -2.364921
+scale = Vector2(0.8333333, 0.8333333)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd6" type="Sprite2D" parent="Groups/Decorations/VineBatch30" unique_id=787397178]
+z_index = 1
+position = Vector2(-34.510056, -68.48025)
+rotation = 1.2217305
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd5" type="Sprite2D" parent="Groups/Decorations/VineBatch30" unique_id=1257731567]
+z_index = 1
+position = Vector2(30.609253, -1.4013672)
+rotation = -0.4450589
+scale = Vector2(0.83333325, 0.83333325)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+frame = 1
+
+[node name="VinesEnd3" type="Sprite2D" parent="Groups/Decorations/VineBatch30" unique_id=784398842]
+z_index = 1
+position = Vector2(-44.374878, -95.1626)
+rotation = 1.134464
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("12_hpc6h")
+
+[node name="VinesGround2" type="Sprite2D" parent="Groups/Decorations/VineBatch30" unique_id=1643397395]
+z_index = 1
+position = Vector2(-5.0078125, -89.61328)
+rotation = 2.7052605
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("14_e08e2")
+vframes = 2
+
+[node name="VinesGround3" type="Sprite2D" parent="Groups/Decorations/VineBatch30" unique_id=777197677]
+z_index = 1
+position = Vector2(-8.427734, -100.890625)
+rotation = -0.5235987
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_e08e2")
+vframes = 3
+
+[node name="VinesEnd2" type="Sprite2D" parent="Groups/Decorations/VineBatch30" unique_id=568860378]
+position = Vector2(-54.18496, -132.95769)
+rotation = 1.8936822
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+
+[node name="VinesEnd7" type="Sprite2D" parent="Groups/Decorations/VineBatch30" unique_id=1177102745]
+position = Vector2(-38.544495, -62.940796)
+rotation = 1.6755161
+texture = ExtResource("11_7k868")
+hframes = 2
+
+[node name="VinesEnd8" type="Sprite2D" parent="Groups/Decorations/VineBatch30" unique_id=803888079]
+position = Vector2(-24.449093, -60.31878)
+rotation = 0.9948377
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VineBatch21" type="Sprite2D" parent="Groups/Decorations" unique_id=262554934]
+z_index = 1
+position = Vector2(880.00006, 169)
+rotation = 2.0158553
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+flip_h = true
+metadata/_edit_group_ = true
+
+[node name="VinesEnd4" type="Sprite2D" parent="Groups/Decorations/VineBatch21" unique_id=1211129225]
+z_index = 1
+position = Vector2(9.893677, -89.20703)
+rotation = -2.364921
+scale = Vector2(0.8333333, 0.8333333)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd6" type="Sprite2D" parent="Groups/Decorations/VineBatch21" unique_id=1546163777]
+z_index = 1
+position = Vector2(-34.510056, -68.48025)
+rotation = 1.2217305
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd5" type="Sprite2D" parent="Groups/Decorations/VineBatch21" unique_id=1590330047]
+z_index = 1
+position = Vector2(30.609253, -1.4013672)
+rotation = -0.4450589
+scale = Vector2(0.83333325, 0.83333325)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+frame = 1
+
+[node name="VinesEnd3" type="Sprite2D" parent="Groups/Decorations/VineBatch21" unique_id=62497513]
+z_index = 1
+position = Vector2(-44.374878, -95.1626)
+rotation = 1.134464
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("12_hpc6h")
+
+[node name="VinesGround2" type="Sprite2D" parent="Groups/Decorations/VineBatch21" unique_id=1579059351]
+z_index = 1
+position = Vector2(-5.0078125, -89.61328)
+rotation = 2.7052605
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("14_e08e2")
+vframes = 2
+
+[node name="VinesGround3" type="Sprite2D" parent="Groups/Decorations/VineBatch21" unique_id=1379912453]
+z_index = 1
+position = Vector2(-8.427734, -100.890625)
+rotation = -0.5235987
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_e08e2")
+vframes = 3
+
+[node name="VinesEnd2" type="Sprite2D" parent="Groups/Decorations/VineBatch21" unique_id=1908926572]
+position = Vector2(-54.18496, -132.95769)
+rotation = 1.8936822
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+
+[node name="VinesEnd7" type="Sprite2D" parent="Groups/Decorations/VineBatch21" unique_id=764508491]
+position = Vector2(-38.544495, -62.940796)
+rotation = 1.6755161
+texture = ExtResource("11_7k868")
+hframes = 2
+
+[node name="VinesEnd8" type="Sprite2D" parent="Groups/Decorations/VineBatch21" unique_id=120631855]
+position = Vector2(-24.449093, -60.31878)
+rotation = 0.9948377
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VineBatch34" type="Sprite2D" parent="Groups/Decorations" unique_id=971521652]
+z_index = 1
+position = Vector2(2661.0002, 502)
+rotation = 5.157448
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+flip_h = true
+metadata/_edit_group_ = true
+
+[node name="VinesEnd4" type="Sprite2D" parent="Groups/Decorations/VineBatch34" unique_id=1557320474]
+z_index = 1
+position = Vector2(9.893677, -89.20703)
+rotation = -2.364921
+scale = Vector2(0.8333333, 0.8333333)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd6" type="Sprite2D" parent="Groups/Decorations/VineBatch34" unique_id=1320175443]
+z_index = 1
+position = Vector2(-34.510056, -68.48025)
+rotation = 1.2217305
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd5" type="Sprite2D" parent="Groups/Decorations/VineBatch34" unique_id=1984097818]
+z_index = 1
+position = Vector2(30.609253, -1.4013672)
+rotation = -0.4450589
+scale = Vector2(0.83333325, 0.83333325)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+frame = 1
+
+[node name="VinesEnd3" type="Sprite2D" parent="Groups/Decorations/VineBatch34" unique_id=1182057228]
+z_index = 1
+position = Vector2(-44.374878, -95.1626)
+rotation = 1.134464
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("12_hpc6h")
+
+[node name="VinesGround2" type="Sprite2D" parent="Groups/Decorations/VineBatch34" unique_id=99081143]
+z_index = 1
+position = Vector2(-5.0078125, -89.61328)
+rotation = 2.7052605
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("14_e08e2")
+vframes = 2
+
+[node name="VinesGround3" type="Sprite2D" parent="Groups/Decorations/VineBatch34" unique_id=1172424105]
+z_index = 1
+position = Vector2(-8.427734, -100.890625)
+rotation = -0.5235987
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_e08e2")
+vframes = 3
+
+[node name="VinesEnd2" type="Sprite2D" parent="Groups/Decorations/VineBatch34" unique_id=42832738]
+position = Vector2(-54.18496, -132.95769)
+rotation = 1.8936822
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+
+[node name="VinesEnd7" type="Sprite2D" parent="Groups/Decorations/VineBatch34" unique_id=1744018546]
+position = Vector2(-38.544495, -62.940796)
+rotation = 1.6755161
+texture = ExtResource("11_7k868")
+hframes = 2
+
+[node name="VinesEnd8" type="Sprite2D" parent="Groups/Decorations/VineBatch34" unique_id=1389706603]
+position = Vector2(-24.449093, -60.31878)
+rotation = 0.9948377
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VineBatch25" type="Sprite2D" parent="Groups/Decorations" unique_id=1665031165]
+z_index = 1
+position = Vector2(3037, 170.00002)
+rotation = 2.0158553
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+flip_h = true
+metadata/_edit_group_ = true
+
+[node name="VinesEnd4" type="Sprite2D" parent="Groups/Decorations/VineBatch25" unique_id=297128388]
+z_index = 1
+position = Vector2(9.893677, -89.20703)
+rotation = -2.364921
+scale = Vector2(0.8333333, 0.8333333)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd6" type="Sprite2D" parent="Groups/Decorations/VineBatch25" unique_id=369347264]
+z_index = 1
+position = Vector2(-34.510056, -68.48025)
+rotation = 1.2217305
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd5" type="Sprite2D" parent="Groups/Decorations/VineBatch25" unique_id=1595605417]
+z_index = 1
+position = Vector2(30.609253, -1.4013672)
+rotation = -0.4450589
+scale = Vector2(0.83333325, 0.83333325)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+frame = 1
+
+[node name="VinesEnd3" type="Sprite2D" parent="Groups/Decorations/VineBatch25" unique_id=2085255077]
+z_index = 1
+position = Vector2(-44.374878, -95.1626)
+rotation = 1.134464
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("12_hpc6h")
+
+[node name="VinesGround2" type="Sprite2D" parent="Groups/Decorations/VineBatch25" unique_id=541099834]
+z_index = 1
+position = Vector2(-5.0078125, -89.61328)
+rotation = 2.7052605
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("14_e08e2")
+vframes = 2
+
+[node name="VinesGround3" type="Sprite2D" parent="Groups/Decorations/VineBatch25" unique_id=1989262191]
+z_index = 1
+position = Vector2(-8.427734, -100.890625)
+rotation = -0.5235987
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_e08e2")
+vframes = 3
+
+[node name="VinesEnd2" type="Sprite2D" parent="Groups/Decorations/VineBatch25" unique_id=484278404]
+position = Vector2(-54.18496, -132.95769)
+rotation = 1.8936822
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+
+[node name="VinesEnd7" type="Sprite2D" parent="Groups/Decorations/VineBatch25" unique_id=259051296]
+position = Vector2(-26.617466, -51.933228)
+rotation = 1.6755161
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("11_7k868")
+hframes = 2
+
+[node name="VinesEnd9" type="Sprite2D" parent="Groups/Decorations/VineBatch25" unique_id=2040287514]
+position = Vector2(-9.095131, 8.031311)
+rotation = 0.7330383
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd8" type="Sprite2D" parent="Groups/Decorations/VineBatch25" unique_id=1987354216]
+position = Vector2(-24.449093, -60.31878)
+rotation = 0.9948377
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VineBatch23" type="Sprite2D" parent="Groups/Decorations" unique_id=1613379404]
+z_index = 1
+position = Vector2(769.00006, 201.00002)
+rotation = 2.0158553
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+flip_h = true
+metadata/_edit_group_ = true
+
+[node name="VinesEnd4" type="Sprite2D" parent="Groups/Decorations/VineBatch23" unique_id=1613090504]
+z_index = 1
+position = Vector2(14.068168, -75.0323)
+rotation = -2.364921
+scale = Vector2(0.8333333, 0.8333333)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd6" type="Sprite2D" parent="Groups/Decorations/VineBatch23" unique_id=1949420238]
+z_index = 1
+position = Vector2(-2.6870117, -55.96118)
+rotation = 1.2217305
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd5" type="Sprite2D" parent="Groups/Decorations/VineBatch23" unique_id=984644131]
+z_index = 1
+position = Vector2(30.609253, -1.4013672)
+rotation = -0.4450589
+scale = Vector2(0.83333325, 0.83333325)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+frame = 1
+
+[node name="VinesEnd3" type="Sprite2D" parent="Groups/Decorations/VineBatch23" unique_id=141692452]
+z_index = 1
+position = Vector2(-14.028791, -87.48243)
+rotation = 2.1642082
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("12_hpc6h")
+
+[node name="VinesEnd2" type="Sprite2D" parent="Groups/Decorations/VineBatch23" unique_id=209863868]
+position = Vector2(56.975628, -97.344635)
+rotation = 4.29351
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+
+[node name="VinesEnd7" type="Sprite2D" parent="Groups/Decorations/VineBatch23" unique_id=1769736188]
+position = Vector2(-38.544495, -62.940796)
+rotation = 1.6755161
+texture = ExtResource("11_7k868")
+hframes = 2
+
+[node name="VinesEnd8" type="Sprite2D" parent="Groups/Decorations/VineBatch23" unique_id=1575859136]
+position = Vector2(-24.449093, -60.31878)
+rotation = 0.9948377
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd9" type="Sprite2D" parent="Groups/Decorations/VineBatch23" unique_id=1062440427]
+position = Vector2(21.218561, -98.75489)
+rotation = 3.1415927
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VineBatch35" type="Sprite2D" parent="Groups/Decorations" unique_id=1467493489]
+z_index = 1
+position = Vector2(1942, 288.00006)
+rotation = 3.5953782
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+flip_h = true
+metadata/_edit_group_ = true
+
+[node name="VinesEnd4" type="Sprite2D" parent="Groups/Decorations/VineBatch35" unique_id=853170406]
+z_index = 1
+position = Vector2(14.068168, -75.0323)
+rotation = -2.364921
+scale = Vector2(0.8333333, 0.8333333)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd6" type="Sprite2D" parent="Groups/Decorations/VineBatch35" unique_id=1261253736]
+z_index = 1
+position = Vector2(-2.6870117, -55.96118)
+rotation = 1.2217305
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd5" type="Sprite2D" parent="Groups/Decorations/VineBatch35" unique_id=913191675]
+z_index = 1
+position = Vector2(30.609253, -1.4013672)
+rotation = -0.4450589
+scale = Vector2(0.83333325, 0.83333325)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+frame = 1
+
+[node name="VinesEnd3" type="Sprite2D" parent="Groups/Decorations/VineBatch35" unique_id=400257359]
+z_index = 1
+position = Vector2(-14.028791, -87.48243)
+rotation = 2.1642082
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("12_hpc6h")
+
+[node name="VinesEnd2" type="Sprite2D" parent="Groups/Decorations/VineBatch35" unique_id=1732049056]
+position = Vector2(56.975628, -97.344635)
+rotation = 4.29351
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+
+[node name="VinesEnd7" type="Sprite2D" parent="Groups/Decorations/VineBatch35" unique_id=1765327520]
+position = Vector2(-38.544495, -62.940796)
+rotation = 1.6755161
+texture = ExtResource("11_7k868")
+hframes = 2
+
+[node name="VinesEnd8" type="Sprite2D" parent="Groups/Decorations/VineBatch35" unique_id=2142850262]
+position = Vector2(-24.449093, -60.31878)
+rotation = 0.9948377
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd9" type="Sprite2D" parent="Groups/Decorations/VineBatch35" unique_id=1955630493]
+position = Vector2(21.218561, -98.75489)
+rotation = 3.1415927
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VineBatch36" type="Sprite2D" parent="Groups/Decorations" unique_id=1459224500]
+z_index = 1
+position = Vector2(3703.0002, 673.0001)
+rotation = 3.5953782
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+flip_h = true
+metadata/_edit_group_ = true
+
+[node name="VinesEnd4" type="Sprite2D" parent="Groups/Decorations/VineBatch36" unique_id=1288890470]
+z_index = 1
+position = Vector2(14.068168, -75.0323)
+rotation = -2.364921
+scale = Vector2(0.8333333, 0.8333333)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd6" type="Sprite2D" parent="Groups/Decorations/VineBatch36" unique_id=1689603911]
+z_index = 1
+position = Vector2(-2.6870117, -55.96118)
+rotation = 1.2217305
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd5" type="Sprite2D" parent="Groups/Decorations/VineBatch36" unique_id=1117319875]
+z_index = 1
+position = Vector2(30.609253, -1.4013672)
+rotation = -0.4450589
+scale = Vector2(0.83333325, 0.83333325)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+frame = 1
+
+[node name="VinesEnd3" type="Sprite2D" parent="Groups/Decorations/VineBatch36" unique_id=916344114]
+z_index = 1
+position = Vector2(-14.028791, -87.48243)
+rotation = 2.1642082
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("12_hpc6h")
+
+[node name="VinesEnd2" type="Sprite2D" parent="Groups/Decorations/VineBatch36" unique_id=1716742023]
+position = Vector2(56.975628, -97.344635)
+rotation = 4.29351
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+
+[node name="VinesEnd7" type="Sprite2D" parent="Groups/Decorations/VineBatch36" unique_id=1507305489]
+position = Vector2(-38.544495, -62.940796)
+rotation = 1.6755161
+texture = ExtResource("11_7k868")
+hframes = 2
+
+[node name="VinesEnd8" type="Sprite2D" parent="Groups/Decorations/VineBatch36" unique_id=414857173]
+position = Vector2(-24.449093, -60.31878)
+rotation = 0.9948377
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd9" type="Sprite2D" parent="Groups/Decorations/VineBatch36" unique_id=513127510]
+position = Vector2(21.218561, -98.75489)
+rotation = 3.1415927
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VineBatch33" type="Sprite2D" parent="Groups/Decorations" unique_id=537316917]
+z_index = 1
+position = Vector2(2612, 477.00006)
+rotation = 2.0158553
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+flip_h = true
+metadata/_edit_group_ = true
+
+[node name="VinesEnd4" type="Sprite2D" parent="Groups/Decorations/VineBatch33" unique_id=1658877708]
+z_index = 1
+position = Vector2(14.068168, -75.0323)
+rotation = -2.364921
+scale = Vector2(0.8333333, 0.8333333)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd6" type="Sprite2D" parent="Groups/Decorations/VineBatch33" unique_id=941523326]
+z_index = 1
+position = Vector2(-2.6870117, -55.96118)
+rotation = 1.2217305
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd5" type="Sprite2D" parent="Groups/Decorations/VineBatch33" unique_id=67221728]
+z_index = 1
+position = Vector2(30.609253, -1.4013672)
+rotation = -0.4450589
+scale = Vector2(0.83333325, 0.83333325)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+frame = 1
+
+[node name="VinesEnd3" type="Sprite2D" parent="Groups/Decorations/VineBatch33" unique_id=1032563524]
+z_index = 1
+position = Vector2(-14.028791, -87.48243)
+rotation = 2.1642082
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("12_hpc6h")
+
+[node name="VinesEnd2" type="Sprite2D" parent="Groups/Decorations/VineBatch33" unique_id=559285554]
+position = Vector2(56.975628, -97.344635)
+rotation = 4.29351
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+
+[node name="VinesEnd7" type="Sprite2D" parent="Groups/Decorations/VineBatch33" unique_id=1403044457]
+position = Vector2(-38.544495, -62.940796)
+rotation = 1.6755161
+texture = ExtResource("11_7k868")
+hframes = 2
+
+[node name="VinesEnd8" type="Sprite2D" parent="Groups/Decorations/VineBatch33" unique_id=523652695]
+position = Vector2(-24.449093, -60.31878)
+rotation = 0.9948377
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd9" type="Sprite2D" parent="Groups/Decorations/VineBatch33" unique_id=2011340534]
+position = Vector2(21.218561, -98.75489)
+rotation = 3.1415927
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VineBatch18" type="Sprite2D" parent="Groups/Decorations" unique_id=1654582757]
+z_index = 1
+position = Vector2(3508, -22.99994)
+rotation = 2.0158553
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+flip_h = true
+metadata/_edit_group_ = true
+
+[node name="VinesEnd4" type="Sprite2D" parent="Groups/Decorations/VineBatch18" unique_id=1382769137]
+z_index = 1
+position = Vector2(9.893677, -89.20703)
+rotation = -2.364921
+scale = Vector2(0.8333333, 0.8333333)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd6" type="Sprite2D" parent="Groups/Decorations/VineBatch18" unique_id=2137848723]
+z_index = 1
+position = Vector2(-34.510056, -68.48025)
+rotation = 1.2217305
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd5" type="Sprite2D" parent="Groups/Decorations/VineBatch18" unique_id=480384265]
+z_index = 1
+position = Vector2(30.609253, -1.4013672)
+rotation = -0.4450589
+scale = Vector2(0.83333325, 0.83333325)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+frame = 1
+
+[node name="VinesEnd3" type="Sprite2D" parent="Groups/Decorations/VineBatch18" unique_id=568603567]
+z_index = 1
+position = Vector2(-44.374878, -95.1626)
+rotation = 1.134464
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("12_hpc6h")
+
+[node name="VinesGround2" type="Sprite2D" parent="Groups/Decorations/VineBatch18" unique_id=118723549]
+z_index = 1
+position = Vector2(-5.0078125, -89.61328)
+rotation = 2.7052605
+scale = Vector2(0.6666666, 0.6666666)
+texture = ExtResource("14_e08e2")
+vframes = 2
+
+[node name="VinesGround3" type="Sprite2D" parent="Groups/Decorations/VineBatch18" unique_id=1703701883]
+z_index = 1
+position = Vector2(-8.427734, -100.890625)
+rotation = -0.5235987
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_e08e2")
+vframes = 3
+
+[node name="VinesEnd2" type="Sprite2D" parent="Groups/Decorations/VineBatch18" unique_id=216783207]
+position = Vector2(-54.18496, -132.95769)
+rotation = 1.8936822
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+
+[node name="VinesEnd7" type="Sprite2D" parent="Groups/Decorations/VineBatch18" unique_id=599321197]
+position = Vector2(-38.544495, -62.940796)
+rotation = 1.6755161
+texture = ExtResource("11_7k868")
+hframes = 2
+
+[node name="VinesEnd8" type="Sprite2D" parent="Groups/Decorations/VineBatch18" unique_id=683676842]
+position = Vector2(-24.449093, -60.31878)
+rotation = 0.9948377
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VineBatch11" type="Sprite2D" parent="Groups/Decorations" unique_id=421132528]
+z_index = 1
+position = Vector2(2376, 482)
+rotation = 1.5707964
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("14_e08e2")
+vframes = 2
+metadata/_edit_group_ = true
+
+[node name="VinesEnd2" type="Sprite2D" parent="Groups/Decorations/VineBatch11" unique_id=364306637]
+position = Vector2(-3.333312, 113.333336)
+rotation = -0.17453292
+texture = ExtResource("11_7k868")
+hframes = 2
+
+[node name="VinesEnd3" type="Sprite2D" parent="Groups/Decorations/VineBatch11" unique_id=1980520357]
+position = Vector2(11.666676, -120)
+rotation = 3.1939526
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("11_7k868")
+hframes = 2
+
+[node name="VinesEnd" type="Sprite2D" parent="Groups/Decorations/VineBatch11" unique_id=1630944686]
+position = Vector2(55, 0)
+rotation = -1.5707964
+texture = ExtResource("25_cbgmd")
+
+[node name="VinesEnd4" type="Sprite2D" parent="Groups/Decorations/VineBatch11" unique_id=989158148]
+position = Vector2(63.333363, 51.666664)
+rotation = -0.9075712
+scale = Vector2(1.05, 1.05)
+texture = ExtResource("11_7k868")
+
+[node name="VinesEnd6" type="Sprite2D" parent="Groups/Decorations/VineBatch11" unique_id=98341469]
+position = Vector2(53.33337, 78.333336)
+rotation = -1.0821041
+scale = Vector2(1.05, 1.05)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd5" type="Sprite2D" parent="Groups/Decorations/VineBatch11" unique_id=1351896184]
+position = Vector2(56.666687, -41.666664)
+rotation = -2.0420353
+scale = Vector2(1.05, 1.05)
+texture = ExtResource("11_7k868")
+
+[node name="VinesGround" type="Sprite2D" parent="Groups/Decorations/VineBatch11" unique_id=76321111]
+position = Vector2(-6.3329935e-06, 20.000168)
+rotation = -3.0543263
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("13_kltya")
+flip_v = true
+vframes = 3
+frame = 2
+
+[node name="VinesGround2" type="Sprite2D" parent="Groups/Decorations/VineBatch11" unique_id=292961175]
+position = Vector2(1.666659, -21.6665)
+rotation = -3.2288592
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("13_kltya")
+flip_v = true
+vframes = 3
+frame = 2
+
+[node name="VineBatch20" type="Sprite2D" parent="Groups/Decorations" unique_id=651351819]
+z_index = 1
+position = Vector2(3278, 191.00002)
+rotation = 4.7472954
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("14_e08e2")
+vframes = 2
+metadata/_edit_group_ = true
+
+[node name="VinesEnd2" type="Sprite2D" parent="Groups/Decorations/VineBatch20" unique_id=1497911733]
+position = Vector2(-3.333312, 113.333336)
+rotation = -0.17453292
+texture = ExtResource("11_7k868")
+hframes = 2
+
+[node name="VinesEnd3" type="Sprite2D" parent="Groups/Decorations/VineBatch20" unique_id=280513368]
+position = Vector2(11.666676, -120)
+rotation = 3.1939526
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("11_7k868")
+hframes = 2
+
+[node name="VinesEnd" type="Sprite2D" parent="Groups/Decorations/VineBatch20" unique_id=381096800]
+position = Vector2(55, 0)
+rotation = -1.5707964
+texture = ExtResource("25_cbgmd")
+
+[node name="VinesEnd4" type="Sprite2D" parent="Groups/Decorations/VineBatch20" unique_id=1436108631]
+position = Vector2(63.333363, 51.666664)
+rotation = -0.9075712
+scale = Vector2(1.05, 1.05)
+texture = ExtResource("11_7k868")
+
+[node name="VinesEnd6" type="Sprite2D" parent="Groups/Decorations/VineBatch20" unique_id=1572540842]
+position = Vector2(53.33337, 78.333336)
+rotation = -1.0821041
+scale = Vector2(1.05, 1.05)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd5" type="Sprite2D" parent="Groups/Decorations/VineBatch20" unique_id=864582361]
+position = Vector2(56.666687, -41.666664)
+rotation = -2.0420353
+scale = Vector2(1.05, 1.05)
+texture = ExtResource("11_7k868")
+
+[node name="VinesGround" type="Sprite2D" parent="Groups/Decorations/VineBatch20" unique_id=2084370684]
+position = Vector2(-6.3329935e-06, 20.000168)
+rotation = -3.0543263
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("13_kltya")
+flip_v = true
+vframes = 3
+frame = 2
+
+[node name="VinesGround2" type="Sprite2D" parent="Groups/Decorations/VineBatch20" unique_id=596060590]
+position = Vector2(1.666659, -21.6665)
+rotation = -3.2288592
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("13_kltya")
+flip_v = true
+vframes = 3
+frame = 2
+
+[node name="VineBatch19" type="Sprite2D" parent="Groups/Decorations" unique_id=1931947801]
+z_index = 1
+position = Vector2(3493, -2)
+rotation = 1.5707964
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("14_e08e2")
+vframes = 2
+metadata/_edit_group_ = true
+
+[node name="VinesEnd2" type="Sprite2D" parent="Groups/Decorations/VineBatch19" unique_id=967149320]
+position = Vector2(-3.333312, 113.333336)
+rotation = -0.17453292
+texture = ExtResource("11_7k868")
+hframes = 2
+
+[node name="VinesEnd3" type="Sprite2D" parent="Groups/Decorations/VineBatch19" unique_id=1632731449]
+position = Vector2(11.666676, -120)
+rotation = 3.1939526
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("11_7k868")
+hframes = 2
+
+[node name="VinesEnd" type="Sprite2D" parent="Groups/Decorations/VineBatch19" unique_id=622988722]
+position = Vector2(55, 0)
+rotation = -1.5707964
+texture = ExtResource("25_cbgmd")
+
+[node name="VinesEnd4" type="Sprite2D" parent="Groups/Decorations/VineBatch19" unique_id=51748898]
+position = Vector2(63.333363, 51.666664)
+rotation = -0.9075712
+scale = Vector2(1.05, 1.05)
+texture = ExtResource("11_7k868")
+
+[node name="VinesEnd6" type="Sprite2D" parent="Groups/Decorations/VineBatch19" unique_id=1820309193]
+position = Vector2(53.33337, 78.333336)
+rotation = -1.0821041
+scale = Vector2(1.05, 1.05)
+texture = ExtResource("11_7k868")
+flip_h = true
+hframes = 2
+
+[node name="VinesEnd5" type="Sprite2D" parent="Groups/Decorations/VineBatch19" unique_id=1844190795]
+position = Vector2(56.666687, -41.666664)
+rotation = -2.0420353
+scale = Vector2(1.05, 1.05)
+texture = ExtResource("11_7k868")
+
+[node name="VinesGround" type="Sprite2D" parent="Groups/Decorations/VineBatch19" unique_id=234440322]
+position = Vector2(-6.3329935e-06, 20.000168)
+rotation = -3.0543263
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("13_kltya")
+flip_v = true
+vframes = 3
+frame = 2
+
+[node name="VinesGround2" type="Sprite2D" parent="Groups/Decorations/VineBatch19" unique_id=1698763497]
+position = Vector2(1.666659, -21.6665)
+rotation = -3.2288592
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("13_kltya")
+flip_v = true
+vframes = 3
+frame = 2
+
+[node name="VineBatch13" type="Sprite2D" parent="Groups/Decorations" unique_id=1724959687]
+z_index = 1
+position = Vector2(484.00003, 546)
+rotation = 1.5707964
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("14_e08e2")
+vframes = 2
+metadata/_edit_group_ = true
+
+[node name="VinesEnd3" type="Sprite2D" parent="Groups/Decorations/VineBatch13" unique_id=2146226790]
+position = Vector2(11.666676, -120)
+rotation = 3.1939526
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("11_7k868")
+hframes = 2
+
+[node name="VinesEnd" type="Sprite2D" parent="Groups/Decorations/VineBatch13" unique_id=983909319]
+position = Vector2(55, 0)
+rotation = -1.5707964
+texture = ExtResource("25_cbgmd")
+
+[node name="VinesEnd4" type="Sprite2D" parent="Groups/Decorations/VineBatch13" unique_id=1534053854]
+position = Vector2(63.333363, 51.666664)
+rotation = -0.9075712
+scale = Vector2(1.05, 1.05)
+texture = ExtResource("11_7k868")
+
+[node name="VineBatch22" type="Sprite2D" parent="Groups/Decorations" unique_id=509915713]
+z_index = 1
+position = Vector2(892.99994, 223.99997)
+rotation = 3.1677725
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("14_e08e2")
+vframes = 2
+metadata/_edit_group_ = true
+
+[node name="VinesEnd3" type="Sprite2D" parent="Groups/Decorations/VineBatch22" unique_id=1598411742]
+position = Vector2(11.666676, -120)
+rotation = 3.1939526
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("11_7k868")
+hframes = 2
+
+[node name="VinesEnd" type="Sprite2D" parent="Groups/Decorations/VineBatch22" unique_id=702176883]
+position = Vector2(55, 0)
+rotation = -1.5707964
+texture = ExtResource("25_cbgmd")
+
+[node name="VinesEnd4" type="Sprite2D" parent="Groups/Decorations/VineBatch22" unique_id=2136018937]
+position = Vector2(63.333363, 51.666664)
+rotation = -0.9075712
+scale = Vector2(1.05, 1.05)
+texture = ExtResource("11_7k868")
+
+[node name="VineBatch15" type="Sprite2D" parent="Groups/Decorations" unique_id=944402388]
+z_index = 1
+position = Vector2(445.00003, 508.99997)
+rotation = 3.132866
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("14_e08e2")
+vframes = 2
+metadata/_edit_group_ = true
+
+[node name="VinesEnd3" type="Sprite2D" parent="Groups/Decorations/VineBatch15" unique_id=1853328349]
+position = Vector2(-16.075727, 123.19772)
+rotation = 6.3093653
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("11_7k868")
+hframes = 2
+
+[node name="VinesEnd" type="Sprite2D" parent="Groups/Decorations/VineBatch15" unique_id=1929521375]
+position = Vector2(55, 0)
+rotation = -1.5707964
+texture = ExtResource("25_cbgmd")
+
+[node name="VinesEnd4" type="Sprite2D" parent="Groups/Decorations/VineBatch15" unique_id=802138077]
+position = Vector2(63.333363, 51.666664)
+rotation = -0.9075712
+scale = Vector2(1.05, 1.05)
+texture = ExtResource("11_7k868")
+
+[node name="VinesEnd5" type="Sprite2D" parent="Groups/Decorations/VineBatch15" unique_id=1645109885]
+position = Vector2(37.56706, -103.009415)
+rotation = -2.1118484
+scale = Vector2(1.05, 1.05)
+texture = ExtResource("11_7k868")
+
+[node name="VineBatch27" type="Sprite2D" parent="Groups/Decorations" unique_id=1736181062]
+z_index = 1
+position = Vector2(1884.0001, 93)
+rotation = -1.5882496
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("14_e08e2")
+vframes = 2
+metadata/_edit_group_ = true
+
+[node name="VinesEnd3" type="Sprite2D" parent="Groups/Decorations/VineBatch27" unique_id=231261052]
+position = Vector2(11.666676, -120)
+rotation = 3.1939526
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("11_7k868")
+hframes = 2
+
+[node name="VinesEnd" type="Sprite2D" parent="Groups/Decorations/VineBatch27" unique_id=1899430320]
+position = Vector2(55, 0)
+rotation = -1.5707964
+texture = ExtResource("25_cbgmd")
+
+[node name="VinesEnd4" type="Sprite2D" parent="Groups/Decorations/VineBatch27" unique_id=456725697]
+position = Vector2(63.333363, 51.666664)
+rotation = -0.9075712
+scale = Vector2(1.05, 1.05)
+texture = ExtResource("11_7k868")
+
+[node name="VineBatch28" type="Sprite2D" parent="Groups/Decorations" unique_id=477556289]
+z_index = 1
+position = Vector2(1922.9999, 130)
+rotation = -0.017453292
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("14_e08e2")
+vframes = 2
+metadata/_edit_group_ = true
+
+[node name="VinesEnd3" type="Sprite2D" parent="Groups/Decorations/VineBatch28" unique_id=1830640663]
+position = Vector2(-16.075727, 123.19772)
+rotation = 6.3093653
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("11_7k868")
+hframes = 2
+
+[node name="VinesEnd" type="Sprite2D" parent="Groups/Decorations/VineBatch28" unique_id=858210551]
+position = Vector2(55, 0)
+rotation = -1.5707964
+texture = ExtResource("25_cbgmd")
+
+[node name="VinesEnd4" type="Sprite2D" parent="Groups/Decorations/VineBatch28" unique_id=1418820958]
+position = Vector2(63.333363, 51.666664)
+rotation = -0.9075712
+scale = Vector2(1.05, 1.05)
+texture = ExtResource("11_7k868")
+
+[node name="VinesEnd5" type="Sprite2D" parent="Groups/Decorations/VineBatch28" unique_id=290412807]
+position = Vector2(37.56706, -103.009415)
+rotation = -2.1118484
+scale = Vector2(1.05, 1.05)
+texture = ExtResource("11_7k868")
+
+[node name="VineBatch14" type="Sprite2D" parent="Groups/Decorations" unique_id=238871854]
+z_index = 1
+position = Vector2(3459, 130)
+rotation = 1.5707964
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("14_e08e2")
+vframes = 2
+metadata/_edit_group_ = true
+
+[node name="VinesEnd3" type="Sprite2D" parent="Groups/Decorations/VineBatch14" unique_id=1382810861]
+position = Vector2(11.666676, -120)
+rotation = 3.1939526
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("11_7k868")
+hframes = 2
+
+[node name="VinesEnd5" type="Sprite2D" parent="Groups/Decorations/VineBatch14" unique_id=1430568215]
+position = Vector2(-10.000011, 31.666668)
+rotation = 3.1939526
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("11_7k868")
+hframes = 2
+frame = 1
+
+[node name="VinesEnd" type="Sprite2D" parent="Groups/Decorations/VineBatch14" unique_id=741137908]
+position = Vector2(55, 0)
+rotation = -1.5707964
+texture = ExtResource("25_cbgmd")
+
+[node name="VinesEnd4" type="Sprite2D" parent="Groups/Decorations/VineBatch14" unique_id=2082131249]
+position = Vector2(63.333363, 51.666664)
+rotation = -0.9075712
+scale = Vector2(1.05, 1.05)
+texture = ExtResource("11_7k868")
+
+[node name="VinesEnd2" type="Sprite2D" parent="Groups/Decorations/VineBatch14" unique_id=2077612058]
+position = Vector2(63.33332, -71.666504)
+rotation = -1.5707964
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("11_7k868")
+flip_h = true
+
+[node name="VineBatch16" type="Sprite2D" parent="Groups/Decorations" unique_id=919216541]
+z_index = 1
+position = Vector2(1127.0002, 450)
+rotation = 1.5707964
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("14_e08e2")
+vframes = 2
+metadata/_edit_group_ = true
+
+[node name="VinesEnd3" type="Sprite2D" parent="Groups/Decorations/VineBatch16" unique_id=155476898]
+position = Vector2(11.666676, -120)
+rotation = 3.1939526
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("11_7k868")
+hframes = 2
+
+[node name="VinesEnd5" type="Sprite2D" parent="Groups/Decorations/VineBatch16" unique_id=1069818454]
+position = Vector2(-10.000011, 31.666668)
+rotation = 3.1939526
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("11_7k868")
+hframes = 2
+frame = 1
+
+[node name="VinesEnd" type="Sprite2D" parent="Groups/Decorations/VineBatch16" unique_id=874723575]
+position = Vector2(55, 0)
+rotation = -1.5707964
+texture = ExtResource("25_cbgmd")
+
+[node name="VinesEnd4" type="Sprite2D" parent="Groups/Decorations/VineBatch16" unique_id=770856536]
+position = Vector2(63.333363, 51.666664)
+rotation = -0.9075712
+scale = Vector2(1.05, 1.05)
+texture = ExtResource("11_7k868")
+
+[node name="VinesEnd2" type="Sprite2D" parent="Groups/Decorations/VineBatch16" unique_id=529732901]
+position = Vector2(63.33332, -71.666504)
+rotation = -1.5707964
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("11_7k868")
+flip_h = true
+
+[node name="VineBatch29" type="Sprite2D" parent="Groups/Decorations" unique_id=1623614971]
+z_index = 1
+position = Vector2(4169, 673)
+rotation = 1.5707964
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("14_e08e2")
+vframes = 2
+metadata/_edit_group_ = true
+
+[node name="VinesEnd3" type="Sprite2D" parent="Groups/Decorations/VineBatch29" unique_id=1334251331]
+position = Vector2(11.666676, -120)
+rotation = 3.1939526
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("11_7k868")
+hframes = 2
+
+[node name="VinesEnd5" type="Sprite2D" parent="Groups/Decorations/VineBatch29" unique_id=1430112799]
+position = Vector2(-10.000011, 31.666668)
+rotation = 3.1939526
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("11_7k868")
+hframes = 2
+frame = 1
+
+[node name="VinesEnd" type="Sprite2D" parent="Groups/Decorations/VineBatch29" unique_id=899001451]
+position = Vector2(55, 0)
+rotation = -1.5707964
+texture = ExtResource("25_cbgmd")
+
+[node name="VinesEnd4" type="Sprite2D" parent="Groups/Decorations/VineBatch29" unique_id=1999991465]
+position = Vector2(63.333363, 51.666664)
+rotation = -0.9075712
+scale = Vector2(1.05, 1.05)
+texture = ExtResource("11_7k868")
+
+[node name="VinesEnd2" type="Sprite2D" parent="Groups/Decorations/VineBatch29" unique_id=165060857]
+position = Vector2(63.33332, -71.666504)
+rotation = -1.5707964
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("11_7k868")
+flip_h = true
+
+[node name="VineBatch26" type="Sprite2D" parent="Groups/Decorations" unique_id=608517047]
+z_index = 1
+position = Vector2(3154, 130)
+rotation = 1.5707964
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("14_e08e2")
+vframes = 2
+metadata/_edit_group_ = true
+
+[node name="VinesEnd3" type="Sprite2D" parent="Groups/Decorations/VineBatch26" unique_id=518261075]
+position = Vector2(11.666676, -120)
+rotation = 3.1939526
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("11_7k868")
+hframes = 2
+
+[node name="VinesEnd5" type="Sprite2D" parent="Groups/Decorations/VineBatch26" unique_id=790298056]
+position = Vector2(-10.000011, 31.666668)
+rotation = 3.1939526
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("11_7k868")
+hframes = 2
+frame = 1
+
+[node name="VinesEnd" type="Sprite2D" parent="Groups/Decorations/VineBatch26" unique_id=1238122875]
+position = Vector2(55, 0)
+rotation = -1.5707964
+texture = ExtResource("25_cbgmd")
+
+[node name="VinesEnd4" type="Sprite2D" parent="Groups/Decorations/VineBatch26" unique_id=47676644]
+position = Vector2(63.333363, 51.666664)
+rotation = -0.9075712
+scale = Vector2(1.05, 1.05)
+texture = ExtResource("11_7k868")
+
+[node name="VinesEnd2" type="Sprite2D" parent="Groups/Decorations/VineBatch26" unique_id=1644966798]
+position = Vector2(63.33332, -71.666504)
+rotation = -1.5707964
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("11_7k868")
+flip_h = true
+
+[node name="Mushroom" type="Sprite2D" parent="Groups/Decorations" unique_id=1924242999]
+position = Vector2(1906.0001, 305)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("26_1w6v2")
+flip_h = true
 
 [node name="Label" parent="." unique_id=33634530 instance=ExtResource("1_bo1nx")]
 visible = false
@@ -383,6 +2248,7 @@ text = "test"
 
 [node name="TileMapForeground" parent="." unique_id=1070660664 instance=ExtResource("7_6bp64")]
 tile_map_data = PackedByteArray("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AAAxAAIAAgAHAAIAAAAyAAIAAgAHAAIAAAA0AAIAAgAHAAIAAAA1AAIAAgAHAAIAAAA2AAIAAgAHAAIAAAA2AAsAAgAMAAIAAAA3AAIAAgAHAAIAAAA3AAsAAgAMAAIAAAA4AAIAAgAHAAIAAAA4AAsAAgAMAAIAAAA5AAIAAgAHAAIAAAA5AAsAAgAOAAEAAAA6AAIAAgAHAAIAAAA6AAoAAgAHAAAAAAA6AAsAAgAHAAIAAAA7AAIAAgAHAAIAAAA7AAoAAgAHAAAAAAA7AAsAAgAHAAIAAAA8AAIAAgAKAAAAAAA8AAoAAgAKAAEAAAA8AAsAAgAKAAAAAAAzAAIAAgAHAAIAAAA1AAsAAgALAAAAAAA5AAoAAgAGAAAAAAA8AAMAAgAGAAEAAAA8AAQAAgAGAAEAAAA8AAUAAgAGAAEAAAA8AAYAAgAGAAEAAAA8AAcAAgAGAAEAAAA8AAgAAgAGAAEAAAAxAA8AAgAIAAAAAAAwAA8AAgAHAAAAAAAvAA8AAgAHAAAAAAA8AAkAAgAGAAEAAACAAA8AAgAHAAIAAACBAA8AAgAHAAIAAACCAA8AAgAHAAIAAACDAAsAAgAJAAAAAACDAAwAAgAIAAEAAACDAA0AAgAIAAEAAACDAA4AAgAIAAEAAACDAA8AAgAIAAIAAACDACkAAgAIAAEAAACDACoAAgAIAAEAAACDACsAAgAIAAEAAACDACwAAgAIAAEAAACDAC0AAgAIAAEAAACDAC4AAgAIAAEAAACDAC8AAgAIAAEAAACDADAAAgAIAAEAAACDADQAAgAIAAEAAACDADUAAgAIAAEAAACDADYAAgAIAAEAAACDADcAAgAIAAEAAACDADgAAgAIAAEAAACDADkAAgAIAAEAAACDADoAAgAIAAEAAACDADMAAgAIAAEAAACDADIAAgAIAAEAAACDADEAAgAIAAEAAACDADsAAgAIAAEAAACDADwAAgAIAAEAAACDAD0AAgAIAAEAAACDAD4AAgAIAAEAAACDAD8AAgAIAAEAAACDAEAAAgAIAAEAAACDAEEAAgAIAAEAAACDAEIAAgAIAAEAAACDAEMAAgAIAAEAAACDAEQAAgAIAAEAAACDAEUAAgAIAAEAAACDAEYAAgAIAAEAAACDAEcAAgAIAAEAAACDAEkAAgAIAAEAAACDAEoAAgAIAAEAAACDAEgAAgAIAAEAAACDAEsAAgAIAAEAAACDAEwAAgAIAAEAAACMAEsAAgAGAAIAAACMAEoAAgAGAAEAAACMAEkAAgAGAAEAAACMAEgAAgAGAAEAAACMAEcAAgAGAAEAAACMAEYAAgAGAAEAAACMAEUAAgAGAAEAAACMAEQAAgAGAAEAAACMAEMAAgAGAAEAAACMAEIAAgAGAAEAAACMAEEAAgAGAAEAAACMAEAAAgAGAAEAAACMAD8AAgAGAAEAAACMAD4AAgAGAAEAAACMADwAAgAGAAEAAACMAD0AAgAGAAEAAACMADsAAgAGAAEAAACMADoAAgAGAAEAAACMADkAAgAGAAEAAACMADgAAgAGAAEAAACMADcAAgAGAAEAAACMADYAAgAGAAEAAACMADUAAgAGAAEAAACMADQAAgAGAAEAAACMADMAAgAGAAEAAACMADIAAgAGAAEAAACMADEAAgAGAAEAAACMADAAAgAGAAEAAACMAC8AAgAGAAEAAACMAC4AAgAGAAEAAACMAC0AAgAGAAEAAACMACwAAgAGAAEAAACMACsAAgAGAAEAAACMACoAAgAGAAEAAACMACkAAgAGAAEAAACMACgAAgAGAAEAAACMACcAAgAGAAEAAACMACYAAgAGAAEAAACMACUAAgAGAAEAAACMACQAAgAGAAEAAACMACMAAgAGAAEAAACMACIAAgAGAAEAAACMACEAAgAGAAEAAACMACAAAgAGAAEAAACMAB8AAgAGAAEAAACMAB4AAgAGAAEAAACMAB0AAgAGAAEAAACMABwAAgAGAAEAAACMABsAAgAGAAEAAACMABoAAgAGAAEAAACMABkAAgAGAAEAAACMABgAAgAGAAEAAACMABcAAgAGAAEAAACMABYAAgAGAAEAAACPABQAAgAKAAEAAACPABMAAgAGAAEAAACPABIAAgAGAAEAAACPABEAAgAGAAEAAACPABAAAgAGAAEAAACPAA8AAgAGAAEAAACMAAsAAgAKAAAAAACMAAwAAgAGAAEAAACMAA0AAgAGAAIAAACNAA0AAgAHAAIAAACOAA0AAgAHAAIAAACPAA0AAgAKAAAAAACPAA4AAgAGAAEAAACMAFMAAgAKAAEAAAB0AA8AAgAHAAIAAAB2AA8AAgAHAAIAAAB3AA8AAgAHAAIAAAB4AA8AAgAHAAIA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AABUADYAAgAHAAIAAABTADYAAgAHAAIAAABSADYAAgAHAAIAAABRADYAAgAHAAIAAABQADYAAgAHAAIAAABPADYAAgAHAAIAAABOADYAAgAHAAIAAABNADYAAgAHAAIAAABMADYAAgAHAAIAAABLADYAAgAHAAIAAABKADYAAgAHAAIAAABJADYAAgAHAAIAAABIADYAAgAHAAIAAABRAEUAAgAOAAEAABBQAEUAAgAHAAIAAABPAEUAAgAHAAIAAABOAEUAAgAOAAEAAABNAEUAAgAMAAIAAABMAEUAAgAMAAIAAABLAEUAAgAMAAIAAABKAEUAAgAMAAIAAABJAEUAAgAMAAIAAABIAEUAAgAMAAIAAABRAEQAAgAIAAAAAABQAEQAAgAHAAAAAABPAEQAAgAHAAAAAABOAEQAAgAGAAAAAABHAEUAAgAMAAIAAABGAEYAAgAIAAEAAABGAEcAAgAIAAEAAABGAEgAAgAIAAEAAABGADcAAgAIAAEAAABGADgAAgAIAAEAAABGADkAAgAIAAEAAABGADoAAgAIAAEAAABGADsAAgAIAAEAAABGADwAAgAIAAEAAABGAD8AAgAMAAIAAFBGAD4AAgAOAAAAAABGAD0AAgAIAAEAAABGAEAAAgAMAAEAAABGAEUAAgANAAAAAABFAEUAAgAHAAAAAABEAEUAAgANAAAAABBDAEUAAgAMAAIAAABCAEUAAgAMAAIAAABBAEUAAgAMAAIAAABAAEUAAgAMAAIAAAA/AEUAAgAMAAIAAAA+AEQAAgAIAAAAAAA9AEQAAgAHAAAAAAA8AEQAAgAHAAAAAAA7AEQAAgAHAAAAAAA6AEMAAgAIAAEAAAA6AEIAAgAIAAEAAAA6AEEAAgAIAAEAAAA6AEAAAgAIAAEAAABFAD4AAgAHAAIAAABEAD4AAgAHAAIAAABDAD4AAgAHAAIAAABCAD4AAgAHAAIAAABBAD4AAgAHAAIAAABAAD4AAgAHAAIAAAA/AD4AAgAHAAIAAAA+AD4AAgAHAAIAAAA9AD4AAgAHAAIAAAA8AD4AAgAHAAIAAAA7AD4AAgAHAAIAAAA6AD8AAgAIAAEAAABHADYAAgAHAAIAAABPAFMAAgAIAAEAAABPAFQAAgAIAAEAAABPAFIAAgAIAAAAAABQAFUAAgAHAAAAAABRAFUAAgAHAAAA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AACEAAAAAgAIAA4AAACEAP//AgAIAA4AAACEAP7/AgAIAA4AAACEAP3/AgAIAA4AAACEAPz/AgAIAA4AAACEAPv/AgAIAA4AAACEAPr/AgAIAA4AAACEAPn/AgAIAA4AAACEAPj/AgAIAA4AAACEAPf/AgAIAA4AAACEAPb/AgAIAA4AAACEAPX/AgAIAA4AAACEAPT/AgAIAA4AAACEAPP/AgAIAA4AAACEAPL/AgAIAA4AAACEAPH/AgAIAA4AAACFAPH/AgAIAA4AAACFAPL/AgAIAA4AAACFAPP/AgAIAA4AAACFAPT/AgAIAA4AAACFAPX/AgAIAA4AAACFAPb/AgAIAA4AAACFAPf/AgAIAA4AAACFAPj/AgAIAA4AAACFAPn/AgAIAA4AAACFAPr/AgAIAA4AAACFAPv/AgAIAA4AAACFAPz/AgAIAA4AAACFAP3/AgAIAA4AAACFAP7/AgAIAA4AAACFAP//AgAIAA4AAACFAAAAAgAIAA4AAACFAAEAAgAIAA4AAACFAAIAAgAIAA4AAACFAAMAAgAIAA4AAACFAAQAAgAIAA4AAAC1AAwAAgAHAAEAAAC2AAwAAgAHAAEAAAC3AAwAAgAJAAAAAAC4AAwAAgAHAAIAAAC5AAwAAgAHAAIAAAC5ABQAAgAHAAAAAAC6AAwAAgAHAAIAAAC6ABQAAgAHAAAAAAC7AAwAAgAHAAIAAAC7ABQAAgAHAAAAAAC8AAwAAgAHAAIAAAC8ABQAAgAHAAAAAAC9AAwAAgAHAAIAAAC9ABQAAgAHAAAAAAC1ABEAAgAHAAEAAAC2ABEAAgAHAAEAAAC3ABEAAgAJAAEAAAC4ABEAAgAIAAAAAAC4ABIAAgAIAAEAAAC4ABMAAgAIAAEAAAC+AAwAAgAHAAIAAAC+ABQAAgAHAAAAAAC/AAwAAgAHAAIAAAC/ABQAAgAHAAAAAADAAAwAAgAHAAIAAADAABQAAgAHAAAAAADBAAwAAgAHAAIAAADBABQAAgAHAAAAAADCAAwAAgAHAAIAAADCABQAAgAHAAAAAADDAAwAAgAHAAIAAADDABQAAgAHAAAAAADEAAwAAgAHAAIAAADEABQAAgAHAAAAAADFAAwAAgAHAAIAAADFABQAAgAHAAAAAADGAAwAAgAHAAIAAADGABQAAgAHAAAAAADHAAwAAgAHAAIAAADHABQAAgAHAAAAAADIAA0AAgAGAAEAAADIAA4AAgAGAAEAAADIAA8AAgAGAAEAAADIABAAAgAGAAEAAADIABEAAgAGAAEAAADIABIAAgAGAAEAAADIABMAAgAGAAEAAACrABEAAgAHAAEAAACsABEAAgAHAAEAAACtABEAAgAHAAEAAACuABEAAgAHAAEAAACvABEAAgAHAAEAAACwABEAAgAHAAEAAACxABEAAgAHAAEAAACyABEAAgAHAAEAAACzABEAAgAHAAEAAAC0ABEAAgAHAAEAAACrAAwAAgAHAAEAAACsAAwAAgAHAAEAAACtAAwAAgAHAAEAAACuAAwAAgAHAAEAAACvAAwAAgAHAAEAAACwAAwAAgAHAAEAAACxAAwAAgAHAAEAAACyAAwAAgAHAAEAAACzAAwAAgAHAAEAAAC0AAwAAgAHAAEAAACFAAsAAgAIAA8AAACDAAoAAgAHAAEAAACDAAkAAgAHAAEAAACDAAgAAgAHAAEAAACDAAcAAgAHAAEAAACDAAYAAgAHAAEAAACDAAUAAgAHAAEAAADIABQAAgAKAAEAAAC4ABQAAgAJAAEAAADIAAwAAgAKAAAAAACNAAcAAgAHAAEAAACNAAgAAgAHAAEAAACMAAUAAgAHAAEAAACNAAUAAgAHAAEAAAB0ADsAAgAHAAAAAABzADsAAgAHAAAAAAB+AEAAAgALAAAAAAB1ADsAAgAHAAAAAAB2ADsAAgAHAAAAAAB3ADsAAgAHAAAAAAB4ADsAAgAIAAAAAAB4ADwAAgAIAAIAAAB3ADwAAgAHAAIAAAB2ADwAAgAHAAIAAAB1ADwAAgAJAAAAAABsAD8AAgAIAAEAAABsAD4AAgAIAAEAAABsAD0AAgAIAAEAAABsADwAAgAIAAEAAABsADsAAgAIAAEAAABsADoAAgAIAAEAAABsADkAAgAIAAEAAAB1AD4AAgAIAAIAAAB0AD4AAgAHAAIAAABzAD4AAgAGAAIAAABzAD0AAgAKAAAAAAB1AD0AAgAIAAEAAAB1ADgAAgAIAAIAAAB0ADgAAgAHAAIAAABzADgAAgAHAAIAAAByADgAAgAHAAIAAABxADgAAgAHAAIAAABwADgAAgAHAAIAAABvADgAAgAHAAIAAABuADgAAgAHAAIAAABtADgAAgAHAAIAAAByADsAAgAHAAAA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")
+metadata/_edit_lock_ = true
 
 [node name="TileMapBackground" type="TileMapLayer" parent="." unique_id=223171353]
 z_index = -10
@@ -397,72 +2263,6 @@ finalDoor = NodePath("../Final Door")
 
 [node name="Checkpoint" parent="." unique_id=973812139 instance=ExtResource("23_gt3je")]
 position = Vector2(4148, 2580)
-
-[node name="VinesEnd" type="Sprite2D" parent="." unique_id=873980368]
-position = Vector2(3567, 121)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("25_cbgmd")
-
-[node name="Vines" type="Sprite2D" parent="." unique_id=1358737094]
-position = Vector2(3540, 49)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("24_3pmx8")
-hframes = 3
-
-[node name="VinesEnd2" type="Sprite2D" parent="." unique_id=177018917]
-position = Vector2(3540, 114)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("25_cbgmd")
-hframes = 3
-
-[node name="Vines2" type="Sprite2D" parent="." unique_id=1000015925]
-position = Vector2(3513, 24)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("24_3pmx8")
-vframes = 2
-
-[node name="Vines3" type="Sprite2D" parent="." unique_id=514979218]
-position = Vector2(3300, 241)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("24_3pmx8")
-
-[node name="Vines4" type="Sprite2D" parent="." unique_id=855709879]
-position = Vector2(3262, 240)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("24_3pmx8")
-
-[node name="Vines5" type="Sprite2D" parent="." unique_id=1450427918]
-position = Vector2(3059, 368)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("24_3pmx8")
-vframes = 3
-
-[node name="VinesEnd3" type="Sprite2D" parent="." unique_id=2076720148]
-position = Vector2(3513, 69)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("25_cbgmd")
-
-[node name="VinesEnd4" type="Sprite2D" parent="." unique_id=1043753635]
-position = Vector2(3301, 311)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("25_cbgmd")
-flip_h = true
-
-[node name="VinesEnd5" type="Sprite2D" parent="." unique_id=664321087]
-position = Vector2(3263, 311)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("25_cbgmd")
-
-[node name="VinesEnd6" type="Sprite2D" parent="." unique_id=482043071]
-position = Vector2(3058, 406)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("25_cbgmd")
-flip_h = true
-
-[node name="Mushroom" type="Sprite2D" parent="." unique_id=950260478]
-position = Vector2(3558, 300)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("26_1w6v2")
 
 [connection signal="body_entered" from="Groups/Spikes/Spikes1" to="Player" method="_on_spikes_body_entered"]
 [connection signal="leverInteract" from="Player" to="FinalRoomLever" method="_on_lever_interacted"]
