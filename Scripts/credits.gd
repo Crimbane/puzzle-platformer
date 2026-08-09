@@ -14,3 +14,7 @@ func _ready() -> void:
 	tween.set_trans(Tween.TRANS_QUAD)
 	tween.set_ease(Tween.EASE_OUT)
 	tween.tween_property(creditsText, "position:y", target + -175, 5.0)
+
+func _process(_delta) -> void:
+	if Input.is_action_just_pressed("Escape"):
+			get_tree().quit()

@@ -20,7 +20,7 @@ script = ExtResource("1_ccovl")
 tile_map_data = PackedByteArray("AAAhAAAAAgAHAAIAAAAgAAAAAgAHAAIAAAAfAAAAAgAHAAIAAAAeAAAAAgAHAAIAAAAdAAAAAgAHAAIAAAAcAAAAAgAHAAIAAAAbAAAAAgAHAAIAAAAaAAAAAgAHAAIAAAA=")
 metadata/_edit_lock_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1133861583]
+[node name="Background" type="Sprite2D" parent="." unique_id=1133861583]
 z_index = -1
 position = Vector2(961, 540)
 texture = ExtResource("1_r18jl")
@@ -28,22 +28,35 @@ metadata/_edit_lock_ = true
 
 [node name="Made By" type="Label" parent="." unique_id=1468063357]
 layout_mode = 0
-offset_left = 747.0
-offset_top = 344.0
-offset_right = 912.0
-offset_bottom = 399.0
+offset_left = 750.0
+offset_top = 352.0
+offset_right = 915.0
+offset_bottom = 407.0
 text = "Made by"
 label_settings = SubResource("LabelSettings_t1yug")
+metadata/_edit_group_ = true
 
 [node name="Names" type="Label" parent="Made By" unique_id=1379430373]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -459.5
-offset_top = 81.0
-offset_right = 458.5
-offset_bottom = 150.0
+offset_left = -260.0
+offset_right = 260.0
+offset_bottom = 69.0
 grow_horizontal = 2
-text = "olem50 and x - change x to your name"
+text = "
+olem50 and Crimtane"
 label_settings = SubResource("LabelSettings_fyjvv")
+
+[node name="Audio" type="Label" parent="Made By" unique_id=382972676]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -117.5
+offset_top = 273.0
+offset_right = 118.5
+offset_bottom = 296.0
+grow_horizontal = 2
+text = "With audio from Ovani Sounds"

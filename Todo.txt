@@ -1,12 +1,5 @@
 Fading block
 
-Escape menu (quit game)
-	Maybe restart game starting with the main menu
-
-Music
-
-Elevator moves when player steps on it
-	Elevator can be reset with a lever
 
 
 Volume sliders

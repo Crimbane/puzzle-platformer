@@ -15,7 +15,7 @@ var tween
 
 func _ready() -> void:
 	if "soundVolume" in VolumeSettings:
-		soundPortalUse.volume_db = VolumeSettings.soundVolume
+		soundPortalUse.volume_db = VolumeSettings.soundVolume - 5.0
 		soundPortalTeleport.volume_db = VolumeSettings.soundVolume
 		soundPortalStartup.volume_db = VolumeSettings.soundVolume
 	body_entered.connect(_on_body_entered)

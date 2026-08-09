@@ -111,12 +111,14 @@ platform_on_leave = 2
 script = ExtResource("1_fkybt")
 
 [node name="Restart Button" parent="." unique_id=1056621152 instance=ExtResource("2_olqyp")]
+visible = false
 offset_left = 837.0
 offset_top = -488.0
 offset_right = 948.0
 offset_bottom = -457.0
 
 [node name="Quit Button" parent="." unique_id=159312891 instance=ExtResource("2_l6n3p")]
+visible = false
 offset_left = 864.0
 offset_top = -537.0
 offset_right = 948.0
