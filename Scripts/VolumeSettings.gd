@@ -1,5 +1,5 @@
 extends Node
 
 
-var musicVolume: float = -14 + 6
-var soundVolume: float = 2 + 6
+var musicVolume: float = -8
+var soundVolume: float = 8
