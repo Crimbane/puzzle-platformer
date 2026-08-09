@@ -5,10 +5,9 @@ extends Control
 func _ready() -> void:
 	var screenSize = get_viewport_rect().size
 	
-	creditsText.position.x = (screenSize.x - creditsText.size.x) / 2.0
+	var target = creditsText.position.y
 	creditsText.position.y = screenSize.y
 
-	var target = (get_viewport_rect().size.y - creditsText.size.y) / 2.0
 
 	var tween = create_tween()
 	tween.set_trans(Tween.TRANS_QUAD)
